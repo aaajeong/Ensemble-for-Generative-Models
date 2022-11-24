@@ -1,0 +1,2 @@
+Source: Der 20. Oktober fällt auf einen Montag.|Result: 20 october is on monday . <eos>|Target: October 20th is a Monday.
+Source: Mir gefällt diese Statue.|Result: i like this statue . <eos>|Target: I like that statue.

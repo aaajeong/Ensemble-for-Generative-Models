@@ -1,6 +1,6 @@
 import torch
 import sys
-sys.path.append('/home/kie/ahjeong/transformer-pytorch')
+sys.path.append('/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k')
 import nltk
 nltk.download('wordnet')
 nltk.download('omw-1.4')
@@ -13,11 +13,13 @@ from rouge import Rouge
 import re
 
 if __name__=="__main__":
-    project_dir = '/home/kie/ahjeong/transformer-pytorch'
-    result_path = f'{project_dir}/evaluation'
+    project_dir = '/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
+    # result_path = f'{project_dir}/evaluation/single/model10'
+    result_path = f'{project_dir}/evaluation/esb/majority'
     
     device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     
+    # f = open(result_path +'/hpys_m10.txt', 'r')
     f = open(result_path +'/hpys.txt', 'r')
     output = f.readlines()
     f.close()

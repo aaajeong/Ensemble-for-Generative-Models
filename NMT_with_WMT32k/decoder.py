@@ -42,7 +42,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
         result.append(best_token)
     return ' '.join(result[::-1])
 
-# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./output/last/models --eval_dir ./deu-eng
+# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs/output_1/last/models --eval_dir ./deu-eng
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_dir', type=str, required=True)
@@ -64,7 +64,7 @@ def main():
     trg_data = torch.load(args.data_dir + '/target.pt')
 
     # Load a saved model.
-    device = torch.device('cpu' if args.no_cuda else 'cuda:0')
+    device = torch.device('cpu' if args.no_cuda else 'cuda:1')
     model = utils.load_checkpoint(args.model_dir, device)
 
     pads = torch.tensor([trg_data['pad_idx']] * beam_size, device=device)
@@ -79,11 +79,13 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    f = open(f'{args.eval_dir}/testset_small.txt', 'r')
+    # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
+    f = open(f'{args.eval_dir}/oneline.txt', 'r')
     dataset = f.readlines()
     f.close()
     
-    f = open('./evaluation/hpys.txt', 'w')
+    # f = open('./evaluation/single/hpys_m10.txt', 'w')
+    f = open('./evaluation/single/test.txt', 'w')
     for data in tqdm(dataset):
         cache = {}
         indices_history = []

@@ -199,7 +199,7 @@ if __name__ == '__main__':
   checkpoint_path = f'{dir_path}/checkpoints'
 
   # model setting
-  model_name = 'transformer-translation-spoken7'
+  model_name = 'transformer-translation-spoken10'
   vocab_num = 32000
   max_length = 512
   d_model = 512

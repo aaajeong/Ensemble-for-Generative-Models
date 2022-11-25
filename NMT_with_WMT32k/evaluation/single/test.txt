@@ -1,2 +1,2 @@
 Source: Mir gefällt diese Statue.|Result: i like this statue . <eos>|Target: I like that statue.
-Source: Ich bin mir nicht sicher, ob meine Erinnerung dem tatsächlich Geschehenen entspricht.|Result: i am not sure whether my memory is true . <eos>|Target: I'm not sure that what I remember is what actually happened.
+Source: Ich habe gehört, du hast die Aufnahmeprüfung bestanden. Gratuliere!|Result: i heard you passed the <unk> . <eos> <eos>|Target: I hear you passed the entrance exam. Congratulations!

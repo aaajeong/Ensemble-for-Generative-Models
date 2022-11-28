@@ -1,2 +1,3 @@
-Source: Mir gefällt diese Statue.|Result: i like this statue . <eos>|Target: I like that statue.
-Source: Ich bin mir nicht sicher, ob meine Erinnerung dem tatsächlich Geschehenen entspricht.|Result: i am not sure whether my memory is true . <eos>|Target: I'm not sure that what I remember is what actually happened.
+Source: Was ist in der Flasche da?|Result: what is there in the bottle ? <eos>|Target: What's in that bottle?
+Source: Ist alles gepackt?|Result: is everything packed ? <eos>|Target: Is everything packed?
+Source: Ich bin im Gefängnis.|Result: i am in prison . <eos>|Target: I'm in jail.

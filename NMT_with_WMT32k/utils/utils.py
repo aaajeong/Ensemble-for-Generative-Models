@@ -30,10 +30,22 @@ def get_accuracy(pred, ans, pad):
     n_correct = n_correct.masked_select(ans != pad)
     return n_correct.sum().item() / n_correct.size(0)
 
-
-def save_checkpoint(model, filepath, global_step, is_best):
+# def save_checkpoint(model, filepath, global_step, is_best):
+#     model_save_path = filepath + '/last_model.pt'
+#     torch.save(model, model_save_path)
+#     torch.save(global_step, filepath + '/global_step.pt')
+#     if is_best:
+#         best_save_path = filepath + '/best_model.pt'
+#         shutil.copyfile(model_save_path, best_save_path)
+        
+def save_checkpoint(t_step, model, filepath, global_step, is_best):
     model_save_path = filepath + '/last_model.pt'
     torch.save(model, model_save_path)
+    torch.save(global_step, filepath + '/global_step.pt')
+    if t_step >= 190:
+        model_save_path = filepath + '/last_model' + str(t_step) + '.pt'
+        torch.save(model, model_save_path)
+        
     torch.save(global_step, filepath + '/global_step.pt')
     if is_best:
         best_save_path = filepath + '/best_model.pt'
@@ -42,13 +54,37 @@ def save_checkpoint(model, filepath, global_step, is_best):
 
 def load_checkpoint(model_path, device, is_eval=True):
     if is_eval:
-        model = torch.load(model_path + '/best_model.pt')
+        model = torch.load(model_path + '/best_model.pt', map_location="cuda:1")
+        # model = torch.load(model_path + '/best_model.pt')
         model.eval()
         return model.to(device=device)
 
     model = torch.load(model_path + '/last_model.pt')
     global_step = torch.load(model_path + '/global_step.pt')
     return model.to(device=device), global_step
+
+def load_checkpoint2(model_path, device, is_eval=True):
+    if is_eval:
+        model = torch.load(model_path + '/best_model.pt', map_location="cuda:0")
+        # model = torch.load(model_path + '/best_model.pt')
+        model.eval()
+        return model.to(device=device)
+
+    model = torch.load(model_path + '/last_model.pt')
+    global_step = torch.load(model_path + '/global_step.pt')
+    return model.to(device=device), global_step
+
+def load_checkpoint_ckp(ckp, model_path, device, is_eval=True):
+    if is_eval:
+        model = torch.load(model_path + '/best_model.pt')
+        model.eval()
+        return model.to(device=device)
+
+    model = torch.load(model_path + '/last_model' + str(ckp) + '.pt', map_location="cuda:1")
+    model.eval()
+    # global_step = torch.load(model_path + '/global_step.pt')
+    return model.to(device=device)
+    # return model.to(device=device), global_step
 
 
 def create_pad_mask(t, pad):

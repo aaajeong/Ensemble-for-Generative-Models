@@ -1,2 +1,0 @@
-Source: Bist du in Tom verliebt?|Result: are you in love with tom ? <eos>|Target: Are you in love with Tom?
-Source: Tom ist ein Faulpelz.|Result: tom is a <unk> . <eos>|Target: Tom is a lazy fellow.

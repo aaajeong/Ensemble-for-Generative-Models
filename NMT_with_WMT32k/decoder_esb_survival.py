@@ -93,6 +93,8 @@ def get_settled_output(best_scores, best_indices):
 # dropout & alpha
 # python decoder_esb_survival.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
 
+# dropout & label smoothing
+# python decoder_esb_survival.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_dir', type=str, required=True)
@@ -122,23 +124,23 @@ def main():
     
     # Load a saved model.
     origin_models = []
-    m = 10
-    m2 = 12
-    models_dir = args.model_dir
-    for i in range(1, m2+1):
-        if i == 1:
-            continue
-        elif i == 9:
-            continue
-        model_path = models_dir + '/output_' + str(i) + '/last/models'
-        model = utils.load_checkpoint(model_path, device)
-        origin_models.append(model)
     # m = 10
+    # m2 = 12
     # models_dir = args.model_dir
-    # for i in range(1, m+1):
+    # for i in range(1, m2+1):
+    #     if i == 1:
+    #         continue
+    #     elif i == 9:
+    #         continue
     #     model_path = models_dir + '/output_' + str(i) + '/last/models'
     #     model = utils.load_checkpoint(model_path, device)
     #     origin_models.append(model)
+    m = 10
+    models_dir = args.model_dir
+    for i in range(1, m+1):
+        model_path = models_dir + '/output_' + str(i) + '/last/models'
+        model = utils.load_checkpoint(model_path, device)
+        origin_models.append(model)
 
     pads = torch.tensor([trg_data['pad_idx']] * beam_size, device=device)
     pads = pads.unsqueeze(-1)
@@ -157,7 +159,7 @@ def main():
     f.close()
     
     
-    f = open('./evaluation/esb/survival/dropout_alpha2/hpys.txt', 'w')
+    f = open('./evaluation/esb/survival/dropout_smoothing/hpys.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         models = origin_models

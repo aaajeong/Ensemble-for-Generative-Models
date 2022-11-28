@@ -16,3 +16,5 @@ output
 *output*
 memo
 train_out(dropout)
+nohup.out
+surviva.out

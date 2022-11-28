@@ -44,11 +44,17 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs/output_1/last/models --eval_dir ./deu-eng
 
+#ckp 단일모델
+# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./output_ckp/last/models --eval_dir ./deu-eng
+
 # dropout은 다른 gpu(id)에서 학습 -> torch.load에서 map_location 설정.
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_11/last/models --eval_dir ./deu-eng
 
 # dropout & alpha 변경
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_11/last/models --eval_dir ./deu-eng --alpha 0.5
+
+# dropout & label smoothing 변경
+# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing/output_4/last/models --eval_dir ./deu-eng
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_dir', type=str, required=True)
@@ -91,7 +97,7 @@ def main():
     f.close()
     
     # f = open('./evaluation/single/hpys_m10.txt', 'w')
-    f = open('./evaluation/single/dropout_alpha/model11/hpys.txt', 'w')
+    f = open('./evaluation/single/dropout_smoothing/model4/hpys.txt', 'w')
     for data in tqdm(dataset):
         cache = {}
         indices_history = []

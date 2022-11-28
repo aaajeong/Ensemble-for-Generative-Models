@@ -1,3 +1,0 @@
-Source: Was ist in der Flasche da?|Result: what is there in the bottle ? <eos>|Target: What's in that bottle?
-Source: Ist alles gepackt?|Result: is everything packed ? <eos>|Target: Is everything packed?
-Source: Ich bin im Gefängnis.|Result: i am in prison . <eos>|Target: I'm in jail.

@@ -50,7 +50,7 @@ def summarize_train(writer, global_step, last_time, model, opt,
     steps_per_sec = 100.0 / (time.time() - last_time)
     writer.add_scalar('global_step/sec', steps_per_sec,
                       global_step)
-# python train.py --problem wmt32k --output_dir ./output_11 --data_dir ./wmt32k_data --dropout 0.4
+# python train3.py --problem wmt32k --output_dir ./output_9 --data_dir ./wmt32k_data --dropout 0.05
 def train(train_data, model, opt, global_step, optimizer, t_vocab_size,
           label_smoothing, writer):
     model.train()
@@ -114,8 +114,7 @@ def validation(validation_data, model, global_step, t_vocab_size, val_writer,
     val_writer.add_scalar('loss', val_loss, global_step)
     return val_loss
 
-# python train.py --problem wmt32k --output_dir ./output --data_dir ./wmt32k_data --parallel
-# watch -d -n 1 nvidia-smi
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--problem', required=True)
@@ -137,7 +136,7 @@ def main():
     parser.add_argument('--summary_grad', action='store_true')
     opt = parser.parse_args()
 
-    device = torch.device('cpu' if opt.no_cuda else 'cuda:0')
+    device = torch.device('cpu' if opt.no_cuda else 'cuda:2')
 
     if not os.path.exists(opt.output_dir + '/last/models'):
         os.makedirs(opt.output_dir + '/last/models')

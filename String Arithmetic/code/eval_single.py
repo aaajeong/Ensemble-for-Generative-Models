@@ -13,7 +13,6 @@ from seq2seq import Seq2seq
 from tqdm import tqdm
 from tensorflow.python.client import device_lib
 print(device_lib.list_local_devices())
-# sys.stdout = open('5-plusminus_single_test.txt', 'w')
 os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 # 데이터셋 읽기
@@ -38,9 +37,10 @@ max_epoch = 1000
 max_grad = 5.0
 
 model = Seq2seq(vocab_size, wordvec_size, hideen_size)
+model.load_params('single_1000epoch.pkl')
 
 optimizer = Adam()
-trainer = Trainer(model, optimizer)
+# trainer = Trainer(model, optimizer)
 
 acc_list = []
 
@@ -48,34 +48,24 @@ acc_list = []
 if config.GPU:
     x_train, t_train = to_gpu(x_train), to_gpu(t_train)
 
-# max_epoch = 2
-for epoch in range(max_epoch):
-    trainer.fit(x_train, t_train, max_epoch=1,
-                batch_size=batch_size, max_grad=max_grad)
-    
-    correct_num = 0
-    for i in range(len(x_test)):
-        question, correct = x_test[[i]], t_test[[i]]
-        verbose = i < 10
-        correct_num += eval_seq2seq(model, question, correct,
-                                    id_to_char, verbose, is_reverse)
+correct_num = 0
+for i in range(len(x_test)):
+    question, correct = x_test[[i]], t_test[[i]]
+    verbose = i < 10
+    correct_num += eval_seq2seq(model, question, correct,
+                                id_to_char, verbose, is_reverse)
 
-    acc = float(correct_num) / len(x_test)
-    acc_list.append(acc)
-    print('검증 정확도 %.3f%%' % (acc * 100))
+acc = float(correct_num) / len(x_test)
+acc_list.append(acc)
 
-trainer.plot_loss('1','2', 'single')
-
-# 모델 저장
-model_path = '../models/'
-model.save_params(model_path + '2-single_1000epoch.pkl')
+print('검증 정확도 %.3f%%' % (acc * 100))
 
 # 그래프 그리기
-x = np.arange(len(acc_list))
-plt.plot(x, acc_list, marker='o')
-plt.title('plusminus_single_1000epoch')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.ylim(0, 1.0)
-plt.savefig('2-plusminus_single_1000epoch.png')
-plt.show()
+# x = np.arange(len(acc_list))
+# plt.plot(x, acc_list, marker='o')
+# plt.title('plusminus_single_1000epoch')
+# plt.xlabel('Epoch')
+# plt.ylabel('Accuracy')
+# plt.ylim(0, 1.0)
+# plt.savefig('1-plusminus_single_1000epoch.png')
+# plt.show()

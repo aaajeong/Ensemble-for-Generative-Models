@@ -128,9 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Checkpoint files
-Checkpoint
-Checkpoint_esb
-
-# Neural Machine Translation
-Checkpoint
+# String Arithmetic
+models

@@ -1,0 +1,985 @@
+Source: Was ist in der Flasche da?|Result: what is there in the bottle ? <eos>|Target: What's in that bottle?
+Source: Ist alles gepackt?|Result: is everything packed ? <eos>|Target: Is everything packed?
+Source: Ich bin im Gefängnis.|Result: i am in prison . <eos>|Target: I'm in jail.
+Source: Ich habe Tom nicht darum gebeten, auf mich zu warten.|Result: i did not ask tom to wait for me . <eos>|Target: I didn't ask Tom to wait for me.
+Source: Tom behauptet, es gebe bei ihm in der Nähe ein Geisterhaus.|Result: tom claims that there is a <unk> near him . <eos>|Target: Tom says there is a haunted house in his neighborhood.
+Source: Ich habe es nicht kaputtgemacht.|Result: i have not <unk> it . <eos>|Target: I didn't break it.
+Source: Das ist meine andere Schwester.|Result: that is my other sister . <eos>|Target: This is my other sister.
+Source: Ich dachte, Sie wären Ärztin.|Result: i thought you were a doctor . <eos>|Target: I thought you were a doctor.
+Source: Mir wurde schwindelig.|Result: i was <unk> . <eos>|Target: I got dizzy.
+Source: Immer wenn es regnet, leckt das Dach.|Result: whenever it rains , the roof <unk> . <eos>|Target: Every time it rains, the roof leaks.
+Source: Wie hast du Tom dazu gebracht, mit dem Trinken aufzuhören?|Result: how did you bring tom to stop drinking ? <eos>|Target: How did you get Tom to quit drinking?
+Source: Jedes Mal, wenn mein Onkel kommt, bringt er ein paar nette Dinge für uns mit.|Result: whenever my uncle comes , he brings some nice things to us . <eos>|Target: Whenever my uncle comes, he brings some nice things for us.
+Source: Deine Arbeit entsprach nicht unseren Erwartungen.|Result: your work did not meet our expectations . <eos>|Target: Your work didn't come up to our expectations.
+Source: Tom ist ein Faulpelz.|Result: tom is a <unk> . <eos>|Target: Tom is a lazy fellow.
+Source: Ich habe mich schon abgemeldet.|Result: i have already <unk> . <eos>|Target: I've already checked out.
+Source: Tom liebt es, über Politik zu sprechen.|Result: tom loves to talk about politics . <eos>|Target: Tom loves talking about politics.
+Source: Wo ist er hingegangen?|Result: where is it <unk> ? <eos>|Target: Where did he go?
+Source: Ich verstehe nicht immer, was los ist.|Result: i do not always understand what is going on . <eos>|Target: I don't always understand what's going on.
+Source: Tom fährt mit dem Bus zur Arbeit.|Result: tom goes to work with the bus . <eos>|Target: Tom takes the bus to work.
+Source: Lasst uns zusammen nach Boston fliegen!|Result: let us fly together to boston ! <eos>|Target: Let's go to Boston together.
+Source: Ich baue gerne Brücken.|Result: i would like to build bridges . <eos>|Target: I like to build bridges.
+Source: Bist du in Tom verliebt?|Result: are you in love with tom ? <eos>|Target: Are you in love with Tom?
+Source: Das ist vollkommen normal.|Result: that is perfectly normal . <eos>|Target: That's perfectly normal.
+Source: Ich will, dass Sie es selbst tun.|Result: i want you to do it yourself . <eos>|Target: I need you to do it yourself.
+Source: Ich bin noch nicht verheiratet.|Result: i am not yet married . <eos>|Target: I'm not married yet.
+Source: Tom hat einige gute Vorschläge vorgebracht.|Result: tom has made some good proposals . <eos>|Target: Tom made a couple of good suggestions.
+Source: Du hast, was es dazu braucht.|Result: you have what it needs . <eos>|Target: You have what it takes.
+Source: Ich mag Ihre Krawatte.|Result: i like your tie . <eos>|Target: I like that tie of yours.
+Source: Tom war nicht der Einzige, der wusste, wo Maria wohnte.|Result: tom was not the only one who knew where maria lived . <eos>|Target: Tom wasn't the only one who knew where Mary lived.
+Source: Bist du zum Laden gegangen?|Result: have you gone to the store ? <eos>|Target: Did you go to the store?
+Source: Die Frage ist, ob man Tom vertrauen kann.|Result: the question is whether you can trust tom . <eos>|Target: The question is whether Tom can be trusted.
+Source: Du wärest bestimmt ein toller Vater.|Result: you <unk> a great father . <eos>|Target: I bet you'd make a great father.
+Source: Kühe versorgen uns mit Milch.|Result: cows provide us with milk . <eos>|Target: Cows provide us with milk.
+Source: Ich habe den Grund des Schwimmbeckens berührt.|Result: i have touched the cause of the <unk> . <eos>|Target: I touched the bottom of the pool.
+Source: Er hat blondes Haar.|Result: he has <unk> hair . <eos>|Target: He has blond hair.
+Source: Ich kann mich nicht entsinnen, wann er nach Boston zog.|Result: i can not <unk> when he moved to boston . <eos>|Target: I can't recall when he moved to Boston.
+Source: Ich will den Bericht in einer Stunde auf meinem Schreibtisch haben!|Result: i want to have the report in one hour on my desk ! <eos>|Target: I want that report on my desk in one hour.
+Source: Er muss den Zug verpasst haben.|Result: he must have missed the train . <eos>|Target: He must have missed the train.
+Source: Ich weiß genau, wo er ist.|Result: i know exactly where he is . <eos>|Target: I know exactly where it is.
+Source: Ich nehme an, Sie sind verärgert.|Result: i assume they are angry . <eos>|Target: I assume you're angry.
+Source: Toms Wagen wurde von hinten angefahren, und er erlitt ein Peitschenschlagsyndrom.|Result: <unk> 's car was <unk> from the back and he suffered a <unk> . <eos>|Target: Tom's car was rear-ended and he suffered a whiplash injury.
+Source: Tom kümmert sich gut um seine Kunden.|Result: tom takes care of his customers . <eos>|Target: Tom takes good care of his customers.
+Source: Werden Sie an dem Wettbewerb für englische Reden teilnehmen?|Result: will you participate in the competition for english speeches ? <eos>|Target: Are you going to take part in the English speech contest?
+Source: Ich bin froh, dass du mich überredet hast, zu gehen.|Result: i am glad you have persuaded me to go . <eos>|Target: I'm glad you talked me into going.
+Source: In dem Zimmer befindet sich ein Schreibtisch.|Result: there is a desk in the room . <eos>|Target: There is a desk in this room.
+Source: Ich habe dir letzte Woche davon erzählt.|Result: i told you last week . <eos>|Target: I told you about this last week.
+Source: Ich hacke gerne Holz.|Result: i love wood . <eos>|Target: I like to chop wood.
+Source: Du musst besonders vorsichtig sein!|Result: you must be particularly careful ! <eos>|Target: You've got to be really careful.
+Source: Ich habe dieses Buch früher schon mal gelesen.|Result: i read this book earlier . <eos>|Target: I've read this book before.
+Source: Hatten Sie Freude daran?|Result: did you enjoy it ? <eos>|Target: Did you enjoy that?
+Source: Ich bin am ganzen Körper grün und blau.|Result: i am in the whole body green and blue . <eos>|Target: My whole body is black and blue.
+Source: Tom ist sehr stolz auf Maria, nicht wahr?|Result: tom is very proud of maria , not true ? <eos>|Target: Tom is very proud of Mary, isn't he?
+Source: Tom denkt, dass Mary ihren Koffer immer viel zu voll packt.|Result: tom thinks that mary always gets a lot too full . <eos>|Target: Tom thinks Mary always packs way too much in her suitcase.
+Source: Mir fehlten die Worte.|Result: i had no words . <eos> <eos>|Target: I was at a loss for words.
+Source: Es sieht aus wie Schnee.|Result: it looks like snow . <eos>|Target: It looks like snow.
+Source: Du schaust anders aus.|Result: you are different . <eos>|Target: You look different.
+Source: Ich spreche nicht sehr gut Französisch.|Result: i do not speak very well french . <eos>|Target: I don't speak French very well.
+Source: Tom ist auf dem Weg nach Hause, oder?|Result: tom is on the way home , or ? <eos>|Target: Tom is on his way home, isn't he?
+Source: Tom log.|Result: tom log . <eos>|Target: Tom was lying.
+Source: Ich ging nach draußen.|Result: i went outside . <eos>|Target: I went outside.
+Source: Ich habe das gerade erfahren.|Result: i have just learned that . <eos>|Target: I've just found out about it.
+Source: Sind genug Stühle für alle da?|Result: are there enough chairs for all ? <eos>|Target: Are there enough chairs here for everyone?
+Source: Ich kann dich verstehen.|Result: i can understand you . <eos>|Target: I can understand you.
+Source: Wie schädlich ist das Rauchen eigentlich?|Result: how damaging is smoking actually ? <eos>|Target: How bad is smoking really?
+Source: Er grub ein Loch im Garten.|Result: he grub a hole in the garden . <eos>|Target: He dug a hole in the garden.
+Source: Wir haben uns schon viele Male darüber unterhalten.|Result: we have discussed this many times . <eos>|Target: We've talked about this many times before.
+Source: Alles geschah gleichzeitig.|Result: everything happened at the same time . <eos>|Target: Everything happened at the same time.
+Source: Etwas Ähnliches ist Tom passiert.|Result: something similar happened to tom . <eos>|Target: Something similar happened to Tom.
+Source: Es fehlte Tom der Mut, mit Maria Schluss zu machen.|Result: tom had the courage to finish with maria . <eos>|Target: Tom didn't have the guts to break up with Mary.
+Source: Das hätte ich nie stehlen sollen.|Result: i should never have steal that . <eos>|Target: I should never have stolen that.
+Source: Sind Sie mit Ihrem Alltagsleben zufrieden?|Result: are you satisfied with your everyday life ? <eos>|Target: Are you satisfied with your daily life?
+Source: Hör auf, Tom zu entschuldigen!|Result: listen to tom to apologize ! <eos>|Target: Stop making excuses for Tom.
+Source: Das ist ein direkter Befehl.|Result: this is a direct command . <eos>|Target: That's a direct order.
+Source: Ich schaue jetzt gerade aus dem Fenster.|Result: i just look out of the window . <eos>|Target: I'm looking out the window right now.
+Source: Mir gefällt diese Statue.|Result: i like this statue . <eos>|Target: I like that statue.
+Source: Der 20. Oktober fällt auf einen Montag.|Result: 20 october is a monday . <eos>|Target: October 20th is a Monday.
+Source: Der Stuhl ist aus Holz.|Result: the chair is made of wood . <eos>|Target: The chair is made of wood.
+Source: Ist das nicht irgendwie eh klar?|Result: is this not clear in any way ? <eos>|Target: Isn't this kind of obvious?
+Source: Du sagtest, du würdest morgen arbeiten.|Result: you <unk> , you would work tomorrow . <eos>|Target: You said you were working tomorrow.
+Source: Du hast noch viel Arbeit vor dir.|Result: you still have much work before you . <eos>|Target: You've got a lot of work ahead of you.
+Source: Tom ist kein Lehrer.|Result: tom is not a teacher . <eos>|Target: Tom isn't a teacher.
+Source: Hast du irgendwelche Fotos von Tom?|Result: do you have any photos from tom ? <eos>|Target: Do you have any pictures of Tom?
+Source: Ich spiele gern Fußball.|Result: i love football . <eos>|Target: I like to play soccer.
+Source: Essen kostet Geld.|Result: food costs money . <eos>|Target: Food costs money.
+Source: Ich habe keine Ahnung, wovon du überhaupt sprichst.|Result: i have no idea what you are talking about . <eos>|Target: I have no clue what you're talking about.
+Source: Tom und Maria stiegen beide in den Wagen.|Result: tom and maria rose both in the car . <eos>|Target: Both Tom and Mary got in the car.
+Source: Lass die Kirche im Dorf stehen.|Result: let the church stand in the village . <eos>|Target: Don't get carried away.
+Source: Wie viele Leute sind auf dieser Party?|Result: how many people are on this party ? <eos>|Target: How many people are at this party?
+Source: Vor dem Kaufhaus befindet sich eine Buchhandlung.|Result: there is a library in front of the department store . <eos>|Target: There is a bookstore in front of the department store.
+Source: Tom hat erbrochen.|Result: tom has <unk> . <eos>|Target: Tom was sick.
+Source: Das ist wirklich das Problem.|Result: that is really the problem . <eos>|Target: This is really the problem.
+Source: Tom und Maria sind ein richtig gutes Gesangsduo.|Result: tom and maria are a good <unk> . <eos>|Target: Tom and Mary sing really well together.
+Source: Tom war sehr verständnisvoll.|Result: tom was very <unk> . <eos>|Target: Tom was very understanding.
+Source: Tom ist dankbar.|Result: tom is grateful . <eos>|Target: Tom is grateful.
+Source: Ich habe Sie nie belogen.|Result: i have never <unk> them . <eos>|Target: I never lied to you.
+Source: Mary ist die Schwester von Tom.|Result: mary is the sister of tom . <eos>|Target: Mary is Tom's sister.
+Source: Ihr Wagen gefällt mir.|Result: you like me . <eos>|Target: I like your car.
+Source: Industrialisierung geht oft mit Umweltverschmutzung einher.|Result: industrialization is often accompanied by pollution . <eos>|Target: Industrialization often goes hand in hand with pollution.
+Source: Darf ich bitte Ihren Führerschein sehen?|Result: can i see your driving licence ? <eos>|Target: Can I see your license, please?
+Source: Alle achten ihn.|Result: all respect him . <eos>|Target: Everybody looks up to him.
+Source: Tom hört nicht auf Maria.|Result: tom does not listen to maria . <eos>|Target: Tom isn't listening to Mary.
+Source: Wir haben keinen gesehen.|Result: we have not seen anything . <eos>|Target: We haven't seen anyone.
+Source: Ich erinnere mich nicht, diese SMS gesendet zu haben.|Result: i do not remember having sent this sms . <eos>|Target: I don't remember sending that text message.
+Source: Tom nahm Maria das Messer weg.|Result: tom took the knife away . <eos>|Target: Tom took the knife away from Mary.
+Source: Es dauert nur eine Sekunde.|Result: it takes only one second . <eos>|Target: It'll only take a second.
+Source: Eins der Kiddies hat das Schloss geknackt.|Result: one of the <unk> has broken the castle . <eos>|Target: One of the kids broke the lock.
+Source: Tom weiß nicht, wie tief der Pool ist.|Result: tom does not know how deep the pool is . <eos>|Target: Tom doesn't know how deep the pool is.
+Source: Mir tut der Kiefer weh.|Result: i am hurt by the pine . <eos>|Target: My jaw hurts.
+Source: Diese Regel gilt auch für dich.|Result: this rule also applies to you . <eos>|Target: This rule applies to you, too.
+Source: Schläfst du?|Result: <unk> you ? <eos>|Target: Are you sleeping?
+Source: Stell mich bitte einem süßen Mädchen vor.|Result: please imagine a sweet girl . <eos>|Target: Please introduce me to a cute girl.
+Source: Tom baute ein Vogelhaus.|Result: tom built a <unk> . <eos>|Target: Tom built a birdhouse.
+Source: Ich fühle mich wirklich nicht gut.|Result: i really do not feel good . <eos>|Target: I really don't feel good.
+Source: Sei vor Mitternacht zurück, oder du wirst ausgesperrt.|Result: be back before midnight or you will be <unk> . <eos>|Target: Get back before midnight or you will be locked out.
+Source: Wir haben in der Karaoke-Bar Schotschu getrunken.|Result: we have drunk in <unk> <unk> . <eos>|Target: We drank shochu at the karaoke bar.
+Source: Er ist abgelenkt.|Result: it is distracted . <eos>|Target: He is distracted.
+Source: Bezahl, was du möchtest.|Result: <unk> what you want . <eos>|Target: Pay what you want.
+Source: Ich möchte mehr über Boston erfahren.|Result: i would like to learn more about boston . <eos>|Target: I'd like to know more about Boston.
+Source: Er bat uns, mit ihm zu gehen.|Result: he asked us to go with him . <eos>|Target: He begged us to go with him.
+Source: Mary ist Toms Cousine.|Result: mary is <unk> <unk> . <eos>|Target: Mary is Tom's cousin.
+Source: Er war mehr als ein König.|Result: he was more than a king . <eos>|Target: He was more than a king.
+Source: Sieh zu, dass diese Tür abgeschlossen bleibt.|Result: see that this door remains closed . <eos>|Target: Make sure this door stays locked.
+Source: Tom wird bald hier sein.|Result: tom will soon be here . <eos>|Target: Tom is going to get here soon.
+Source: Sie müssen einen Strafverteidiger engagieren.|Result: they need to commit a <unk> . <eos>|Target: You need to hire an criminal defense lawyer.
+Source: Diese Schuhe passen nicht zu dem Anzug.|Result: these shoes do not match the suit . <eos>|Target: Those shoes don't go with that suit.
+Source: Pizza ist mein Leibgericht.|Result: pizza is my <unk> . <eos>|Target: Pizza is my favorite food.
+Source: Tom ist nicht so müde wie Maria.|Result: tom is not as tired as maria . <eos>|Target: Tom isn't as tired as Mary.
+Source: Tom ist Schlagzeuger.|Result: tom is drummer . <eos>|Target: Tom is a drummer.
+Source: Sprechen Sie Französisch?|Result: do you speak french ? <eos>|Target: Do you speak French?
+Source: Denk nicht lange nach – tu’s!|Result: remember not long – tu ’s ! <eos>|Target: Don't think about it. Do it.
+Source: Es funktioniert tatsächlich.|Result: it actually works . <eos>|Target: It really works.
+Source: Ich weiß, was ich will.|Result: i know what i want . <eos>|Target: I know what I want.
+Source: Meine Arbeit fängt gerade erst an.|Result: my work is just beginning . <eos>|Target: My work is just beginning.
+Source: Tom kocht gut.|Result: tom cook well . <eos>|Target: Tom cooks well.
+Source: Er ist alles andere als ein Narr.|Result: he is anything but a <unk> . <eos>|Target: He is anything but a fool.
+Source: Ich schätze deine Rücksichtnahme.|Result: i appreciate your consideration . <eos>|Target: I appreciate your thoughtfulness.
+Source: Irgendwie habe ich Appetit, aber es ist schon spät.|Result: somehow i have appetite , but it is already late . <eos>|Target: I kind of want to eat something, but it's already late.
+Source: Das gehört Tom.|Result: that belongs to tom . <eos>|Target: That's Tom's.
+Source: Er gibt jeden Tag dem Lehrer einen Apfel.|Result: he gives the teacher an apple every day . <eos>|Target: He gives an apple to the teacher every day.
+Source: Mit dir hätte ich hier als letztem gerechnet.|Result: i would have expected you to be here as last . <eos>|Target: You are the last person I expected to see here.
+Source: Ihr braucht euch nicht sofort zu entscheiden.|Result: you do not need to decide immediately . <eos>|Target: You don't have to make a decision now.
+Source: Ich kann das nicht essen.|Result: i can not eat that . <eos>|Target: I can't eat this.
+Source: Tom weiß, wer Maria ins Auto gebrettert ist.|Result: tom knows who is maria in the car . <eos>|Target: Tom knows who crashed into Mary's car.
+Source: Wir wollen so bald wie möglich los.|Result: we want to do so as soon as possible . <eos>|Target: We plan to leave as soon as possible.
+Source: Er hat keinen Fehler gemacht.|Result: he has not made any mistake . <eos>|Target: He did nothing wrong.
+Source: Ich habe dich dabei gesehen.|Result: i have seen you . <eos>|Target: I've seen you doing that.
+Source: Ich erinnere mich nicht an dich.|Result: i do not remember you . <eos>|Target: I don't remember you.
+Source: Es hat uns allen Freude gemacht.|Result: we have all enjoyed it . <eos>|Target: We all enjoyed it.
+Source: Ich werde dich lieben, bis ich sterbe.|Result: i will love you until i <unk> . <eos>|Target: I'll love you until I die.
+Source: Tom wusste nicht, mit wem Maria nach Boston fahren wollte.|Result: tom did not know who maria wanted to drive to boston . <eos>|Target: Tom didn't know who Mary wanted to go to Boston with.
+Source: Tom schaut wütend.|Result: tom looks angry . <eos>|Target: Tom looks furious.
+Source: Tom wird schnell langweilig.|Result: tom will quickly become boring . <eos>|Target: Tom becomes bored very easily.
+Source: Tom sah sehr beschäftigt aus.|Result: tom looked very busy . <eos>|Target: Tom looked really busy.
+Source: Du bist meine Freundin.|Result: you are my girlfriend . <eos>|Target: You're my girlfriend.
+Source: Qualitativ hochwertiges Obst ist im Winter selten und teuer.|Result: high quality fruit is rare and expensive in winter . <eos>|Target: Good quality fruit is scarce in the winter and it costs a lot.
+Source: Was hast du heute zu Mittag gegessen?|Result: what did you eat at noon today ? <eos>|Target: What did you have for lunch today?
+Source: Tom musste auf sein morgendliches Schwimmen aufgrund dessen, dass es zu kalt war, verzichten.|Result: tom had to take his <unk> swim because it was too cold . <eos> <eos> <eos>|Target: Tom had to forgo his morning swim, on account of it being too cold.
+Source: Sie werden nicht aufhören.|Result: they will not stop . <eos>|Target: They're not going to stop.
+Source: Ich glaube daran, dass Wissen Macht ist.|Result: i believe that knowledge is power . <eos>|Target: It's my belief that knowledge is power.
+Source: Tom weiß das nicht.|Result: tom does not know that . <eos>|Target: Tom doesn't know that.
+Source: Komme, wann immer du möchtest.|Result: come whenever you want . <eos>|Target: Come whenever you'd like.
+Source: Wie läuft die Arbeit?|Result: how is the work going on ? <eos>|Target: How's work?
+Source: Wird der Zug planmäßig ankommen?|Result: will the train arrive on schedule ? <eos>|Target: Will the train arrive on time?
+Source: Die Luft in diesem Raum ist sehr stickig.|Result: the air in this room is very <unk> . <eos>|Target: The air in this room's very stuffy.
+Source: Tom wurde mit einer Brechstange oder etwas Ähnlichem der Schädel eingeschlagen.|Result: tom was taken with a <unk> or something like the skull . <eos>|Target: Tom's head was smashed in with a crowbar or something similar.
+Source: Ich mag dir so etwas gesagt haben, aber ich kann mich überhaupt nicht mehr daran erinnern.|Result: i may have said something like this , but i can not remember it at all . <eos>|Target: I may have told you such a thing, but I don't remember it at all.
+Source: Tom ließ sich anwerben.|Result: tom was recruited . <eos>|Target: Tom enlisted.
+Source: Ich dachte, ich würde es ohne fremde Hilfe schaffen.|Result: i thought i would create it without foreign help . <eos>|Target: I thought I could do it without anybody's help.
+Source: Tom ist mit dem Bus in die Stadt gefahren.|Result: tom is in the city by bus . <eos>|Target: Tom went to the city by bus.
+Source: Tom hat gesagt, dass er nicht zu Marys Party geht.|Result: tom said he did not go to <unk> party . <eos>|Target: Tom said he isn't going to Mary's party.
+Source: Du hast wohl ein Anrecht darauf, es zu erfahren.|Result: you may be entitled to know it . <eos>|Target: I suppose you have the right to know.
+Source: Ich muss diesen Bericht bis spätestens 2.30 Uhr fertigschreiben.|Result: i must <unk> this report by <unk> p.m. <eos>|Target: I have to finish writing this report by 2:30.
+Source: Ich habe es niemandem gesagt, selbst Tom nicht.|Result: i did not tell anyone , even tom . <eos> <eos>|Target: I didn't tell anyone, not even Tom.
+Source: Du wirst es nicht glauben.|Result: you will not believe it . <eos>|Target: You're not going to believe this.
+Source: Öffne bitte die Tür.|Result: please open the door . <eos>|Target: Open the door, please.
+Source: Verfüge nie über Geld, ehe du es hast.|Result: never have money before you have it . <eos>|Target: Never spend your money before you have it.
+Source: Ich wünschte, du würdest mir vertrauen.|Result: i wish you would trust me . <eos>|Target: I wish you'd trust me.
+Source: Tom warnte Maria, dass seine Mutter eine Schwätzerin sei, die alles ihr Anvertraute weitererzähle.|Result: tom warned maria that his mother was a <unk> who <unk> all her <unk> . <eos>|Target: Tom warned Mary that his mother was a gossip who would repeat anything told to her in confidence.
+Source: Mir behagen freundliche Menschen.|Result: i <unk> friendly people . <eos>|Target: I like people who are friendly.
+Source: Tom arbeitet immer noch an seinem Computer.|Result: tom still works on his computer . <eos>|Target: Tom is still working at his computer.
+Source: Das Buch fiel auf den Boden.|Result: the book fell on the ground . <eos>|Target: The book fell to the floor.
+Source: Draußen warten drei Männer auf dich.|Result: three men are waiting for you outside . <eos>|Target: There are three men waiting for you outside.
+Source: Er ist auf einem Auge blind.|Result: he is blind to an eye . <eos>|Target: He is blind in one eye.
+Source: Ich habe meine alten Sachen weggegeben.|Result: i have <unk> my old stuff . <eos>|Target: I gave my old clothes away.
+Source: Warum haben Sie mich nicht eher angerufen?|Result: why did you not call me more ? <eos>|Target: Why didn't you call me sooner?
+Source: Schlaue Leute lernen aus ihren Fehlern.|Result: <unk> people learn from their mistakes . <eos>|Target: Smart people learn from their mistakes.
+Source: Tom bricht die Regeln.|Result: tom breaks the rules . <eos>|Target: Tom is breaking the rules.
+Source: Tom, liebst du mich noch?|Result: tom , do you love me ? <eos>|Target: Tom, do you still love me?
+Source: Ich half meinem Vater bei der Arbeit.|Result: i helped my father to work . <eos>|Target: I helped my father with the work.
+Source: Pass auf, wo du hingehst.|Result: pass on where you <unk> . <eos>|Target: Watch where you're going.
+Source: Ich möchte wirklich ein guter Lehrer sein.|Result: i really want to be a good teacher . <eos>|Target: I really want to be a good teacher.
+Source: Er war derjenige, der es vorgeschlagen hat.|Result: he was the one who proposed it . <eos>|Target: He was the one who suggested it.
+Source: Er hat das Geld gestohlen.|Result: he has stolen the money . <eos>|Target: He stole the money.
+Source: Es gab auf der Straße eine Umleitung.|Result: there was a diversion on the road . <eos>|Target: There was a detour on the road.
+Source: Sie fanden, wonach sie gesucht hatten.|Result: they found that they had sought . <eos>|Target: They found what they were looking for.
+Source: Beim Baseball ist der Pitcher der Spieler, der den Ball wirft.|Result: in baseball , the <unk> is the player who discards the ball . <eos>|Target: In baseball, the pitcher is the player who throws the ball.
+Source: Ich bin 2013 an der Hüfte operiert worden.|Result: i was operating at the hip in 2013 . <eos>|Target: I had hip surgery in 2013.
+Source: Tom sieht jeden Abend mit den Kindern zusammen fern.|Result: tom sees each evening with the children away . <eos>|Target: Tom watches TV with the kids every evening.
+Source: Ich habe keine Ahnung, wer Toms Ehefrau ist.|Result: i have no idea who is <unk> wife . <eos>|Target: I have no idea who Tom's wife is.
+Source: Es ist traurig, dass Tom nicht mehr bei uns ist.|Result: it is sad that tom is no longer with us . <eos>|Target: It's sad that Tom is no longer with us.
+Source: Ich kann die Kinder meiner Schwester nicht ausstehen!|Result: i can not stand for the children of my sister ! <eos>|Target: I can't stand my sister's kids.
+Source: Darf ich Ihren Füller für ein paar Minuten ausleihen?|Result: can i rent your <unk> for a few minutes ? <eos>|Target: Can I borrow your pen for a few minutes?
+Source: Hat Tom das versucht?|Result: has tom tried that ? <eos>|Target: Has Tom tried that?
+Source: Wir haben Pfannkuchen zum Frühstück gemacht.|Result: we made <unk> for breakfast . <eos>|Target: We made pancakes for breakfast.
+Source: Haben Tom und Maria jemanden gefunden, der auf Johannes aufpassen kann?|Result: have tom and maria found someone who can watch johannes ? <eos>|Target: Did Tom and Mary find a babysitter for John?
+Source: Ein rollender Stein setzt kein Moos an.|Result: a <unk> stone does not set a moss . <eos>|Target: A rolling stone gathers no moss.
+Source: Ich habe Kinder.|Result: i have children . <eos>|Target: I have kids.
+Source: Ich kann nicht alles behalten, was Tom mir erzählt hat.|Result: i can not keep everything that tom told me . <eos>|Target: I can't remember everything Tom told me.
+Source: Ich nehme an, du wirst dafür bezahlt.|Result: i assume you will pay for it . <eos>|Target: I assume that you're getting paid for this.
+Source: Tom darf nicht dorthin.|Result: tom must not be there . <eos>|Target: Tom isn't allowed to go there.
+Source: Wann hast du das letztemal jemandem gesagt, dass du ihn liebst?|Result: when did you tell someone that you love him ? <eos>|Target: When was the last time you told someone you loved them?
+Source: Tom will, dass Maria weiß, dass er sie leiden mag.|Result: tom wants maria to know that he likes to suffer . <eos>|Target: Tom wants Mary to know that he likes her.
+Source: Was ist das Unheimlichste, was Ihnen je passiert ist?|Result: what has happened to you ? <eos>|Target: What's the scariest thing that ever happened to you?
+Source: Die Katze ist sehr niedlich.|Result: the cat is very <unk> . <eos>|Target: The cat is very cute.
+Source: Ich fahre mit dem Rad zur Arbeit.|Result: i drive with the wheel to work . <eos>|Target: I bike to work.
+Source: Du bist alt genug, um auf deinen eigenen Füßen zu stehen.|Result: you are old enough to stand on your own feet . <eos>|Target: You're old enough to stand on your own feet.
+Source: Sieh Tom zu!|Result: see tom ! <eos>|Target: Watch Tom.
+Source: Sie hat mich gebissen.|Result: she <unk> me . <eos>|Target: It bit me.
+Source: Das war schwieriger, als ich erwartete.|Result: that was more difficult than i expected . <eos>|Target: That was more difficult than I expected.
+Source: Hat das Haus einen Garten?|Result: does the house have a garden ? <eos>|Target: Does the house have a garden?
+Source: Die Zeit wird’s zeigen.|Result: time will show . <eos>|Target: Time will tell.
+Source: Ich habe am Sonntag Zeit.|Result: i have time on sunday . <eos>|Target: I'm free on Sunday.
+Source: Hören Sie auf, mich zu belästigen!|Result: listen to <unk> me ! <eos>|Target: Quit bothering me.
+Source: Tom ist sehr freundlich.|Result: tom is very friendly . <eos>|Target: Tom is extremely friendly.
+Source: Tom fährt mit dem Bus zur Schule.|Result: tom goes to school by bus . <eos>|Target: Tom goes to school by bus.
+Source: Tom hat Hosenträger an.|Result: tom has <unk> . <eos>|Target: Tom is wearing suspenders.
+Source: Jetzt bin ich verwirrt.|Result: now i am confused . <eos>|Target: I'm confused now.
+Source: Ich höre sehr gerne den Glockenschlag einer Pendeluhr.|Result: i am delighted to hear the <unk> of a <unk> . <eos>|Target: I love to hear a grandfather clock chime.
+Source: Wir sind glücklich hier zu sein.|Result: we are happy to be here . <eos>|Target: We're happy to be here.
+Source: Könntest du mir bitte helfen?|Result: could you please help me ? <eos>|Target: Could you help me, please?
+Source: Ich möchte mit Tom sprechen.|Result: i would like to talk to tom . <eos>|Target: I'd like to speak to Tom.
+Source: Sehe ich dick aus?|Result: do i see dick ? <eos>|Target: Do I look fat?
+Source: Ich werde nie zu Feiern eingeladen.|Result: i will never be invited to celebrate . <eos>|Target: I never get invited to parties.
+Source: Maria ist noch schöner geworden.|Result: maria has become even more beautiful . <eos>|Target: Mary has become even more beautiful.
+Source: Wie lautet das Passwort?|Result: what is the password ? <eos>|Target: What's the password?
+Source: Tom sagte, er würde sich um mich kümmern.|Result: tom said he would take care of me . <eos>|Target: Tom said that he'll look after me.
+Source: Ich kann noch nicht schwimmen.|Result: i can not swim yet . <eos>|Target: I can't swim yet.
+Source: Er weiß, wie man Häuser verkauft.|Result: he knows how to sell houses . <eos>|Target: He knows how to sell houses.
+Source: Auf der Erde gibt es sieben Kontinente.|Result: there are seven continents on earth . <eos>|Target: There are seven continents on the earth.
+Source: Er hat viele Freunde.|Result: he has many friends . <eos>|Target: He has many friends.
+Source: Ich habe einen schnellen Wagen.|Result: i have a quick car . <eos>|Target: I have a fast car.
+Source: Ich mache das vielleicht.|Result: i may do so . <eos>|Target: I may do that.
+Source: Was ich gerne wissen möchte ist, wie Tom hierher kam.|Result: i would like to know how tom came here . <eos>|Target: What I want to know is how Tom got here.
+Source: Du solltest nicht auf diejenigen herabblicken, die weniger begünstigt sind als du.|Result: you should not go to those who are less favoured than you . <eos>|Target: You shouldn't look down on those who are less fortunate than you are.
+Source: Tom spielt gut Tennis.|Result: tom plays well tennis . <eos>|Target: Tom is good at tennis.
+Source: Es ist etwa eine halbe Stunde von hier entfernt.|Result: it is about half an hour from here . <eos>|Target: It's a good half hour away from here.
+Source: Irgendwas riecht hier gut.|Result: something is a good thing here . <eos>|Target: Something smells good.
+Source: Seid ihr auf dem Heimweg?|Result: are you on home ? <eos>|Target: Are you on your way home?
+Source: Tom will Apfelkuchen essen.|Result: tom wants to eat <unk> . <eos>|Target: Tom wants to eat some apple pie.
+Source: Tom verdankt seinen Erfolg seinen Eltern.|Result: tom owes his success to his parents . <eos>|Target: Tom owes his success to his parents.
+Source: Hast du das Huhn probiert?|Result: have you tried the chicken ? <eos>|Target: Have you tried the chicken?
+Source: Es ist heiß hier drinnen.|Result: it is hot here . <eos>|Target: It's hot in here.
+Source: Möchtest Du Toms Referenzen nicht sehen?|Result: do you not want to see <unk> references ? <eos>|Target: Wouldn't you like to see Tom's references?
+Source: Ich weiß, dass das schwerfällt.|Result: i know that this is difficult . <eos>|Target: I know that it's hard to do that.
+Source: Tom hat die Toilette sauber gemacht.|Result: tom made the toilet clean . <eos>|Target: Tom cleaned the toilet.
+Source: Tom behauptet, es sei meine Schuld gewesen.|Result: tom claims that it was my fault . <eos>|Target: Tom claims that it was my fault.
+Source: Na, worauf wartest du?|Result: well , what are you doing ? <eos>|Target: So, what're you waiting for?
+Source: Ich mag Hunde nicht.|Result: i do not like dogs . <eos>|Target: I don't like dogs.
+Source: Da ist ein Laden gleich schräg gegenüber auf der anderen Straßenseite.|Result: there is a store right opposite the other side of the road . <eos>|Target: There's a convenience store diagonally across the street.
+Source: Tom konnte nicht einschlafen.|Result: tom could not sleep . <eos>|Target: Tom couldn't fall asleep.
+Source: Lass es uns versuchen!|Result: let us try ! <eos>|Target: Let's try!
+Source: Tom scheint einen Herzinfarkt zu haben.|Result: tom seems to have a heart attack . <eos>|Target: Tom seems to be having a heart attack.
+Source: Terroristen jagten einen Bus in die Luft.|Result: terrorists <unk> a bus into the air . <eos>|Target: Terrorists blew up a bus.
+Source: Wenn Ihr Magen damit beschäftigt ist, eine schwere Mahlzeit zu verdauen, dann ist Ihr Gehirn im Urlaub.|Result: when your stomach is busy <unk> a heavy meal , your brain is on holiday . <eos>|Target: When your stomach is busy, digesting a big meal your brain takes a vacation.
+Source: Sie sind auf uns losgegangen.|Result: they are on us . <eos>|Target: They've turned on us.
+Source: Deine Nase läuft.|Result: your nose is running . <eos>|Target: Your nose is running.
+Source: Das nennst du einen Kuss?|Result: do you have a <unk> ? <eos>|Target: Do you call that a kiss?
+Source: Ich habe deinen Brief erhalten.|Result: i have received your letter . <eos>|Target: I received your letter.
+Source: Was habe ich getan?|Result: what have i done ? <eos>|Target: What did I do?
+Source: Weiß Tom, dass ich hier bin?|Result: does tom know that i am here ? <eos>|Target: Does Tom know that I'm here?
+Source: Ich gab Tom auch eins.|Result: i also gave tom one . <eos>|Target: I gave one to Tom, too.
+Source: Wie weit ist es von hier zum Museum?|Result: how far is it from here to the museum ? <eos>|Target: How far is it from here to the museum?
+Source: Wo haben Sie sich versteckt?|Result: where did you hide ? <eos>|Target: Where were you hiding?
+Source: Suchen Sie weiter!|Result: look further ! <eos>|Target: Keep looking.
+Source: Tom kandidierte für das Bürgermeisteramt.|Result: tom <unk> for the <unk> . <eos>|Target: Tom ran for mayor.
+Source: Es gibt bei ihm kaum Hoffnung auf Genesung.|Result: there is little hope in him for recovery . <eos>|Target: There is little hope of his recovery.
+Source: Tom hat doch vor, an dem Wettbewerb teilzunehmen, oder?|Result: tom will have to participate in the competition , or ? <eos>|Target: Tom is planning on entering the competition, right?
+Source: Tom ist ein sehr eifersüchtiger Mann.|Result: tom is a very <unk> man . <eos>|Target: Tom is a very jealous man.
+Source: Das Signal war rot.|Result: the signal was red . <eos>|Target: The signal was red.
+Source: Der Vulkan ist heuer zweimal ausgebrochen.|Result: the volcano broke out twice this year . <eos>|Target: The volcano has erupted twice this year.
+Source: Ehrlich gesagt ist es schwer zu erklären|Result: frankly , it is difficult to explain . <eos> <eos>|Target: Actually, it's hard to explain.
+Source: Ich wartete auf eine Entschuldigung von Tom, aber die kam nicht.|Result: i waited for an apology from tom , but that did not come . <eos>|Target: I waited for Tom to apologize, but he didn't.
+Source: In meinem Beutel sind Erdbeeren.|Result: in my bag are strawberries . <eos>|Target: There are strawberries in my bag.
+Source: Tom hält es für falsch, was ich getan habe.|Result: tom considers it wrong what i have done . <eos>|Target: Tom thinks what I did was wrong.
+Source: Tom dachte, er hätte das perfekte Versteck für seine Goldmünzen gefunden, aber er irrte sich.|Result: tom thought he had found the perfect hiding place for his <unk> , but he <unk> himself . <eos>|Target: Tom thought where he put his gold coins was the perfect hiding place. However, he was wrong.
+Source: Wie es bei Amerikanern oft der Fall ist, macht er sich nichts aus rohem Fisch.|Result: as is often the case with americans , he is not doing anything from <unk> fish . <eos>|Target: As is often the case with Americans, he does not care for raw fish.
+Source: Ich habe zwei Söhne und zwei Töchter.|Result: i have two sons and two daughters . <eos>|Target: I have two sons and two daughters.
+Source: Ich erledige das später, wenn ich nicht so beschäftigt bin.|Result: i <unk> this later if i am not so busy . <eos>|Target: I'll do that later when I'm not so busy.
+Source: Tom braucht sich keine Sorgen zu machen.|Result: tom does not need to worry . <eos>|Target: Tom doesn't have to worry.
+Source: Sobald ich meinen Sohn dazu gebracht habe, unsere Familienfotos einzulesen, lade ich ein paar davon auf unsere Seite hoch.|Result: once i brought my son to <unk> our <unk> , i invite some of them to our site . <eos>|Target: As soon as I can get my son to scan our family photos, I'll upload some of them to our website.
+Source: Das ist das letzte, woran ich mich erinnere.|Result: that is the last thing i remember . <eos>|Target: That's the last thing I remember.
+Source: Dann versuch mal dein Glück!|Result: then try your luck ! <eos>|Target: Take your shot.
+Source: Tom sieht keinen Vorteil in der von dir vorgeschlagenden Methode.|Result: tom sees no advantage in the method you use . <eos>|Target: Tom doesn't think there is any advantage of doing it the way you suggest we do it.
+Source: Warum ist das so wichtig?|Result: why is this so important ? <eos>|Target: Why is it so important?
+Source: Was ich Ihnen gestern sagte, stimmte nicht.|Result: what i said yesterday did not vote . <eos>|Target: What I told you yesterday wasn't true.
+Source: Ich fühle mich erquickt.|Result: i feel <unk> . <eos>|Target: I feel refreshed.
+Source: Danke, Tom! Auch dir danke, Maria!|Result: thank you , tom ! <eos>|Target: Thank you, Tom. And thank you too, Mary.
+Source: Sprechen Sie gut Französisch?|Result: do you speak well french ? <eos>|Target: Are you good at speaking French?
+Source: Du hast mir den Kopf verdreht.|Result: you have <unk> my head . <eos>|Target: You made me lose my mind.
+Source: Ich geriet plötzlich in große Sorge.|Result: i suddenly became very concerned . <eos>|Target: I was suddenly very worried.
+Source: Dieser Raum wird sich bald erwärmen.|Result: this space will soon warm up . <eos>|Target: This room will soon heat up.
+Source: Musst du samstags zur Schule?|Result: have you got to school on saturday ? <eos>|Target: Do you have to go to school on Saturdays?
+Source: Es ist fast perfekt.|Result: it is almost perfect . <eos>|Target: It's almost perfect.
+Source: Ich will speziell nirgendwohin.|Result: i want to make a special point . <eos>|Target: I don't want to go anywhere in particular.
+Source: Tom und ich saßen im Flugzeug nebeneinander.|Result: tom and i sat together in the plane . <eos>|Target: Tom and I sat next to each other on the plane.
+Source: Du fängst an, mich aufzuregen.|Result: you <unk> me . <eos>|Target: You're starting to annoy me.
+Source: Schließlich ist mein Wunsch wahr geworden.|Result: finally , my wish has become true . <eos>|Target: At last, my wish has come true.
+Source: Ich fragte Tom, ob er jemanden kenne, der Französischunterricht gibt.|Result: i asked tom if he knows someone who gives <unk> . <eos>|Target: I asked Tom if he knew anybody who taught French.
+Source: Wir müssen die Ladung verringern.|Result: we must reduce the charge . <eos>|Target: We have to lighten the load.
+Source: Sie kam von dort heraus.|Result: it came from there . <eos>|Target: She came out of there.
+Source: Das wussten wir.|Result: we knew that . <eos>|Target: We knew this.
+Source: Ist es schon fünf?|Result: is it five ? <eos>|Target: Is it five already?
+Source: Tom konnte seine Brille nicht wiederfinden.|Result: tom could not find his glasses . <eos>|Target: Tom couldn't find his glasses.
+Source: In der Regel haben Zwillinge viel gemeinsam.|Result: generally , twins have a lot of common . <eos> <eos>|Target: As a rule, twins have a lot in common.
+Source: Es ist nichts Neues.|Result: it is nothing new . <eos>|Target: It isn't new.
+Source: Tom hat uns alles gegeben, was er hatte.|Result: tom gave us everything he had . <eos>|Target: Tom gave us everything he had.
+Source: Deshalb wurde er ärgerlich.|Result: it was therefore annoying . <eos>|Target: That is why he got angry.
+Source: Die Tür schließt nach dem Rausgehen automatisch.|Result: the door automatically closes after the <unk> . <eos>|Target: The door will lock automatically when you go out.
+Source: Warum muss ich das immer tun?|Result: why must i always do so ? <eos>|Target: Why do I always have to do that?
+Source: Es war verrückt.|Result: it was crazy . <eos>|Target: It was crazy.
+Source: Ich bin mir nicht sicher, ob ich das anfassen will.|Result: i am not sure i want to touch this . <eos>|Target: I'm not sure that I want to touch that.
+Source: Tom ist einige Zentimeter größer als Maria.|Result: tom is a few centimeters larger than maria . <eos>|Target: Tom is a few inches taller than Mary.
+Source: Meine Frau beklagt sich dauernd über alles.|Result: my wife is constantly complaining about everything . <eos>|Target: My wife is always complaining about something.
+Source: Ein Satz muss nicht lang sein, um schön zu sein.|Result: a sentence must not be long to be beautiful . <eos>|Target: A sentence doesn't have to be long to be beautiful.
+Source: Ich bin Toms neue Sekretärin.|Result: i am <unk> new secretary . <eos>|Target: I'm Tom's new secretary.
+Source: Ich gehe erst, wenn Sie mir sagen, was Sie wissen.|Result: i only go when you tell me what you know . <eos>|Target: I'm not leaving until you tell me what I want to know.
+Source: Das ist nicht, was ich gehört habe.|Result: that is not what i have heard . <eos>|Target: That's not what I've heard.
+Source: Ich hatte gute Gründe, das zu tun.|Result: i had good reasons to do so . <eos>|Target: I had a good reason to do that.
+Source: Bitte denk daran, die Briefe abzuschicken.|Result: please remember to write the letters . <eos>|Target: Please remember to mail the letters.
+Source: Tom ist vermutlich der begabteste Künstler Amerikas.|Result: tom is probably america ’s most talented artist . <eos>|Target: Tom is probably America's most talented artist.
+Source: Das Flugzeug flog über den Fuji.|Result: the aircraft flew over fuji . <eos>|Target: The plane flew over Mt. Fuji.
+Source: Tom ist froh, nicht in deiner Haut zu stecken.|Result: tom is happy not to put in your skin . <eos>|Target: Tom is happy not to be in your shoes.
+Source: Er hat Wein.|Result: he has wine . <eos>|Target: He has wine.
+Source: Danke für den Hinweis!|Result: thank you for your comment . <eos>|Target: Thanks for the tip.
+Source: Ich bin in einer Sekunde bei dir.|Result: i am in a second with you . <eos>|Target: I'll be with you in a sec.
+Source: Tom legt seine Wäsche zusammen.|Result: tom puts his linen together . <eos>|Target: Tom is folding his laundry.
+Source: Tom, ich muss mich bei dir entschuldigen.|Result: tom , i must apologize to you . <eos>|Target: Tom, I owe you an apology.
+Source: Danke, dass du mir das gegeben hast.|Result: thank you for giving me that . <eos>|Target: Thank you for giving this to me.
+Source: Ich wünschte, Sie wären hier bei mir.|Result: i wish you were here with me . <eos>|Target: I wish you were here with me.
+Source: Du bist gesprächig.|Result: you are <unk> . <eos>|Target: You're talkative.
+Source: Was ist dein Lieblingskochbuch?|Result: what is your <unk> ? <eos>|Target: What's your favorite cookbook?
+Source: Geben Sie mehr Wasser dazu.|Result: give more water . <eos>|Target: Add more water.
+Source: Musste das wirklich sein?|Result: did that really have to be ? <eos>|Target: Did you really have to do this?
+Source: Tom sah den Kindern beim Spielen zu.|Result: tom saw the children playing . <eos>|Target: Tom watched the children play.
+Source: Vielen Dank, dass du mich eingeladen hast!|Result: thank you for inviting me ! <eos>|Target: Thank you so much for inviting me.
+Source: Sie bekam Angst, als sie wahrnahm, dass der Mann ihr hinterherging.|Result: she got fear when she <unk> that the man <unk> her . <eos>|Target: She became scared when she noticed the man following her.
+Source: Wann kommt Tom?|Result: when will tom come ? <eos>|Target: When is Tom coming?
+Source: Ich wollte dir eigentlich schreiben, aber ich hab’s vergessen.|Result: i wanted to write you , but i forgot . <eos> <eos>|Target: I was going to write to you, but I forgot.
+Source: Dieses Gebäude hat oft den Besitzer gewechselt.|Result: this building has often changed the owner . <eos>|Target: That building has changed hands many times.
+Source: Was trinkt ihr?|Result: what does it drink ? <eos>|Target: What are you guys drinking?
+Source: Tom hat versprochen, dass er das nicht mehr tut.|Result: tom promised that he did not do so anymore . <eos>|Target: Tom has promised he won't do that anymore.
+Source: Ich bin an Tom nicht interessiert.|Result: i am not interested in tom . <eos>|Target: I'm not interested in Tom.
+Source: Ich versuche, mehr Gemüse zu essen.|Result: i try to eat more vegetables . <eos>|Target: I'm trying to eat more vegetables.
+Source: Das Problem hatte ich noch nie.|Result: i never had the problem . <eos>|Target: I've never had that problem before.
+Source: Tom braucht es nicht zu wissen.|Result: tom does not need to know . <eos>|Target: Tom doesn't have to know.
+Source: Ich wusste, dass das passieren würde.|Result: i knew that would happen . <eos>|Target: I knew it was going to happen.
+Source: Sagst du mir auch die Wahrheit?|Result: do you tell me the truth ? <eos>|Target: Are you telling me the truth?
+Source: Ich denke nicht, dass Technik uns mit allem versorgt, was wir brauchen.|Result: i do not think technology provides us with everything we need . <eos>|Target: I don't think that technology provides us with everything we need.
+Source: Ich habe mir gestern beim Frisör die Haare schneiden lassen.|Result: yesterday i cut the hair at the <unk> . <eos>|Target: I had my hair cut at the barber shop yesterday.
+Source: Ich bringe euch alle um!|Result: i bring you all around ! <eos>|Target: I'll kill all of you.
+Source: Wir dürfen hier nicht schwimmen.|Result: we must not swim here . <eos>|Target: We're not allowed to swim here.
+Source: Ich bin stolz, an diesem Projekt teilzuhaben.|Result: i am proud to participate in this project . <eos>|Target: I am proud to be a part of this project.
+Source: Als ich ein Kind war, schwamm ich immer in dem Teich dort.|Result: when i was a child i always <unk> in the pond there . <eos>|Target: When I was a child, I used to swim in that pond.
+Source: Weil Tom seinen Schirm vergessen hatte, lieh ich ihm meinen.|Result: because tom forgot his screen , i gave him my name . <eos>|Target: Tom forgot his umbrella, so I lent him mine.
+Source: Tom und Maria schworen sich unvergängliche Liebe.|Result: tom and maria <unk> love . <eos>|Target: Tom and Mary declared their undying love for one another.
+Source: Ich sehe dich nie, ohne an meine Mutter zu denken.|Result: i never see you without thinking about my mother . <eos>|Target: I never see you without thinking of my mother.
+Source: Ich freue mich, dass ihr das bemerkt habt.|Result: i am glad you have noticed that . <eos>|Target: I'm glad you noticed.
+Source: Sie besitzt zweitausend Bücher.|Result: it has two thousand books . <eos>|Target: She owns two thousand books.
+Source: Ihr Glaube an Gott ist unerschütterlich.|Result: their faith in god is <unk> . <eos>|Target: Her faith in God is unshaken.
+Source: Tom scheint gewonnen zu haben.|Result: tom seems to have won . <eos>|Target: Tom seems to have won.
+Source: Wir taten alles für das Wohl unserer Kinder.|Result: we did everything for the well - being of our children . <eos>|Target: We did everything for the welfare of our children.
+Source: Die Studenten sind 18 bis 25 Jahre alt.|Result: students are 18 to 25 years old . <eos>|Target: The students range in age from 18 to 25.
+Source: Wir haben zu tun.|Result: we have to do . <eos>|Target: We've got work to do.
+Source: Um wie viel Uhr ist dein Flug nach Hause?|Result: at what time is your flight home ? <eos>|Target: What time is your flight home?
+Source: Ich möchte mich bei meinen Verwandten in der Heimat melden.|Result: i want to report to my relatives in the home country . <eos>|Target: I want to get in touch with my relatives back home.
+Source: Ich möchte diesen Anzug reinigen lassen.|Result: i want to clean this suit . <eos>|Target: I'd like to have this suit cleaned.
+Source: Ich habe jede Menge zu tun.|Result: i have a lot to do . <eos>|Target: I have a ton of stuff to do.
+Source: Ich habe die richtige Entscheidung getroffen.|Result: i have taken the right decision . <eos>|Target: I made the right decision.
+Source: Tom meinte, er werde das nicht tun.|Result: tom said he will not do so . <eos>|Target: Tom told me he isn't going to do that.
+Source: Man erwartet nicht, dass Tom gewinnt.|Result: you do not expect tom to win . <eos>|Target: Tom isn't expected to win.
+Source: Er ist nicht bereit.|Result: it is not ready . <eos>|Target: He's not ready.
+Source: Tom sieht unbehaglich aus.|Result: tom looks <unk> . <eos>|Target: Tom looks uneasy.
+Source: Tom sagte, er höre jemanden schnarchen.|Result: tom said he heard someone <unk> . <eos>|Target: Tom said he heard somebody snoring.
+Source: Der Vertrag ist in trockenen Tüchern, also lasst uns das begießen.|Result: the contract is in dry <unk> so let us get the <unk> . <eos>|Target: The contract is in the bag, so let's go out and celebrate.
+Source: Was wird jetzt mit uns geschehen?|Result: what will happen now with us ? <eos>|Target: What'll happen to us now?
+Source: Sie sahen eine Katze den Baum hinaufklettern.|Result: they saw a cat <unk> the tree . <eos>|Target: They saw a cat climbing up the tree.
+Source: Was könnte ich Tom wohl zum Geburtstag schenken?|Result: what could i give tom a birthday ? <eos>|Target: What could I give Tom for his birthday?
+Source: Auf sein Versprechen kann man sich nicht verlassen.|Result: you can not rely on his promise . <eos>|Target: His promise cannot be relied on.
+Source: Ich war tief beeindruckt von seinem Mut.|Result: i was deeply impressed by his courage . <eos>|Target: I was deeply impressed with his courage.
+Source: Was du sagst, ergibt keinen Sinn.|Result: what you say does not make sense . <eos>|Target: You aren't making sense.
+Source: Ich fahre mit dem Fahrrad zur Arbeit.|Result: i drive by bike to work . <eos>|Target: I ride a bike to work.
+Source: Es ist Zeit, in die Schule zu gehen.|Result: it is time to go to school . <eos>|Target: It's time to go to school.
+Source: Die Reparatur meines Fahrrads hat mich fünftausend Yen gekostet.|Result: repair of my <unk> has cost me five thousand yen . <eos>|Target: It cost me 5,000 yen to repair my bicycle.
+Source: Die Kinder spielen mit Spielsachen.|Result: children play with toys . <eos>|Target: The children are playing with toys.
+Source: Lasst uns mit dem Auto fahren.|Result: let us drive by car . <eos>|Target: Let's go by car.
+Source: Friss nicht wie ein Schwein!|Result: <unk> not like a pig ! <eos>|Target: Don't eat like a pig.
+Source: Du wusstest, dass ich hier war.|Result: you know that i was here . <eos>|Target: You knew I was here.
+Source: Jedenfalls könnt ihr ganz beruhigt sein.|Result: in any case , you can rest assured . <eos>|Target: In any case, you don't need to worry.
+Source: Ich sehe mir das mal an.|Result: i see this time . <eos>|Target: Let me look into it.
+Source: Lassen Sie uns versuchen, das Rätsel zu lösen.|Result: let us try to solve the mystery . <eos>|Target: Let's try to solve the riddle.
+Source: Ich bin dir nicht mehr böse.|Result: i am no longer evil to you . <eos>|Target: I'm no longer angry at you.
+Source: Scher dich weg!|Result: get away ! <eos>|Target: Beat it.
+Source: Ich mag Pizza.|Result: i like pizza . <eos>|Target: I like pizza.
+Source: Ich denke über eine Lösung nach.|Result: i think about a solution . <eos>|Target: I'm trying to figure out a solution.
+Source: Mein Vater und meine Mutter saßen unter einem Baum.|Result: my father and my mother sat under a tree . <eos>|Target: My father and mother were sitting under a tree.
+Source: Die Gebäude sehen so winzig aus.|Result: the buildings are so tiny . <eos>|Target: The buildings look so tiny.
+Source: Tom schoss ein weiteres Mal auf die Krähe und verfehlte sie erneut.|Result: tom shot again on the <unk> and failed again . <eos>|Target: Tom took another shot at the crow, but missed again.
+Source: Wie viel habt ihr bezahlt?|Result: how much have you paid ? <eos>|Target: How much did you pay?
+Source: Viele Gemälde hängen in Kunstmuseen.|Result: many paintings hang in <unk> . <eos>|Target: Many paintings hang in art museums.
+Source: Ich weiß, dass ihr reich seid.|Result: i know that you are rich . <eos>|Target: I know you're rich.
+Source: Ich will meine Eltern nicht enttäuschen.|Result: i do not want to disappoint my parents . <eos>|Target: I don't want to be a disappointment to my parents.
+Source: Ich möchte nicht, dass Sie schreien.|Result: i do not want you to cry . <eos>|Target: I don't want you to scream.
+Source: Ich mag nicht darüber nachdenken.|Result: i do not think about it . <eos>|Target: I don't like to think about it.
+Source: Ich kann kein Bier mehr trinken.|Result: i can no longer drink beer . <eos>|Target: I can't drink any more beer.
+Source: Er wird sich um meine Katzen kümmern, während ich im Ausland bin.|Result: he will look after my cats while i am abroad . <eos>|Target: He will look after the cats for me while I'm abroad.
+Source: Glauben Sie, das kümmert mich?|Result: do you think that takes care of me ? <eos>|Target: Do you think I care?
+Source: Sie können jetzt keinen Rückzieher machen.|Result: you can not go back now . <eos>|Target: You can't back out now.
+Source: Es ist der 20. Oktober.|Result: it is 20 october . <eos>|Target: It's the 20th of October.
+Source: Ich sollte eine Reservierung vornehmen lassen.|Result: i should make a reservation . <eos>|Target: I should make a reservation.
+Source: Tom war sehr verängstigt.|Result: tom was very <unk> . <eos>|Target: Tom was very terrified.
+Source: Jemand hat ein Blatt aus diesem Buch herausgerissen.|Result: someone has <unk> a sheet from this book . <eos>|Target: Someone's torn a page out of this book.
+Source: Ich weiß, dass Tom ehrgeizig ist.|Result: i know tom is ambitious . <eos>|Target: I know that Tom is ambitious.
+Source: Tom ist drei Jahre jünger als ich.|Result: tom is three years younger than me . <eos>|Target: Tom is three years younger than I am.
+Source: Sie sind mit dem Abwaschen an der Reihe.|Result: they are with the <unk> . <eos> <eos>|Target: It's your turn to wash up.
+Source: Im Inneren der Höhle fühlte ich mich sicher.|Result: inside the cave i felt safe . <eos>|Target: I felt safe inside the cave.
+Source: Wie werdet ihr mit dem ganzen Druck fertig?|Result: how will you deal with all the pressure ? <eos>|Target: How do you handle all of the pressure?
+Source: Ich glaube, dass die Zeit jetzt gekommen ist.|Result: i think the time has come . <eos>|Target: I think now is the time.
+Source: Alle Blätter des Baums sind gelb geworden.|Result: all leaves of the <unk> have become yellow . <eos>|Target: All of the tree's leaves turned yellow.
+Source: Ich habe nichts weiter zu sagen.|Result: i have nothing more to say . <eos>|Target: I have nothing further to say.
+Source: Ich glaubte ihnen nicht.|Result: i did not believe them . <eos>|Target: I didn't believe them.
+Source: Komm rein. Es ist kalt draußen.|Result: it is cold outside . <eos>|Target: Come in. It's cold outside.
+Source: Pack deine Sachen und geh!|Result: pack your things and go ! <eos>|Target: Pack your stuff and go.
+Source: Mir war plötzlich sehr seltsam zumute.|Result: i was suddenly very strange . <eos>|Target: I suddenly felt really strange.
+Source: Ich glaube, wir haben ein neues Problem.|Result: i think we have a new problem . <eos>|Target: I think we've got a new problem.
+Source: Mary ist Toms erste und einzige Liebe.|Result: mary is <unk> first and only love . <eos>|Target: Mary is Tom's first and only love.
+Source: Tom hat jetzt sicher mehr zu tun als letztes Jahr.|Result: tom certainly has more to do than last year . <eos>|Target: Tom must be busier now than he was last year.
+Source: Ich habe viele Freunde.|Result: i have many friends . <eos>|Target: I've got a lot of friends.
+Source: Meine Eltern streiten schon wieder.|Result: my parents are arguing again . <eos>|Target: My parents are fighting again.
+Source: Wir sind jetzt alle ein Team.|Result: we are now all a team . <eos>|Target: We're all a team now.
+Source: Tom ist deutlich jünger als Mary.|Result: tom is much younger than mary . <eos>|Target: Tom is much younger than Mary.
+Source: Tom war einfach zur falschen Zeit am falschen Ort.|Result: tom was simply in the wrong place at the wrong time . <eos>|Target: Tom was simply in the wrong place at the wrong time.
+Source: Ich habe von Thomas niemals eine Antwort bekommen.|Result: i never received an answer from thomas . <eos>|Target: I never got a reply from Tom.
+Source: Ich will, dass du die Dinge endlich ernst nimmst.|Result: i want you finally to take things seriously . <eos>|Target: I want you to start taking things seriously.
+Source: Ich spreche kein Schwedisch.|Result: i do not speak swedish . <eos>|Target: I don't speak Swedish.
+Source: In jener Nacht verließ Tom erst spät die Stadt, um zu vermeiden, dass er festgenommen würde.|Result: in that night tom left the city late to avoid being arrested . <eos>|Target: Tom left the city late that night to avoid getting arrested.
+Source: Es ist eine ziemlich große Nummer.|Result: it is a fairly large number . <eos>|Target: It is quite a big number.
+Source: Tom wies auf meinen Fehler hin.|Result: tom pointed out my mistake . <eos>|Target: Tom pointed out my mistake.
+Source: Eine gute Kommunikation und gegenseitiger Respekt sind die wesentlichen Bestandteile erfolgreicher Zusammenarbeit.|Result: good communication and mutual respect are the essential elements of successful cooperation . <eos>|Target: Effective communication and mutual respect are essential elements of successful teamwork.
+Source: Tom und Maria unterhielten sich die ganze Nacht lang mit Johannes und Elke.|Result: tom and maria spent the night with johannes and elke . <eos>|Target: Tom and Mary spent the night talking with John and Alice.
+Source: Jetzt sollte man nur abwarten.|Result: now we should wait . <eos>|Target: All you have to do is wait and see.
+Source: Ich muss etwas essen gehen.|Result: i have to eat . <eos>|Target: I need to go eat something.
+Source: Du arbeitest mit.|Result: you are working with . <eos>|Target: You're cooperating.
+Source: Ich liebe Erdbeeren.|Result: i love strawberries . <eos>|Target: I love strawberries.
+Source: Stille macht manche Leute nervös.|Result: silence makes some people nervous . <eos>|Target: Silence makes some people nervous.
+Source: Der Skandal beschädigte die Reputation des Unternehmens.|Result: the scandal damaged the company 's reputation . <eos>|Target: The scandal hurt the company's reputation.
+Source: Morgen wirst du zu tun haben.|Result: tomorrow you will have to do . <eos>|Target: You'll be busy tomorrow.
+Source: Ihr werdet dort rechtzeitig ankommen, sofern ihr nicht den Zug verpasst.|Result: you will arrive in time if you do not miss the train . <eos>|Target: You'll get there in time, so long as you don't miss the train.
+Source: Man weiß nicht, warum sie sich umgebracht hat.|Result: they do not know why they have killed themselves . <eos>|Target: The reason she killed herself is unknown.
+Source: Alle Busse sind voll.|Result: all buses are full . <eos>|Target: Every bus is full.
+Source: Tom hörte den Alarm.|Result: tom heard the alarm . <eos>|Target: Tom heard the alarm.
+Source: Es ist überhaupt nicht klar.|Result: it is not clear at all . <eos>|Target: It isn't at all clear.
+Source: Sie ist vertraut mit japanischer Geschichte.|Result: she is familiar with japanese history . <eos>|Target: She is familiar with Japanese history.
+Source: Haben Sie dieses Buch gelesen?|Result: have you read this book ? <eos>|Target: Have you read that book?
+Source: Wo nimmst du die Zeit her?|Result: where do you take the time ? <eos>|Target: Where do you find the time?
+Source: Was habe ich dir gesagt?|Result: what have i said to you ? <eos>|Target: What have I told you?
+Source: Ich kann meinen Mitbewohner nicht ausstehen.|Result: i can not stand by my <unk> . <eos>|Target: I can't stand my roommate.
+Source: Tom behauptet, er könne schwimmen.|Result: tom claims he could swim . <eos>|Target: Tom claims he can swim.
+Source: Ich habe mich für mein Verhalten entschuldigt.|Result: i apologise for my behaviour . <eos>|Target: I apologized for my behavior.
+Source: Er lebt in Tokio.|Result: he lives in tokyo . <eos>|Target: He lives in Tokyo.
+Source: Ich möchte ein Zimmer mit Dusche.|Result: i want a room with shower . <eos>|Target: I want a room with a shower.
+Source: „Noch Kaffee?“ – „Nein, danke.“|Result: ‘ coffee ? ’ – ‘ no , thank you ’ . <eos>|Target: "More coffee?" "No, thanks."
+Source: Mein Ehemann und ich pflegten gemeinsam bergsteigen zu gehen.|Result: my husband and i used to walk together . <eos>|Target: My husband and I used to go mountain climbing together.
+Source: Du brauchst das nicht zu machen.|Result: you do not need to do so . <eos>|Target: You don't need to do this.
+Source: Ich muss zum Abendessen zu Hause sein.|Result: i must be at home for dinner . <eos>|Target: I have to be home for dinner.
+Source: Es gibt keine Antwort auf eure Frage.|Result: there is no answer to your question . <eos>|Target: There is no answer to your question.
+Source: Ich bin gerade ein wenig nervös.|Result: i am just a little nervous . <eos>|Target: I'm a bit nervous right now.
+Source: Ich hätte mir von Tom nicht so viel Geld leihen sollen.|Result: i should not have lend so much money from tom . <eos>|Target: I shouldn't have borrowed so much money from Tom.
+Source: Gegen wen trete ich an?|Result: who do i oppose ? <eos>|Target: Who's my opponent?
+Source: Maria ist ein Landmädchen.|Result: maria is a <unk> . <eos>|Target: Mary is a country girl.
+Source: Tom ist weitaus zufriedener, seit er die Arbeit gewechselt hat.|Result: tom is much more satisfied since he has changed the work . <eos>|Target: Tom is a lot happier since he changed jobs.
+Source: Der Junge hat ein Buch gekauft.|Result: the boy bought a book . <eos>|Target: The boy bought a book.
+Source: Es ist nicht leicht.|Result: it is not easy . <eos>|Target: It isn't easy.
+Source: Obwohl es gegen die Firmengrundsätze verstößt, küssen und umarmen sich Tom und Maria bei jeder Begegnung.|Result: although it infringes the <unk> , kiss and embrace tom and maria at every encounter . <eos>|Target: Even though it's against company policy, Tom and Mary kiss and hug every time they meet.
+Source: Du bist mein Bruder, und ich liebe dich.|Result: you are my brother , and i love you . <eos>|Target: You're my brother and I love you.
+Source: Tom wurde von einem Lastwagen überfahren.|Result: tom was <unk> by a truck . <eos>|Target: Tom got run over by a truck.
+Source: Ich mag Fußball am liebsten.|Result: i love football . <eos>|Target: I like soccer best.
+Source: Er hat es mir gezeigt.|Result: he has shown me . <eos>|Target: He showed it to me.
+Source: Wo sind Sie?|Result: where are they ? <eos>|Target: Where are you?
+Source: Gehst du jeden Tag einkaufen?|Result: do you go shopping every day ? <eos>|Target: Do you go shopping every day?
+Source: Ich werde morgen mit dir sprechen.|Result: i will speak with you tomorrow . <eos>|Target: I will speak with you tomorrow.
+Source: Kommen Sie runter.|Result: come down . <eos>|Target: Come downstairs.
+Source: Tom will zu Hause bleiben und fernsehen.|Result: tom will stay at home and television . <eos>|Target: Tom wants to stay at home and watch TV.
+Source: Es sieht aus, als wäre es dir gelungen, das Problem allein zu lösen.|Result: it seems that you managed to solve the problem alone . <eos>|Target: It looks like you managed to solve the problem on your own.
+Source: Wie oft habe ich dich schon gebeten, das sein zu lassen?|Result: how many times have i asked you to be ? <eos>|Target: How many times have I asked you to not do that?
+Source: Ich bin des Mordes angeklagt.|Result: i am accused of murder . <eos>|Target: I'm being charged with murder.
+Source: Wann warst du das letzte Mal betrunken?|Result: when were you the last time drunk ? <eos>|Target: When was the last time you got drunk?
+Source: Wer ist der Besitzer des Cafés?|Result: who is the owner of the café ? <eos>|Target: Who's the owner of the cafe?
+Source: Alles, was du brauchst, ist ein Führerschein.|Result: all you need is a driving licence . <eos>|Target: All you need is to get a driver's license.
+Source: Ich ging als Austauschstudent nach Australien.|Result: i went as a <unk> to australia . <eos>|Target: I went to Australia as an exchange student.
+Source: Tom spricht mit französischem Akzent.|Result: tom speaks with french accent . <eos>|Target: Tom speaks with a French accent.
+Source: Sprechen dich diese Gemälde an?|Result: are you talking about these paintings ? <eos>|Target: Do these paintings appeal to you?
+Source: Du bist der Arzt.|Result: you are the doctor . <eos>|Target: You are the doctor.
+Source: Ich bin beeindruckt, wie gut Sie Französisch sprechen!|Result: i am impressed by how well you speak french ! <eos>|Target: I'm impressed with how well you speak French.
+Source: Du kannst uns nicht einschüchtern.|Result: you can not be intimidated . <eos>|Target: You can't intimidate us.
+Source: Ohne ihre Hilfe wäre ich jetzt nicht mehr am Leben.|Result: without your help i would no longer be alive . <eos>|Target: If it weren't for her help, I would not be alive now.
+Source: Tom sagte mir, dass du das tun würdest.|Result: tom told me that you would do so . <eos>|Target: Tom told me that you'd do that.
+Source: Waren noch Eintrittskarten da?|Result: were there tickets ? <eos>|Target: Were there any tickets left?
+Source: Tom kauft Blumen für Maria.|Result: tom buys flowers for maria . <eos>|Target: Tom is buying some flowers for Mary.
+Source: Tom sorgte sich um Marys Sicherheit.|Result: tom worried about <unk> security . <eos>|Target: Tom was worried about Mary's safety.
+Source: Tom ist vermutlich noch immer im Büro.|Result: tom is probably still in office . <eos>|Target: Tom is likely to still be in his office.
+Source: Entschuldigen Sie bitte meine Verspätung.|Result: please excuse my delay . <eos>|Target: Excuse me for being late.
+Source: Das ist eine echte Überraschung.|Result: that is a real surprise . <eos>|Target: This is a real surprise.
+Source: Tom sagte, dass er noch eine Tasse Kaffee haben will.|Result: tom said that he still wants a cup of coffee . <eos>|Target: Tom said he'd like to have another cup of coffee.
+Source: Wäre ich ein Vogel gewesen, so hätte ich zu dir fliegen können.|Result: if i was a bird , i could have been flying to you . <eos>|Target: If I'd been a bird, I could've flown to you.
+Source: Tom hat große Augen.|Result: tom has great eyes . <eos>|Target: Tom has big eyes.
+Source: Gehorche deinem Vater!|Result: <unk> your father ! <eos>|Target: Obey your father.
+Source: Ich habe niemals Unrecht.|Result: i have never been wrong . <eos>|Target: I'm never wrong.
+Source: Tom ging Jogging.|Result: tom went jogging . <eos>|Target: Tom went running.
+Source: Wann gehst du nach Hause?|Result: when do you go home ? <eos>|Target: When are you walking home?
+Source: Das kann ich nicht sicher sagen.|Result: i can not say that . <eos>|Target: I can't tell for sure.
+Source: Tom hat Maria gesehen, und John ebenfalls.|Result: tom saw maria , and john also . <eos>|Target: Tom saw Mary, and so did John.
+Source: Sie sehen wie ein Polizist aus.|Result: they look like a policeman . <eos>|Target: You look like a policeman.
+Source: Es ist zu laut.|Result: it is too loud . <eos>|Target: It's too loud.
+Source: Der Regen war nicht stark genug, um das Feuer zu löschen.|Result: the rain was not strong enough to delete the fire . <eos>|Target: The rain wasn't heavy enough to put out the fire.
+Source: Tom lachte laut los.|Result: tom <unk> loud . <eos>|Target: Tom laughed out loud.
+Source: Ich rufe von meinem Mobiltelefon aus an.|Result: i call from my mobile phone . <eos>|Target: I'm calling from a cell phone.
+Source: Tom machte einen unfreundlichen Eindruck.|Result: tom made a <unk> impression . <eos>|Target: Tom seemed to be unfriendly.
+Source: Hatte Tom sehr viel zu tun?|Result: did tom have a lot to do ? <eos>|Target: Was Tom very busy?
+Source: Wie können wir es beweisen?|Result: how can we prove it ? <eos>|Target: How can we prove it?
+Source: Ich bin verliebt in sie.|Result: i am in love with you . <eos>|Target: I'm in love with her.
+Source: Wir müssen die Tatsache in Betracht ziehen, dass sie alt ist.|Result: we must consider the fact that it is old . <eos>|Target: We must take into account the fact that she is old.
+Source: Weisheit ist besser als Reichtum.|Result: wisdom is better than wealth . <eos>|Target: Wisdom is better than riches.
+Source: Tom ist sehr deprimiert.|Result: tom is very <unk> . <eos>|Target: Tom is very depressed.
+Source: Ich werde dir ein Geheimnis verraten.|Result: i will tell you a secret . <eos>|Target: I'll tell you a secret.
+Source: Tom hat mir erzählt, dass er und Maria den Sommerurlaub am Strand verbracht haben.|Result: tom told me that he and maria spent the summer holiday on the beach . <eos>|Target: Tom told me that he and Mary spent their summer vacation at the beach.
+Source: Kaninchen haben lange Ohren und kurze Schwänze.|Result: rabbits have long ears and short <unk> . <eos>|Target: Rabbits have long ears and short tails.
+Source: Seid ihr interessiert?|Result: are you interested ? <eos>|Target: Are you interested?
+Source: Wir fuhren mit dem Kanu flussabwärts.|Result: we took the canoe downstream . <eos>|Target: We canoed downstream.
+Source: Wir können Tom nicht umbringen.|Result: we can not kill tom . <eos>|Target: We can't kill Tom.
+Source: Ich kann das ohne jegliche Hilfe machen.|Result: i can do so without any help . <eos>|Target: I can do this without any help.
+Source: Ich glaube, es ist unwahrscheinlich, dass die nächste Windows-Version vor Ende dieses Monats herauskommt.|Result: i believe that it is unlikely that the next windows version will be released before the end of this month . <eos>|Target: I think it's unlikely that the next version of Windows will come out before the end of this month.
+Source: Tom ist ein genialer junger Wissenschaftler.|Result: tom is a <unk> of young scientists . <eos>|Target: Tom is a brilliant young scientist.
+Source: Könntest du das Radio leise stellen?|Result: could you put the radio quietly ? <eos>|Target: Could you turn down the radio?
+Source: Habt ihr es überhaupt gelesen?|Result: have you read it at all ? <eos>|Target: Did you read it at all?
+Source: Ist das reines Gold?|Result: is that pure gold ? <eos>|Target: Is this pure gold?
+Source: Er wird in einer halben Stunde hier sein.|Result: it will be here in half an hour . <eos>|Target: He will be here in half an hour.
+Source: Ich muss etwas mit dir bereden.|Result: i have to do something with you . <eos>|Target: I need to discuss something with you.
+Source: Tom öffnete die Tür und schaltete das Licht ein.|Result: tom opened the door and <unk> the light . <eos>|Target: Tom opened the door and turned on the lights.
+Source: Zuerst hatte ich Lampenfieber, aber ich kam schnell darüber weg.|Result: first i had <unk> , but i quickly came to this . <eos>|Target: I had stage fright at first, but I got over it quickly.
+Source: Er isst ausschließlich Obst.|Result: he only eat fruit . <eos>|Target: He doesn't eat anything except fruit.
+Source: Das Gesetz wird am ersten April in Kraft treten.|Result: the law will enter into force on first april . <eos>|Target: The law will be effective from the 1st of April.
+Source: Der Park war voller Leute.|Result: the park was full of people . <eos>|Target: The park was full of people.
+Source: Ich wüsste gerne, warum Tom das getan hat.|Result: i would like to know why tom did so . <eos>|Target: I wonder why Tom did that.
+Source: Tom unterrichtet Sportpsychologie.|Result: tom <unk> . <eos>|Target: Tom teaches sport psychology.
+Source: Sie wird gegen sechs Uhr von der Schule zurückkommen.|Result: it will return to school at 6 p.m. <eos>|Target: She will come back from school by six o'clock.
+Source: Wir sind stolz auf dich.|Result: we are proud of you . <eos>|Target: We're proud of you.
+Source: Diamanten sind einem Mädchen der beste Freund.|Result: diamonds are a girl of the best friend . <eos>|Target: Diamonds are a girl's best friends.
+Source: Ich glaube, dass Verheiratete mehr Probleme haben als Alleinstehende.|Result: i believe that married couples have more problems than <unk> . <eos>|Target: I think married people have more problems than single people.
+Source: Wir legten 100 Kilometer mit dem Auto zurück, bevor es dunkel wurde.|Result: we returned 100 kilometres by car before it became dark . <eos>|Target: We covered 100 kilometers in the car before it got dark.
+Source: Diese Feuchtigkeit bringt mich um.|Result: this humidity is causing me . <eos>|Target: The humidity is killing me.
+Source: Wir mögen Kinder.|Result: we like children . <eos>|Target: We like children.
+Source: Tom wurde des Mordes an Maria überführt.|Result: tom was transferred to maria . <eos> <eos>|Target: Tom was convicted of killing Mary.
+Source: Ich bin’s.|Result: i am . <eos>|Target: It's me.
+Source: Was möchtest du zum Abendessen?|Result: what do you want for dinner ? <eos>|Target: What would you like for supper?
+Source: Die Zeremonie wird morgen stattfinden.|Result: the ceremony will take place tomorrow . <eos>|Target: The ceremony will take place tomorrow.
+Source: Ich möchte ins Ausland gehen.|Result: i want to go abroad . <eos>|Target: I want to go abroad.
+Source: Wie viele Mäntel haben Sie?|Result: how many <unk> do you have ? <eos>|Target: How many coats do you have?
+Source: Ihr habt viel zu verlieren.|Result: you have much to lose . <eos>|Target: You have a lot to lose.
+Source: Tom hat mich nie gefragt.|Result: tom never asked me . <eos>|Target: Tom never asked me.
+Source: Ich habe schon zu Mittag gegessen.|Result: i have eaten at noon . <eos>|Target: I've already eaten lunch.
+Source: Darf ich Sie anrufen, falls ich noch weitere Fragen habe?|Result: can i call you if i have further questions ? <eos>|Target: If I have any others questions, may I call you?
+Source: Die diesjährige Trockenheit war sehr schädlich für die ländlichen Gebiete.|Result: this year 's drought was very damaging to rural areas . <eos>|Target: The drought this year was very damaging for rural areas.
+Source: Er hat das für Geld gemacht.|Result: he did so for money . <eos>|Target: He did it for money.
+Source: Wenn ich reich wäre, würde ich das tun. So, wie es ist, kann ich nichts machen.|Result: if i were rich i would do so , as it is , i can not do anything . <eos>|Target: If I were rich, I would do so. As it is, I can do nothing.
+Source: Tom kann morgen mit zu unserer Party kommen.|Result: tom can come to our party tomorrow . <eos>|Target: Tom is able to come to our party tomorrow.
+Source: Tom sagte sich, dass kein Grund zur Panik vorlag.|Result: tom said that there was no reason to panic . <eos>|Target: Tom told himself that there was no reason to panic.
+Source: Mein Haus liegt in der Nähe der Schule.|Result: my house is near the school . <eos>|Target: My house is near the school.
+Source: Die Eheringe habe ich schon.|Result: i have the <unk> . <eos>|Target: I already have the wedding rings.
+Source: Du störst die anderen.|Result: you <unk> the others . <eos>|Target: You're bothering the others.
+Source: Ich wusste gar nicht, dass Tom das kann.|Result: i did not know that tom can . <eos>|Target: I didn't know Tom knew how to do that.
+Source: Denke daran, worüber wir gestern gesprochen haben!|Result: remember what we talked about yesterday ! <eos>|Target: Remember what we spoke about yesterday.
+Source: Ich kann nur GIF-Dateien importieren.|Result: i can only import <unk> . <eos>|Target: I can only import GIF files.
+Source: Das ist eure einzige Chance.|Result: that is your only chance . <eos>|Target: This is your only chance.
+Source: Tom hat diese für dich gemacht.|Result: tom made them for you . <eos>|Target: Tom made these for you.
+Source: Der Wagen gehört Toms Frau.|Result: the car belongs to <unk> woman . <eos>|Target: That's Tom's wife's car.
+Source: Die Sieben soll eine Glückszahl sein.|Result: the seven should be a <unk> . <eos>|Target: Seven is said to be a lucky number.
+Source: Gehe hin und suche Tom!|Result: go and search tom ! <eos>|Target: Go find Tom.
+Source: Tom war als Schüler in der Kyūdō-AG.|Result: tom was a student in the <unk> . <eos>|Target: Tom was in the kyudo club when he was in high school.
+Source: Es bleibt abzuwarten.|Result: it remains to be seen . <eos>|Target: It remains to be seen.
+Source: Es läuft alles sehr schlecht.|Result: it is all very bad . <eos>|Target: Everything is going very badly.
+Source: Jetzt hat meine Tochter vor mir Angst.|Result: now my daughter is afraid of me . <eos>|Target: Now my daughter is afraid of me.
+Source: Wem gehört dieses Auto?|Result: who is this car ? <eos>|Target: Whose car is that?
+Source: Diese Gegend wurde bombardiert.|Result: this area was bombed . <eos>|Target: The area around here was bombed.
+Source: Sagt mir, wie das möglich ist!|Result: tell me how this is possible ! <eos>|Target: Tell me how that's possible.
+Source: Wir haben genug Zeit, um den Zug zu bekommen.|Result: we have enough time to get the train . <eos>|Target: We have enough time to catch the train.
+Source: Die Lage scheint hoffnungslos.|Result: the situation seems hopeless . <eos>|Target: The situation seems hopeless.
+Source: Ist für morgen alles vorbereitet?|Result: is everything prepared for tomorrow ? <eos>|Target: Is everything arranged for tomorrow?
+Source: Er ist immer heiter.|Result: it is always <unk> . <eos>|Target: He is always cheerful.
+Source: Ich werde hierbleiben, wenn du es wirklich möchtest.|Result: i will <unk> if you really want it . <eos>|Target: I'll stay here if you really want me to.
+Source: Was hat sich da zugetragen?|Result: what has happened ? <eos>|Target: What happened there?
+Source: Ich will von der Schule abgehen.|Result: i want to leave the school . <eos>|Target: I want to leave school.
+Source: Tom versteht wahrscheinlich Französisch.|Result: tom probably understands french . <eos>|Target: Tom probably understands French.
+Source: Du bist sehr nett.|Result: you are very kind . <eos>|Target: You're very kind.
+Source: Sie ist nichts mehr als ein Kind.|Result: it is nothing more than a child . <eos>|Target: She is a mere child.
+Source: Du warst bewusstlos.|Result: you were <unk> . <eos>|Target: You were unconscious.
+Source: Warum habt ihr Angst?|Result: why are you afraid ? <eos>|Target: Why are you scared?
+Source: Wir werden schon klarkommen.|Result: we are already being <unk> . <eos>|Target: We'll be fine.
+Source: Man lädt mich nicht zu Feiern ein.|Result: you do not invite me to celebrate . <eos>|Target: I'm not invited to parties.
+Source: Leihen Sie ihm so viel Geld, wie er benötigt.|Result: lend him as much money as he needs . <eos>|Target: Lend him as much money as he needs.
+Source: Hast du es dabei?|Result: do you have it ? <eos>|Target: Do you have it with you?
+Source: Du solltest Tom einen Dankesbrief schreiben.|Result: you should write tom a <unk> . <eos>|Target: You should write Tom a thank-you letter.
+Source: Schalte bitte das Radio ein.|Result: <unk> please enter the radio . <eos>|Target: Please turn on the radio.
+Source: Du kannst alles hören.|Result: you can hear everything . <eos>|Target: You can hear everything.
+Source: Halte die Augen offen.|Result: keep the eyes open . <eos>|Target: Keep your eyes open.
+Source: Niemand mag sie.|Result: no one likes it . <eos>|Target: Nobody likes them.
+Source: Tom verlor alles Geld, das er besaß.|Result: tom lost all the money he had . <eos>|Target: Tom lost all the money he had.
+Source: Er brach sein Wort.|Result: he broke his word . <eos>|Target: He broke his word.
+Source: Das tut Tom nicht.|Result: tom does not . <eos>|Target: That's not what Tom does.
+Source: Ich bin früh ins Bett gegangen, da ich müde war.|Result: i went to bed early because i was tired . <eos>|Target: I went to bed early because I was tired.
+Source: Tom verirrte sich im Wald.|Result: tom <unk> in the forest . <eos>|Target: Tom got lost in the woods.
+Source: „Dies ist der schönste Tag meines Lebens!“ – „Ich würde gern dasselbe sagen können.“|Result: “ that is the most beautiful day of my life ! ” – “ i would like to say the same thing . ” <eos>|Target: "This is the best day of my life!" "I wish I could say the same."
+Source: Es fiel Tom schwer zu erklären, was er wollte.|Result: tom was hard to explain what he wanted . <eos>|Target: Tom had trouble explaining what he wanted.
+Source: Sieh zu, dass du dich nicht wieder verirrst!|Result: see that you are not <unk> again ! <eos>|Target: Try not to get lost again.
+Source: Tom ärgerte sich über die Unterbrechung.|Result: tom <unk> about the interruption . <eos>|Target: Tom was annoyed at the interruption.
+Source: Graham Greene ist einer meiner Lieblingsschriftsteller.|Result: graham <unk> is one of my <unk> . <eos>|Target: Graham Greene is one of my favorite authors.
+Source: Tom wird nicht reagieren.|Result: tom will not respond . <eos>|Target: Tom won't respond.
+Source: Mein Bruder ist jetzt in Australien.|Result: my brother is now in australia . <eos>|Target: My brother is now in Australia.
+Source: Hemden findet man in der Abteilung für Herrenoberbekleidung.|Result: shirts can be found in the <unk> department . <eos>|Target: Shirts can be found in the menswear department.
+Source: Es ist dumm von dir zu schwimmen, wenn es so kalt ist.|Result: it is stupid to swim from you when it is so cold . <eos>|Target: It's foolish for you to swim when it's this cold.
+Source: Da ist es richtig heiß.|Result: it is really hot . <eos>|Target: It's really hot there.
+Source: Das war ein Schlag ins Gesicht.|Result: that was a slap in the face . <eos>|Target: That was a slap in the face.
+Source: Mein Ansatz wird ein anderer sein.|Result: my approach will be a different one . <eos>|Target: My approach will be different.
+Source: Ich denke, Tom mag es.|Result: i think tom likes it . <eos>|Target: I think Tom likes it.
+Source: Ein Einrad hat nur ein Rad.|Result: a <unk> has only one wheel . <eos>|Target: A unicycle has only one wheel.
+Source: Sie lesen Zeitungen und Bücher.|Result: you read newspapers and books . <eos>|Target: They read newspapers and books.
+Source: Tom hat Mary gesehen, als sie in die Post ging.|Result: tom saw mary when she went to the post . <eos>|Target: Tom saw Mary enter the post office.
+Source: Ich habe mir große Mühe gegeben.|Result: i have made great efforts . <eos> <eos>|Target: I tried hard.
+Source: Tom war sich nicht sicher, ob ihm der Plan gefiel.|Result: tom was not sure if he liked the plan . <eos>|Target: Tom wasn't sure he liked the plan.
+Source: Marys Ehering ist aus reinem Gold.|Result: <unk> <unk> is made of pure gold . <eos>|Target: Mary's wedding ring is made of pure gold.
+Source: Tom wollte immer Arzt werden, aber seine Schulnoten haben nicht ganz gereicht, um ihm einen Platz an einer medizinischen Fakultät zu sichern.|Result: tom always wanted to become a doctor , but his <unk> did not have enough to secure him a place at a medical faculty . <eos>|Target: Tom always wanted to be a doctor, but his grades at school weren't quite good enough to get him into medical school.
+Source: Meine Eltern sind nicht oft zuhause.|Result: my parents are not often at home . <eos>|Target: My parents aren't home a lot.
+Source: Wer ist Toms Vater?|Result: who is <unk> father ? <eos>|Target: Who's Tom's father?
+Source: Bist du wirklich Ärztin?|Result: are you really a doctor ? <eos>|Target: Are you really a doctor?
+Source: Tom möchte von Ihnen wissen, warum Sie letzte Woche nicht an der Sitzung teilgenommen haben.|Result: tom wants to know from you why you did not attend the sitting last week . <eos>|Target: Tom wants to ask you why you weren't at the meeting last week.
+Source: Der Atlantik trennt Amerika von Europa.|Result: the atlantic divides america from europe . <eos>|Target: The Atlantic Ocean separates America from Europe.
+Source: Ich danke euch von Herzen.|Result: thank you very much . <eos>|Target: From the bottom of my heart, thank you.
+Source: Möchtest du eine Banane?|Result: do you want a banana ? <eos>|Target: Would you like a banana?
+Source: Wartet nicht auf mich, wenn ich mich verspäte!|Result: do not wait for me if i <unk> ! <eos>|Target: Don't wait for me if I'm late.
+Source: Stellen Sie das Medikament außerhalb der Reichweite von Kindern!|Result: make the medicine outside the reach of children ! <eos>|Target: Put this medicine where children can't get it.
+Source: Ist Tom bei Maria?|Result: is tom at maria ? <eos>|Target: Is Tom with Mary?
+Source: Ich verbringe zuviel Zeit vor meinem Computer.|Result: i spend too much time before my computer . <eos>|Target: I spend too much time in front of my computer.
+Source: Hat Tom das geschrieben?|Result: has tom written that ? <eos>|Target: Was Tom the one who wrote that?
+Source: Tom wird die Prüfung wahrscheinlich bestehen.|Result: tom will probably have the test . <eos>|Target: Tom will probably pass the test.
+Source: Sie kommt aus Kalifornien.|Result: it comes from california . <eos>|Target: She comes from California.
+Source: Eigentlich ist er gar nicht der Geschäftsführer.|Result: he is not the managing director . <eos> <eos>|Target: He isn't actually the manager.
+Source: Ich esse fast jeden Tag Reis.|Result: i eat rice almost every day . <eos>|Target: I eat rice almost every day.
+Source: Tom ist wahrscheinlich inzwischen zu Hause.|Result: tom is probably at home . <eos>|Target: Tom has probably gotten home by now.
+Source: Tom sagt, er habe mit seiner Freundin gekuschelt, aber sie hätten sich noch nicht geküsst.|Result: tom says he has <unk> with his girlfriend , but they have not yet <unk> . <eos>|Target: Tom says he's snuggled with his girlfriend, but they haven't yet kissed.
+Source: Willst du bei mir pennen?|Result: do you want to join me ? <eos>|Target: Do you want to crash at my place?
+Source: Ich wüsste nicht, dass er jemals pünktlich gekommen wäre.|Result: i do not know that he had ever come on time . <eos>|Target: He has never come on time that I know of.
+Source: Wen kennst du dort?|Result: who do you know there ? <eos>|Target: Who do you know there?
+Source: Ich hoffe, du amüsierst dich gut!|Result: i hope you will be happy ! <eos>|Target: I hope you have a good time!
+Source: Es war nicht Tom derjenige, der das Lagerfeuer entzündete.|Result: it was not tom who <unk> the <unk> . <eos>|Target: It wasn't Tom who lit the campfire.
+Source: Marias Kleid war günstig.|Result: <unk> dress was good . <eos>|Target: Mary's dress was cheap.
+Source: Die Schriftstellerei ist ein brotloser Beruf.|Result: <unk> is a <unk> profession . <eos>|Target: You can't make a living being a writer.
+Source: Ich muss es finden.|Result: i must find it . <eos>|Target: I have to find it.
+Source: Ich bin den ganzen Tag zu Hause geblieben, statt arbeiten zu gehen.|Result: i stayed at home all day , instead of working . <eos>|Target: I stayed home all day instead of going to work.
+Source: Du solltest essen.|Result: you should eat . <eos>|Target: You should eat.
+Source: Er möchte in die Vereinigten Staaten gehen.|Result: he wants to go to the united states . <eos>|Target: He wants to go to the United States.
+Source: Mir tut der linke Arm weh.|Result: the left arm <unk> me . <eos>|Target: My left arm hurts.
+Source: Tom und ich werden dich dort treffen.|Result: tom and i will meet you there . <eos>|Target: Tom and I'll meet you there.
+Source: Ich wünschte, ich könnte besser Französisch.|Result: i wish i could better french . <eos>|Target: I wish that I were better at French.
+Source: Tom sah bis zum Einschlafen fern.|Result: tom looked far away from sleep . <eos>|Target: Tom watched TV until he fell asleep.
+Source: Tom geht gern mit Mary spazieren.|Result: tom likes to walk with mary . <eos>|Target: Tom likes taking walks with Mary.
+Source: Tom kam heute Abend fast ums Leben.|Result: tom almost died this evening . <eos>|Target: Tom almost died tonight.
+Source: Es ist immer eine Freude, dich zu sehen.|Result: it is always a pleasure to see you . <eos>|Target: It's always a pleasure to see you.
+Source: Tom glaubt, bei ihm zu Hause spuke es.|Result: tom believes in him at home <unk> it . <eos>|Target: Tom thinks that his house is haunted.
+Source: Tom hat sich das selbst beigebracht.|Result: tom has taught himself . <eos>|Target: Tom taught himself how to do that.
+Source: Gib mir das da.|Result: give me that . <eos>|Target: Give me that one.
+Source: Meine Lage hat sich geändert.|Result: my situation has changed . <eos>|Target: My situation has changed.
+Source: Maria pflegt keinen Lippenstift zu tragen.|Result: maria does not care about wearing <unk> . <eos>|Target: Mary doesn't use lipstick.
+Source: Er hat wenige Freunde.|Result: he has few friends . <eos>|Target: He has few friends.
+Source: Ich komme bald zurück.|Result: i come back soon . <eos>|Target: I will be back soon.
+Source: Was hast du diesmal getan?|Result: what did you do this time ? <eos>|Target: What did you do this time?
+Source: Tom spielt gern Klavier.|Result: tom likes to play piano . <eos>|Target: Tom enjoys playing the piano.
+Source: Ein Fenster ging zu Bruch.|Result: a window was broken . <eos>|Target: A window was broken.
+Source: Triffst du dich nicht mit jemandem?|Result: do you not join someone ? <eos>|Target: Aren't you dating anyone?
+Source: Das ist ein guter Plan.|Result: that is a good plan . <eos>|Target: It's a good plan.
+Source: Das ist entmutigend.|Result: that is <unk> . <eos>|Target: That's discouraging.
+Source: Wir haben die ganze Nacht durchgetanzt.|Result: we have <unk> all night . <eos>|Target: We danced all night long.
+Source: Hattest du schöne Weihnachten?|Result: do you love christmas ? <eos>|Target: Did you have a nice Christmas?
+Source: Lass dir von niemandem etwas anderes erzählen!|Result: let no one tell you anything else ! <eos>|Target: Don't let anyone else tell you otherwise.
+Source: Anscheinend weiß er davon.|Result: he seems to know . <eos> <eos>|Target: It seems that he is aware of the fact.
+Source: Ich fühle mich genauso wie vor drei Jahren.|Result: i feel like three years ago . <eos>|Target: I feel exactly the same way I did three years ago.
+Source: Darf ich fragen, was Sie hier treiben?|Result: can i ask what you are doing here ? <eos>|Target: Can I ask what you're doing here?
+Source: Tom sucht seine Geldbörse.|Result: tom is looking for his wallet . <eos>|Target: Tom is looking for his wallet.
+Source: Er ist mit dem Ergebnis unzufrieden.|Result: he is unhappy with the result . <eos>|Target: He is unsatisfied with the result.
+Source: Möchtest du, dass ich mich für dich umhöre?|Result: do you want me to be <unk> for you ? <eos>|Target: Would you like me to ask around for you?
+Source: Bitte lächeln!|Result: please smile ! <eos>|Target: Say cheese.
+Source: Er ist rücksichtslos.|Result: it is <unk> . <eos>|Target: He is so heartless.
+Source: Ich hänge ein Bild meiner Großmutter auf.|Result: i have a picture of my grandmother . <eos>|Target: I'm hanging up a picture of my grandmother.
+Source: Sie ist gerade zwanzig geworden.|Result: it has just become twenty . <eos>|Target: She has just turned twenty.
+Source: Ich hoffe, ihr fühlt euch wie zu Hause.|Result: i hope you feel like at home . <eos>|Target: I hope you feel at home.
+Source: Warum ignoriert ihr mich?|Result: why is it ignoring me ? <eos>|Target: Why have you been ignoring me?
+Source: Er hat einen Hund und sechs Katzen.|Result: he has a dog and six cats . <eos>|Target: He has a dog and six cats.
+Source: Ich rief Tom an und erzählte ihm von meinem Problem.|Result: i called tom and told him about my problem . <eos>|Target: I called Tom and told him about my problem.
+Source: Schwerpunkt der Diskussion war die Arbeitslosigkeit.|Result: the discussion focused on unemployment . <eos>|Target: The focus of the discussion was unemployment.
+Source: Bewahren Sie das Geheimnis.|Result: keep the secret . <eos>|Target: Keep the secret.
+Source: Kann ich mit dir sprechen?|Result: can i speak with you ? <eos>|Target: May I speak with you?
+Source: Der Herbst steht vor der Tür.|Result: the autumn is on the doorstep . <eos>|Target: Autumn is just around the corner.
+Source: Ich will, dass du aus dem Fenster schaust.|Result: i want you to get out of the window . <eos>|Target: I want you to look out the window.
+Source: Magst du immer noch scharfes Essen?|Result: do you still like <unk> food ? <eos>|Target: Do you still like spicy food?
+Source: Er verliert ziemlich leicht die Fassung.|Result: it loses the version quite easily . <eos>|Target: He loses his temper quite easily.
+Source: Tom sagte Maria, dass er Hunger habe.|Result: tom said maria that he was hungry . <eos>|Target: Tom told Mary that he was hungry.
+Source: Tom ist wirklich spät.|Result: tom is really late . <eos>|Target: Tom is really late.
+Source: Ich beschieße die Kaninchen in meinem Garten mit einer Wasserpistole, um sie von meinem Gemüse fernzuhalten.|Result: i <unk> the rabbits in my garden with a <unk> to keep them from my vegetables . <eos>|Target: I shoot the rabbits in my garden with a squirt gun to keep them away from the vegetables.
+Source: Der Erfolg ihres Mannes hat nichts an ihrer Einstellung alten Freunden gegenüber geändert.|Result: your husband 's success has not changed anything to her attitude towards old friends . <eos>|Target: Her husband's success hasn't affected her attitude toward old friends.
+Source: Er erhängte sich.|Result: he <unk> . <eos>|Target: He hanged himself.
+Source: Tom versucht, vernünftig mit Maria zu reden.|Result: tom tries to talk sensibly with maria . <eos>|Target: Tom is trying to reason with Mary.
+Source: Tom faltet gerne Papierflieger.|Result: tom <unk> likes to <unk> . <eos>|Target: Tom likes to make paper airplanes.
+Source: Ich kann nicht gut mehrere Aufgaben gleichzeitig erledigen.|Result: i can not do several tasks at the same time . <eos>|Target: I'm not good at multitasking.
+Source: Es tut mir leid, aber du irrst dich.|Result: i am sorry , but you are <unk> you . <eos>|Target: I'm sorry, but you're wrong.
+Source: Tom ist nicht dort drin.|Result: tom is not there . <eos>|Target: Tom isn't in there.
+Source: Du hast ins Schwarze getroffen.|Result: you hit the black . <eos>|Target: You hit the bullseye.
+Source: Tom meinte, es könne sein, dass Maria allein nach Hause gehen wolle.|Result: tom said it could be that maria wanted to go home alone . <eos>|Target: Tom said he thought that Mary might want to walk home by herself.
+Source: Er hat sich kein bisschen verändert, seit ich ihn gesehen habe.|Result: it has not changed a little since i saw it . <eos>|Target: He hasn't changed a bit since I saw him.
+Source: Scheuch sie weg!|Result: <unk> you ! <eos>|Target: Shoo them away.
+Source: Kinder zu unterrichten ist einfacher, als Erwachsene zu unterrichten.|Result: teaching children is easier than teaching adults . <eos>|Target: Teaching children is easier than teaching adults.
+Source: Tom stimmte bereitwillig zu.|Result: tom readily agreed . <eos>|Target: Tom readily agreed to it.
+Source: Ich denke nicht, dass eure Eltern damit einverstanden wären.|Result: i do not think your parents would agree with that . <eos>|Target: I don't think your parents would approve.
+Source: Atmen Sie tief ein!|Result: breathe deeply ! <eos>|Target: Breathe in deeply.
+Source: Tom schickte mir diese Postkarte aus Boston.|Result: tom sent me this postcard from boston . <eos>|Target: Tom sent this postcard to me from Boston.
+Source: Ich möchte das nicht mehr.|Result: i do not want that anymore . <eos>|Target: I don't want that anymore.
+Source: Tom hat es geschafft, eine neue Arbeit zu finden.|Result: tom managed to find a new job . <eos>|Target: Tom managed to find a new job.
+Source: Wem sagst du das!|Result: who do you say that ! <eos>|Target: Tell me about it!
+Source: Er isst nichts außer Obst.|Result: he does not eat anything but fruit . <eos>|Target: He eats nothing but fruit.
+Source: Hast du Angst vor mir?|Result: are you afraid of me ? <eos>|Target: Are you scared of me?
+Source: Ich weiß, dass Tom der Sohn eines Polizisten ist.|Result: i know tom is the son of a police officer . <eos>|Target: I know Tom is a son of a policeman.
+Source: Das ist eine ernste Sache.|Result: this is a serious matter . <eos>|Target: This is a serious matter.
+Source: Hier darf man nicht rauchen.|Result: we must not smoke here . <eos>|Target: It's not OK to smoke here.
+Source: Tom kommt jede Woche nach Boston, um sich mit Maria zu treffen.|Result: tom comes to boston every week to meet maria . <eos>|Target: Tom comes to Boston every week to see Mary.
+Source: Tom kam durch eine Geheimtür in der Wand herein.|Result: tom came into the wall by a <unk> . <eos>|Target: Tom came in through a secret door in the wall.
+Source: Schau dir das Bild an.|Result: look at the picture . <eos>|Target: Look at the picture.
+Source: Du verschwendest Zeit.|Result: you <unk> time . <eos>|Target: You're wasting time.
+Source: Er hörte keine Musik.|Result: he did not hear music . <eos>|Target: He didn't listen to music.
+Source: Der Wievielte ist heute?|Result: the <unk> is today ? <eos>|Target: What's the date today?
+Source: Ich habe mir beim Barbier die Haare schneiden lassen.|Result: i got the hair cut at the <unk> . <eos>|Target: I had my hair cut at the barber's.
+Source: Meine Güte! Was für ein großer Karton!|Result: my goodness ! what for a big box ! <eos>|Target: Wow! What a big box!
+Source: Das hatte ich in der Schule.|Result: i had that at school . <eos>|Target: I did that at school.
+Source: Tom ist sehr jung, nicht wahr?|Result: tom is very young , not true ? <eos>|Target: Tom is very young, isn't he?
+Source: Ich gehe davon aus, dass du dich nicht beschweren willst.|Result: i assume you do not want to complain . <eos>|Target: I trust you have no complaints.
+Source: Es dauerte sechs Jahre, bis wir Konstantinopel erobert hatten.|Result: it took six years before we conquered constantinople . <eos>|Target: It took us six years to conquer Constantinople.
+Source: Hier ist mein Gepäck.|Result: here is my luggage . <eos>|Target: Here is my baggage.
+Source: Tom hat Angst.|Result: tom is afraid . <eos>|Target: Tom is afraid.
+Source: Ist es möglich, mit Kreditkarte zu bezahlen?|Result: is it possible to pay by credit card ? <eos>|Target: Can I use a credit card for payment?
+Source: Er verlor das Augenlicht bei dem Unfall.|Result: he lost the <unk> in the accident . <eos>|Target: He lost his sight in the accident.
+Source: Ich rufe dich an, wenn ich nach Hause komme.|Result: i call you when i come home . <eos>|Target: I'll give you a call when I get home.
+Source: Ich habe ihn getroffen.|Result: i met him . <eos>|Target: I met him.
+Source: Wirst du wirklich das Auto da kaufen?|Result: will you really buy the car there ? <eos>|Target: Are you really going to buy that car?
+Source: Gibt es in diesem Gebäude öffentliche Toiletten?|Result: are there public toilets in this building ? <eos>|Target: Are there public restrooms in this building?
+Source: Ich komme so schnell nach Hause, wie ich kann.|Result: i come home as soon as i can . <eos>|Target: I'll be home as soon as I can.
+Source: Tom war überrascht, dass Maria das unterlassen hatte.|Result: tom was surprised that maria had failed . <eos>|Target: Tom was surprised that Mary hadn't done that.
+Source: Ich bin gar nicht beschäftigt.|Result: i am not busy at all . <eos>|Target: I'm not at all busy.
+Source: Kannst du glauben, was er sagte?|Result: can you believe what he said ? <eos>|Target: Can you believe what he said?
+Source: Ich bot ihm fünfzig Pence und er willigte ein.|Result: i offered him 50 <unk> and he <unk> . <eos>|Target: I offered him fifty pence and he accepted.
+Source: Maria und Adelheid tragen immer ähnliche Kleider.|Result: maria and <unk> always wear similar clothes . <eos>|Target: Mary and Alice always wear similar clothes.
+Source: Ich habe es mir gründlich überlegt.|Result: i have considered it thoroughly . <eos>|Target: I've thought long and hard over this.
+Source: Warst du schon einmal im Sommer in Boston?|Result: were you already in boston in summer ? <eos>|Target: Have you ever been to Boston in the summer?
+Source: Wir riefen unseren Anwalt an.|Result: we called on our lawyer . <eos>|Target: We called our lawyer.
+Source: Der Mond leuchtet heute Nacht hell.|Result: the moon is bright this night . <eos>|Target: The moon is shining brightly tonight.
+Source: Sie weichen mir aus.|Result: you are leaving me . <eos>|Target: You're being evasive.
+Source: Das Restaurant liegt auf der dem Hotel gegenüberliegenden Straßenseite.|Result: the restaurant is on the opposite side of the hotel . <eos>|Target: The restaurant is across the street from the hotel.
+Source: Wir sollten Toms Vorschlag zumindest in unsere Überlegung einbeziehen.|Result: we should , at least , include <unk> proposal in our consideration . <eos>|Target: We should at least consider Tom's suggestion.
+Source: Ich dachte, Sie wollten die Scheidung.|Result: i thought they wanted divorce . <eos>|Target: I thought you wanted a divorce.
+Source: Ich suche immer noch Tom.|Result: i still search tom . <eos>|Target: I'm still looking for Tom.
+Source: Diese Entscheidung habe ich getroffen.|Result: i have taken this decision . <eos>|Target: I'm the one who made that decision.
+Source: Hätte Tom das zu mir gesagt, hätte ich ihm eine gelangt.|Result: had tom said that to me , i would have come to him . <eos>|Target: If Tom had said that to me, I'd have slapped him.
+Source: Tom, setz dich! Ich habe ein kleines Abendbrot vorbereitet.|Result: tom , <unk> you , i have prepared a little <unk> . <eos>|Target: Sit yourself down, Tom. I've made some supper.
+Source: Tom parkte das Auto hinter dem Gebäude.|Result: tom <unk> the car behind the building . <eos>|Target: Tom parked his car behind the building.
+Source: Ihr Aufsatz ist sehr gut, abgesehen von zwei oder drei Rechtschreibfehlern.|Result: her paper is very good , apart from two or three <unk> . <eos>|Target: Her composition is very good except for two or three spelling errors.
+Source: Niemand hat es überprüft.|Result: nobody has checked it . <eos>|Target: Nobody checked it.
+Source: Tom ist auf keinen Fall gestern Abend zu Hause angekommen.|Result: tom has not arrived at home yesterday evening . <eos>|Target: Tom never made it back home last night.
+Source: Deine Geschichte hat mir gefallen.|Result: i liked your history . <eos>|Target: I liked your story.
+Source: Ich habe mich schon immer gefragt, was das für ein Geräusch ist.|Result: i have always wondered what this is for a sound . <eos>|Target: I always wondered what that noise was.
+Source: Was machst du mit Sachen, die du nicht mehr anziehst?|Result: what are you doing with things that you do n't want to do ? <eos>|Target: What do you do with clothes that you don't wear anymore?
+Source: Zuerst musst du dich selbst schützen.|Result: first you have to protect yourself . <eos>|Target: First, you must protect yourself.
+Source: Ich wohne zusammen mit meinen Eltern.|Result: i live together with my parents . <eos>|Target: I live with my parents.
+Source: Ist das hier dein Hund?|Result: is this your dog ? <eos>|Target: Is this your dog?
+Source: Wir sind nur befreundet, sonst nichts.|Result: we are only friends , otherwise nothing . <eos>|Target: We're just friends. Nothing more.
+Source: Die Bluse passt nicht zu dem Rock.|Result: the blouse does not suit the rock . <eos>|Target: That blouse doesn't go with that skirt.
+Source: Haben Sie günstigere Zimmer?|Result: do you have cheaper rooms ? <eos>|Target: Do you have any cheaper rooms?
+Source: Tom ist immer noch am Lesen.|Result: tom is still reading . <eos>|Target: Tom is still reading.
+Source: Viel Spaß euch beiden!|Result: enjoy both ! <eos>|Target: You two have fun.
+Source: Wir entschuldigen uns.|Result: we apologize . <eos>|Target: We apologize.
+Source: Tom schnitt Maria das Wort ab, bevor sie irgendetwas darüber sagen konnte, was geschehen war.|Result: tom cut maria the word before she could say anything about what happened . <eos>|Target: Tom cut Mary off before she could say anything about what happened.
+Source: Tom wollte wach bleiben, bis sein Vater käme.|Result: tom wanted to stay awake until his father would come . <eos>|Target: Tom wanted to stay awake until his father got home.
+Source: Tom hob seine Spielsachen auf und legte sie in eine Kiste.|Result: tom raised his toys and put them in a box . <eos>|Target: Tom picked up his toys and put them in a box.
+Source: Mach dir keine Sorgen! Es ist noch jede Menge Zeit.|Result: do not worry , it is still a lot of time . <eos>|Target: Don't worry. There's still plenty of time.
+Source: Das ist unnütz.|Result: that is pointless . <eos>|Target: This is useless.
+Source: Ich habe ein Ticket.|Result: i have a ticket . <eos>|Target: I have a ticket.
+Source: Schreien bringt dich auch nicht weiter.|Result: cry does not bring you further . <eos>|Target: Yelling and screaming is not going to get you anywhere.
+Source: Du bist müde.|Result: you are tired . <eos>|Target: You're tired.
+Source: Tom reist viel.|Result: tom travels a lot . <eos>|Target: Tom travels a great deal.
+Source: Habe ich bestanden?|Result: have i passed ? <eos>|Target: Did I pass the test?
+Source: Haben wir gewonnen?|Result: have we won ? <eos>|Target: Did we win?
+Source: Tom wird langsam verzweifelt.|Result: tom is slowly desperate . <eos>|Target: Tom is getting desperate.
+Source: Tom sagte, er freue sich schon auf deinen Besuch.|Result: tom said he looks forward to your visit . <eos>|Target: Tom said that he was looking forward to your visit.
+Source: Du bist sehr verständnisvoll.|Result: you are very <unk> . <eos>|Target: You're very understanding.
+Source: Ich möchte wissen, wo es ist.|Result: i would like to know where it is . <eos>|Target: I want to know where it is.
+Source: Tom spricht immer Französisch.|Result: tom always speaks french . <eos>|Target: Tom always speaks French.
+Source: Tom spielt gerne Basketball.|Result: tom likes to play basketball . <eos>|Target: Tom likes to play basketball.
+Source: Sie sind keine Bauern.|Result: they are not farmers . <eos>|Target: They're not farmers.
+Source: Die Zeit wird kommen, da Sie dies verstehen werden.|Result: time will come because you will understand this . <eos>|Target: The time will come when you will understand this.
+Source: Der Schutz des Waldes ist überall auf der Welt eine wichtige Aufgabe.|Result: protecting the forest is an important task everywhere in the world . <eos>|Target: Forest conservation is an important issue all over the world.
+Source: Danke für alles.|Result: thank you for all . <eos>|Target: Thank you for everything.
+Source: Tom wurde sehr krank.|Result: tom was very sick . <eos>|Target: Tom became very ill.
+Source: Das ist typisch.|Result: that is typical . <eos>|Target: That's typical.
+Source: Glaubst du an Liebe auf den ersten Blick?|Result: do you think of love at first glance ? <eos>|Target: Do you believe in love at the first sight?
+Source: Tom und Maria wurden gute Freunde.|Result: tom and maria were good friends . <eos>|Target: Tom and Mary got to be good friends.
+Source: Unser Zug kam rechtzeitig an.|Result: our train came in time . <eos>|Target: Our train arrived on time.
+Source: Ich stehe immer um 6 Uhr auf.|Result: i always stand at 6 p.m. <eos>|Target: I always get up at six.
+Source: Wo haben Sie den Anzug machen lassen?|Result: where did you make the suit ? <eos>|Target: Where did you have the suit made?
+Source: Tom kam an, nachdem Maria gegangen war.|Result: tom arrived after maria had gone . <eos>|Target: Tom arrived after Mary had already left.
+Source: Niemand weiß das.|Result: nobody knows that . <eos>|Target: No one knows that.
+Source: Tom bat um unsere Hilfe.|Result: tom asked for our help . <eos>|Target: Tom asked for our help.
+Source: Sie macht so etwas nicht.|Result: it does not . <eos>|Target: She does not do things like that.
+Source: Das Frühstück wird gesondert berechnet.|Result: breakfast is charged separately . <eos>|Target: There's an extra charge for breakfast.
+Source: Ich habe es nicht böse gemeint.|Result: i did not mean it evil . <eos>|Target: I meant no harm.
+Source: Tom tat so, als hätte er mich nicht bemerkt.|Result: tom did as if he had not noticed me . <eos>|Target: Tom pretended he didn't notice me.
+Source: Er gehört zum diplomatischen Korps.|Result: he belongs to the diplomatic corps . <eos>|Target: He belongs to the diplomatic corps.
+Source: Es zeugt von schlechten Manieren, mit vollem Mund zu sprechen.|Result: it shows bad <unk> to speak with full mouth . <eos>|Target: It's bad manners to speak with your mouth full.
+Source: Wir sollten Tom dazu bewegen, dass er verschwindet.|Result: we should encourage tom to disappear . <eos>|Target: We should make Tom leave.
+Source: Tom wird vermutlich seine Anstellung verlieren.|Result: tom will probably lose his job . <eos>|Target: Tom will likely lose his job.
+Source: Der Hund mag euch.|Result: the dog likes you . <eos>|Target: The dog likes you.
+Source: Tom fuhr die ganze Nacht durch, während Maria neben ihm schlief.|Result: tom went all night , while maria slept next to him . <eos>|Target: Tom drove all night while Mary slept next to him.
+Source: Das kann sie nicht gesagt haben.|Result: you can not say that . <eos>|Target: She cannot have said that.
+Source: Einsame Menschen haben oft Angst davor, andere kennenzulernen, was dazu führt, dass sie immer einsam bleiben.|Result: lonely people often fear to know others , which means that they are always lonely . <eos>|Target: Lonely people tend to be afraid of meeting others, which ensures they will always be lonely.
+Source: Was hat dich dazu bewogen, für unser Unternehmen zu arbeiten?|Result: what led you to work for our company ? <eos>|Target: What's made you decide to work for our company?
+Source: Tom hat sich umgebracht.|Result: tom was killed . <eos>|Target: Tom killed himself.
+Source: Dieses Buch ist nicht interessant.|Result: this book is not interesting . <eos>|Target: This book isn't interesting.
+Source: Wer ist dein Lieblings-Blogger?|Result: who is your <unk> ? <eos>|Target: Who's your favorite blogger?
+Source: Lass das Fenster im Schlafzimmer nicht auf!|Result: do not leave the window in the bedroom ! <eos>|Target: Don't leave the bedroom window open.
+Source: Ich wohne nicht mehr in Boston.|Result: i no longer live in boston . <eos>|Target: I no longer live in Boston.
+Source: Das ist kein Grund, in Panik zu verfallen.|Result: that is no reason to panic . <eos>|Target: That's not a reason to panic.
+Source: Ich trage am Sonntag gewöhnlich Jeans.|Result: i usually wear jeans on sunday . <eos>|Target: I usually wear jeans on Sunday.
+Source: Ich hätte nicht so viel essen sollen.|Result: i should not have had so much food . <eos>|Target: I shouldn't have eaten so much.
+Source: Simsen am Steuer ist gefährlich.|Result: <unk> on the tax is dangerous . <eos>|Target: It's not safe to text while you drive.
+Source: Jeder, der ihn kennt, respektiert ihn.|Result: anyone who knows him respects him . <eos>|Target: Everyone who knows him respects him.
+Source: So viel Spaß habe ich in meinem ganzen Leben noch nicht gehabt.|Result: i have not had so much fun in my whole life . <eos>|Target: This is the most fun I've had in my life.
+Source: Du hast alles verloren.|Result: you lost everything . <eos>|Target: You've lost everything.
+Source: Warum tut er das?|Result: why is it doing so ? <eos>|Target: Why is he doing this?
+Source: Ich komme nicht nach Boston.|Result: i do not come to boston . <eos>|Target: I'm not coming to Boston.
+Source: Das habe ich mir schon gedacht!|Result: i have already thought this ! <eos>|Target: I thought as much.
+Source: Schmeißt nichts weg!|Result: <unk> nothing ! <eos>|Target: Don't throw anything away.
+Source: Bitte hol mir ein Stück Papier.|Result: please get a piece of paper . <eos>|Target: Please fetch me a piece of paper.
+Source: Pass auf deine Finger auf!|Result: pass on your finger ! <eos>|Target: Watch your fingers.
+Source: Danke für die Inspiration!|Result: thank you for your inspiration ! <eos>|Target: Thanks for the inspiration.
+Source: Was Sie sagen, ist richtig.|Result: what you say is right . <eos>|Target: What you say is right.
+Source: Ich bin verheiratet und habe eine Tochter.|Result: i am married and have a daughter . <eos>|Target: I'm married and I have a daughter.
+Source: Ich habe mir einen neuen Füller gekauft.|Result: i bought a new <unk> . <eos>|Target: I bought a new fountain pen.
+Source: Tom wartet darauf, dass Sie etwas sagen.|Result: tom is waiting for you to say something . <eos>|Target: Tom is waiting for you to say something.
+Source: Ich bin verrückt.|Result: i am crazy . <eos>|Target: I'm mad.
+Source: Tom glaubte, Maria hätte einen Fehler gemacht.|Result: tom believed that maria had made a mistake . <eos>|Target: Tom thought Mary had made a mistake.
+Source: Tom spricht mit seinen Großeltern Französisch.|Result: tom speaks with his grandparents french . <eos>|Target: Tom speaks French to his grandparents.
+Source: Das wird teuer sein.|Result: that will be expensive . <eos>|Target: It'll be expensive.
+Source: Lest das zuerst!|Result: read this first ! <eos>|Target: Read this first.
+Source: Was sagen die Leute?|Result: what do people say ? <eos>|Target: What are people saying?
+Source: Bitte weine nicht!|Result: please not wines ! <eos>|Target: Please don't cry.
+Source: Es besteht noch eine Möglichkeit.|Result: there is still a possibility . <eos>|Target: There's another possibility.
+Source: Er bat mich um Geld.|Result: he asked me for money . <eos>|Target: He asked me for money.
+Source: Mit diesem Kleid wirst du viele Blicke auf dich ziehen.|Result: with this dress you will draw many views on you . <eos>|Target: You're going to turn a lot of heads with that dress.
+Source: Tom hat das nicht allein getan.|Result: tom did not do so alone . <eos>|Target: Tom didn't do it alone.
+Source: Die Schule bleibt während der Weihnachtsfeiertage geschlossen.|Result: the school remains closed during the <unk> . <eos>|Target: School has closed for the Christmas holidays.
+Source: Sie müssen die Fragen nicht beantworten.|Result: you do not have to answer the questions . <eos>|Target: You don't have to answer those questions.
+Source: Tom schien etwas enttäuscht zu sein.|Result: tom seemed somewhat disappointed . <eos>|Target: Tom seemed to be somewhat disappointed.
+Source: Darf ich fragen, was das bedeutet?|Result: can i ask what this means ? <eos>|Target: May I ask what that means?
+Source: Ich kann nicht glauben, dass ich hier bin.|Result: i can not believe that i am here . <eos>|Target: I can't believe I'm here.
+Source: In diesem Fall muss ich Tom zustimmen.|Result: in this case i must agree with tom . <eos>|Target: I have to agree with Tom on this one.
+Source: Ich wünschte, ich hätte das Lied nie gesungen.|Result: i wish i had never sung the song . <eos>|Target: I wish I'd never sung that song.
+Source: Tom, bist du da?|Result: tom , are you there ? <eos>|Target: Tom, are you there?
+Source: Hier, sieh dir das an.|Result: here , see that . <eos>|Target: Here, look at this.
+Source: Es lohnt sich nicht, dorthin zu gehen.|Result: it is not worth going there . <eos>|Target: It isn't worthwhile going there.
+Source: Tom wird jeden Moment erwartet.|Result: tom is expected every moment . <eos>|Target: Tom is expected to arrive at any moment.
+Source: Er hat bei einem Unfall sein Augenlicht verloren.|Result: he lost his <unk> in an accident . <eos>|Target: He lost his eyesight in an accident.
+Source: Stühle und Tische wurden beschädigt.|Result: chairs and tables were damaged . <eos>|Target: Chairs and tables were damaged.
+Source: Haben wir genug Milch?|Result: do we have enough milk ? <eos>|Target: Do we have enough milk?
+Source: Bitte sagt mir, was ihr wollt.|Result: please tell me what you want . <eos>|Target: Please let me know what you want.
+Source: Das passiert nicht wirklich, oder?|Result: that does not really happen , or ? <eos>|Target: That isn't really going to happen, is it?
+Source: Er traf mich am Kopf.|Result: he met me at the head . <eos>|Target: He hit me on the head.
+Source: Tom betrachtete sich im Spiegel.|Result: tom looked at the mirror . <eos>|Target: Tom looked at himself in the mirror.
+Source: Habt ihr den Verstand verloren?|Result: have you lost the mind ? <eos>|Target: Have you guys lost your minds?
+Source: Ich glaube, dass Tom uns belogen hat.|Result: i think tom has <unk> us . <eos>|Target: I think Tom lied to us.
+Source: Er hat meinen Geburtstag vergessen.|Result: he forgot my birthday . <eos>|Target: He forgot my birthday.
+Source: Tom war sehr verdutzt.|Result: tom was very <unk> . <eos>|Target: Tom was very puzzled.
+Source: Kommt dir das bekannt vor?|Result: do you know that ? <eos>|Target: Does this ring a bell?
+Source: Er ist der Typ Mann, der lieber Topflappen häkelt als Abenteuer zu suchen.|Result: he is the type man who would prefer to search for <unk> as an adventure . <eos>|Target: He's the type of man who'd rather crochet potholders than seek adventure.
+Source: Der Grund, den beide Brüder dafür angaben, Junggesellen geblieben zu sein, war, dass sie nicht sowohl Flugzeuge als auch eine Frau unterhalten könnten.|Result: the reason that both brothers were told that they could not have both aircraft and a woman . <eos>|Target: The reason both brothers gave for remaining bachelors was that they couldn't support both airplanes and a wife.
+Source: Hast du gestern gearbeitet?|Result: did you work yesterday ? <eos>|Target: Did you work yesterday?
+Source: Tom und Maria sind miteinander verwandt.|Result: tom and maria are related to each other . <eos>|Target: Tom and Mary are related to each other.
+Source: Wo wollt ihr denn alle so früh am Morgen hin?|Result: where do you want to go so early in the morning ? <eos>|Target: Where are you all going so early in the morning?
+Source: Diese Männer sind Kanadier.|Result: these men are canadian . <eos>|Target: Those men are Canadians.
+Source: Ich muss mein Zimmer nicht sauber machen.|Result: i do not have to make my room clean . <eos>|Target: I don't have to clean my room.
+Source: Tom hat zu viel getrunken.|Result: tom has drunk too much . <eos>|Target: Tom drank too much.
+Source: Wir wollen uns ein neues Heim kaufen.|Result: we want to buy a new home . <eos>|Target: We want to buy a new home.
+Source: Ohne Luft würden wir sterben.|Result: without air , we would die . <eos>|Target: Without air, we would die.
+Source: Tom ist eine sehr offene Person.|Result: tom is a very open person . <eos>|Target: Tom is a very frank person.
+Source: Toms Vater ist sehr großzügig.|Result: <unk> 's father is very generous . <eos>|Target: Tom's father is very generous.
+Source: Diese Entscheidung hat Tom getroffen.|Result: this decision was taken by tom . <eos>|Target: Tom was the one who made that decision.
+Source: Ein ernsthaft verwundeter Elefant drehte durch und attackierte alles, was ihm im Weg stand.|Result: a seriously <unk> elephant turned through and <unk> everything that stood in his way . <eos>|Target: A critically wounded elephant went berserk and attacked every living thing in his path.
+Source: Nach dem Tode setzt bald die Leichenstarre ein.|Result: after death , the <unk> will soon begin . <eos>|Target: Rigor mortis sets in soon after death.
+Source: Erzähl mir alles.|Result: <unk> me all . <eos>|Target: Tell me everything.
+Source: Sie hat so schöne Augen.|Result: it has such beautiful eyes . <eos>|Target: She has such beautiful eyes.
+Source: Ich faste.|Result: i <unk> . <eos>|Target: I'm fasting.
+Source: Das passiert jeden Tag.|Result: that happens every day . <eos>|Target: This is a daily occurrence.
+Source: Die betagte Dame schleppte sich mühsam die Treppe hinauf.|Result: the <unk> lady <unk> up the stairs . <eos>|Target: The old lady climbed the stairs with difficulty.
+Source: Ich möchte laufen.|Result: i want to run . <eos>|Target: I want to run.
+Source: Ich sah Tom die Straße hinunter laufen.|Result: i saw tom down the road . <eos>|Target: I saw Tom running down the street.
+Source: Haben Sie wirklich alles aufgegessen?|Result: do you really have everything to do ? <eos>|Target: Did you really eat everything?
+Source: Wo habt ihr gefrühstückt?|Result: where have you <unk> ? <eos>|Target: Where did you eat breakfast?
+Source: Junge, vertrau mir!|Result: young , <unk> me ! <eos>|Target: Dude, trust me.
+Source: Einige Eltern bestrafen ihre Kinder nicht, wenn diese lügen.|Result: some parents do not punish their children when they lie . <eos>|Target: Some parents don't punish their children when they lie.
+Source: Tom hat das gar nicht verstanden.|Result: tom did not understand that . <eos>|Target: Tom didn't understand any of it.
+Source: Worüber denkst du nach?|Result: what do you think about ? <eos>|Target: What are you thinking about?
+Source: Tom trägt bei sich im Haus Schuhe.|Result: tom is wearing shoes in the house . <eos>|Target: Tom wears shoes inside his house.
+Source: Was würdest du tun, wenn du ein Gespenst sehen würdest?|Result: what would you do if you saw a specter ? <eos>|Target: What would you do if you saw a ghost?
+Source: Er spielt sehr gut Klavier.|Result: he plays very well piano . <eos>|Target: He plays the piano very well.
+Source: Sie sind gleich hinter dir.|Result: they are just behind you . <eos>|Target: They're right behind you.
+Source: Und jetzt bin ich dran!|Result: and now i am ready ! <eos>|Target: And now, it's my turn!
+Source: Habt ihr Tom kontaktiert?|Result: have you contacted tom ? <eos>|Target: Did you get in touch with Tom?
+Source: Sie werden morgen zur Schule gehen.|Result: they will go to school tomorrow . <eos>|Target: You'll go to school tomorrow.
+Source: Tom ist auch da.|Result: tom is also there . <eos>|Target: Tom is there, too.
+Source: Ich habe nicht den blassesten Schimmer, was Tom vorhat.|Result: i do not have the <unk> of what tom wants . <eos>|Target: I don't have the faintest idea what Tom is trying to do.
+Source: Warum hast du die Tür nicht geschlossen?|Result: why did you not close the door ? <eos>|Target: Why didn't you shut the door?
+Source: Wir mussten unsere Pläne abändern, da wir nicht genug Geld hatten.|Result: we had to change our plans because we did not have enough money . <eos>|Target: We had to alter our plans because we didn't have enough money.
+Source: Es war mutig von Ihnen, die Wahrheit zu sagen.|Result: it was courageous of them to say the truth . <eos>|Target: You were courageous to tell the truth.
+Source: Einer der Nachteile, wenn man alleine lebt, besteht darin, dass man niemanden zum Reden hat.|Result: one of the drawbacks of living alone is that nobody has to talk about . <eos>|Target: One of the disadvantages of living alone is that you have no one to talk to.
+Source: Das ist mein Problem.|Result: that is my problem . <eos>|Target: This is my problem.
+Source: Ich glaube, Sie haben Tom überzeugt.|Result: i believe you have convinced tom . <eos>|Target: I think you've convinced Tom.
+Source: Tom ist heute den ganzen Tag unterwegs.|Result: tom is travelling all day . <eos> <eos>|Target: Tom is out for the day.
+Source: Eine Gruppe von Ausländern kam in Edo, das heißt in Tōkyō, an.|Result: a group of foreigners arrived in edo , in other words in <unk> . <eos>|Target: A group of foreigners arrived in Edo, that is to say Tokyo.
+Source: Tom sah in seine Aktentasche.|Result: tom saw in his <unk> . <eos>|Target: Tom looked in his briefcase.
+Source: Du siehst toll aus!|Result: you look great ! <eos>|Target: You look great.
+Source: Das Video war bald in aller Munde.|Result: the video was soon on the lips . <eos>|Target: The video quickly went viral.
+Source: Ich möchte nicht mit Tom spielen.|Result: i do not want to play with tom . <eos>|Target: I don't want to play with Tom.
+Source: Tom versteht kein Wort Französisch.|Result: tom understands no french word . <eos>|Target: Tom doesn't know any French.
+Source: Tom sagte, er wisse nicht, wo Maria wohne.|Result: tom said that he did not know where maria lived . <eos>|Target: Tom said that he didn't know where Mary lived.
+Source: Tom wollte seinen Sohn Johannes nennen.|Result: tom wanted to call his son johannes . <eos>|Target: Tom wanted to name his son John.
+Source: Bist du fast fertig?|Result: are you almost ready ? <eos>|Target: Are you almost ready?
+Source: Ich habe viele Freunde im Ausland.|Result: i have many friends abroad . <eos>|Target: I have many friends in foreign countries.
+Source: Es gelang mir nicht so schnell wie Tom.|Result: i did not succeed as quickly as tom . <eos>|Target: I wasn't able to do that as fast as Tom.
+Source: Meine Freundin weinte.|Result: my friend <unk> . <eos>|Target: My girlfriend was crying.
+Source: Du wohnst zu weit weg.|Result: you go too far . <eos>|Target: You live too far away.
+Source: Wie glaubst du, dass Tom mit der Situation zurechtkommen wird?|Result: how do you think tom will deal with the situation ? <eos>|Target: How do you think Tom will cope with the situation?
+Source: Muss man jeden Tag das Bett machen?|Result: do you have to make the bed every day ? <eos>|Target: Do you have to make the bed every day?
+Source: Machen Sie hier Ferien?|Result: do you make a holiday here ? <eos>|Target: Are you here on holiday?
+Source: Sie haben aber einen sehr schönen Garten!|Result: but you have a very beautiful garden ! <eos>|Target: You sure have a beautiful garden!
+Source: Ich weiß, dass Sie auch beschäftigt sind.|Result: i know they are also employed . <eos>|Target: I know you're busy, too.
+Source: Sie glauben nicht, dass ich recht habe, oder?|Result: you do not believe that i am right , or ? <eos>|Target: You don't think I'm right, do you?
+Source: Er war bei der Sitzung anwesend.|Result: he was present at the sitting . <eos>|Target: He was present at the meeting.
+Source: Tom traut der Polizei nicht.|Result: tom does not trust the police . <eos>|Target: Tom doesn't trust the police.
+Source: Tom stand kurz vor einem Nervenzusammenbruch.|Result: tom stood in front of a <unk> . <eos>|Target: Tom was on the verge of a nervous breakdown.
+Source: Ich sagte Tom nie die Wahrheit.|Result: i never told tom the truth . <eos>|Target: I never told Tom the truth.
+Source: Ich habe keinen Bleistift.|Result: i have no pencil . <eos>|Target: I don't have a pencil.
+Source: Ich lese nicht so viele Bücher, wie ich es früher getan habe.|Result: i do not read as many books as i did earlier . <eos>|Target: I don't read as many books as I used to.
+Source: Ich werde mit dir gehen.|Result: i will go with you . <eos>|Target: I'm going to go with you.
+Source: Wir haben den 3. Oktober.|Result: we have 3 october . <eos>|Target: It's the third of October.
+Source: Früher gefiel es auch mir in Boston.|Result: i liked it in boston . <eos>|Target: I used to like Boston, too.
+Source: Ich hätte das vor Wochen tun sollen.|Result: i should have done so a few weeks ago . <eos>|Target: I should've done this weeks ago.
+Source: Tom versuchte, seine Mutter zu trösten.|Result: tom tried to comfort his mother . <eos>|Target: Tom tried to comfort his mother.
+Source: Es regnet fast überhaupt nicht.|Result: there is almost no rain at all . <eos>|Target: It's hardly raining at all.
+Source: Ich muss mein Handy aufladen.|Result: i must charge my mobile phone . <eos>|Target: I need to charge my cellphone.
+Source: Der Hubschrauber fliegt sehr niedrig.|Result: the helicopters fly very low . <eos>|Target: The helicopter is flying very low.
+Source: Tom hat gerade angefangen.|Result: tom has just started . <eos>|Target: Tom just started.
+Source: Die Hornisse ist in eine Falle gegangen.|Result: <unk> has gone into a trap . <eos>|Target: The hornet was caught in a trap.
+Source: Das Volk liebt die Freiheit.|Result: the people love freedom . <eos>|Target: People love freedom.
+Source: Tom hat euch namentlich nicht genannt.|Result: tom did not name you . <eos>|Target: Tom didn't mention you by name.
+Source: Dieses Produkt wird in Italien hergestellt.|Result: this product is produced in italy . <eos>|Target: This product is made in Italy.
+Source: Sie versuchte, ihren Vater zu überreden.|Result: she tried to persuade her father . <eos>|Target: She attempted to persuade her father.
+Source: Pass bitte auf.|Result: please pass . <eos>|Target: Just be careful.
+Source: Maria ist eine Hula-Tänzerin.|Result: maria is a <unk> . <eos>|Target: Mary is a hula dancer.
+Source: Wir spielen jeden Samstag Fußball.|Result: we play football every saturday . <eos>|Target: We play football every Saturday.
+Source: Wir haben viel Wasser.|Result: we have a lot of water . <eos>|Target: We have a lot of water.
+Source: Die ersten amerikanischen Siedler kamen im siebzehnten Jahrhundert.|Result: the first american settlers came in the seventeenth century . <eos>|Target: The first American colonists arrived in the 17th century.
+Source: Wir hatten Streit.|Result: we had disputes . <eos>|Target: We had a fight.
+Source: Wir werden Tom das Geld, das er verlangte, nicht geben.|Result: we will not give tom the money he requested . <eos>|Target: We're not going to give Tom the money he asked for.

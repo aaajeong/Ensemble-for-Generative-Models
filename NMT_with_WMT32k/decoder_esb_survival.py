@@ -86,6 +86,15 @@ def get_settled_output(best_scores, best_indices):
         
 
 # python decoder_esb_survival.py --translate --data_dir ./wmt32k_data --model_dir ./outputs --eval_dir ./deu-eng
+
+# dropout은 다른 gpu(id)에서 학습 -> torch.load에서 map_location 설정.
+# python decoder_esb_survival.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng
+
+# dropout & alpha
+# python decoder_esb_survival.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
+
+# dropout & label smoothing
+# python decoder_esb_survival.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_dir', type=str, required=True)
@@ -93,6 +102,7 @@ def main():
     parser.add_argument('--eval_dir', type=str, required=False)
     parser.add_argument('--max_length', type=int, default=100)
     parser.add_argument('--beam_size', type=int, default=4)
+    parser.add_argument('--alpha_esb', action='store_true')
     parser.add_argument('--alpha', type=float, default=0.6)
     parser.add_argument('--no_cuda', action='store_true')
     parser.add_argument('--translate', action='store_true')
@@ -100,6 +110,9 @@ def main():
     args = parser.parse_args()
 
     beam_size = args.beam_size
+    
+    # alpha_esb = [0.6, 0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 0.8, 1.0]
+    alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
 
     # Load fields.
     if args.translate:
@@ -107,10 +120,21 @@ def main():
     trg_data = torch.load(args.data_dir + '/target.pt')
 
     # Check device cuda 
-    device = torch.device('cpu' if args.no_cuda else 'cuda:0')
+    device = torch.device('cpu' if args.no_cuda else 'cuda:1')
     
     # Load a saved model.
     origin_models = []
+    # m = 10
+    # m2 = 12
+    # models_dir = args.model_dir
+    # for i in range(1, m2+1):
+    #     if i == 1:
+    #         continue
+    #     elif i == 9:
+    #         continue
+    #     model_path = models_dir + '/output_' + str(i) + '/last/models'
+    #     model = utils.load_checkpoint(model_path, device)
+    #     origin_models.append(model)
     m = 10
     models_dir = args.model_dir
     for i in range(1, m+1):
@@ -135,7 +159,7 @@ def main():
     f.close()
     
     
-    f = open('./evaluation/esb/survival/hpys2.txt', 'w')
+    f = open('./evaluation/esb/survival/dropout_smoothing/hpys.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         models = origin_models
@@ -149,6 +173,7 @@ def main():
         t_masks = []
         preds = []
         scores = []
+        length_penalties = []
         
         for _ in range(m):
             cache.append({})
@@ -167,6 +192,9 @@ def main():
             
             # score
             scores.append(None)
+            
+            # length_penalty
+            length_penalties.append(None)
             
         target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
         
@@ -231,10 +259,18 @@ def main():
                     else:
                         scores[i] = scores_history[i][-1].unsqueeze(1) + preds[i]
 
-                    length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                    # length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                    if args.alpha_esb:
+                        length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
+                        scores[i] = scores[i] / length_penalties[i]
+                        scores[i] = scores[i].view(-1)
+                    else:
+                        length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                        scores[i] = scores[i] / length_penalty
+                        scores[i] = scores[i].view(-1)
                 
-                    scores[i] = scores[i] / length_penalty
-                    scores[i] = scores[i].view(-1)
+                    # scores[i] = scores[i] / length_penalty
+                    # scores[i] = scores[i].view(-1)
 
                 # Ensemble: Survival                
                 for i in range(len(models)):    

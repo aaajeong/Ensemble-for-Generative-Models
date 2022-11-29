@@ -114,12 +114,13 @@ def validation(validation_data, model, global_step, t_vocab_size, val_writer,
     val_writer.add_scalar('loss', val_loss, global_step)
     return val_loss
 
-# python train.py --problem wmt32k --output_dir ./output --data_dir ./wmt32k_data --parallel
+# python train.py --problem wmt32k --output_dir ./output_super --data_dir ./wmt32k_data
 # watch -d -n 1 nvidia-smi
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--problem', required=True)
-    parser.add_argument('--train_step', type=int, default=200)
+    # parser.add_argument('--train_step', type=int, default=200)
+    parser.add_argument('--train_step', type=int, default=2000)
     parser.add_argument('--batch_size', type=int, default=4096)
     parser.add_argument('--max_length', type=int, default=100)
     parser.add_argument('--n_layers', type=int, default=6)

@@ -4,13 +4,19 @@ from tqe import TQE
 from tqdm import tqdm
 import re
 
-f = open('./esb/majority/hpys.txt', 'r')
+GPU_NUM = 1 # 원하는 GPU 번호 입력
+device = torch.device(f'cuda:{GPU_NUM}' if torch.cuda.is_available() else 'cpu')
+torch.cuda.set_device(device) # change allocation of current GPU
+print(torch.cuda.is_available())
+
+f = open('./single/dropout_alpha/model1/hpys.txt', 'r')
 outputs = f.readlines()
 
-f1 = open('./esb/majority/tqe.txt', 'w')
-sum, count = 0, 0
+f1 = open('./single/dropout_alpha/model1/tqe.txt', 'w')
+t_sum, count = 0, 0
 
 for o in tqdm(outputs):
+    print(o)
     count +=1
     src, hpy, ref = o.split('|')
     hpy = hpy.replace('<eos>', '').replace('Result: ', '')
@@ -27,15 +33,16 @@ for o in tqdm(outputs):
     source.append(src)
     model = TQE('LaBSE')
     cos_sim_values = model.fit(source, target)
-    sum += cos_sim_values[0] 
+    t_sum += cos_sim_values[0] 
     
     f1.write(str(cos_sim_values[0]))
     f1.write('\n')
     
-print('sum: ', sum)
+    
+print('sum: ', t_sum)
 print('count: ', count)
-print('mean: ', sum/count)
-f1.write('Average TQE: ' + str(sum/count))   
+print('mean: ', t_sum/count)
+f1.write('Average TQE: ' + str(t_sum/count))   
 
 f1.close()
 f.close()

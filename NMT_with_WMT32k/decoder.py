@@ -97,7 +97,7 @@ def main():
     f.close()
     
     # f = open('./evaluation/single/hpys_m10.txt', 'w')
-    f = open('./evaluation/single/dropout_smoothing/model4/hpys.txt', 'w')
+    f = open('./evaluation/single/supermodel/hpys.txt', 'w')
     for data in tqdm(dataset):
         cache = {}
         indices_history = []

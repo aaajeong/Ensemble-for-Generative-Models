@@ -9,10 +9,10 @@ device = torch.device(f'cuda:{GPU_NUM}' if torch.cuda.is_available() else 'cpu')
 torch.cuda.set_device(device) # change allocation of current GPU
 print(torch.cuda.is_available())
 
-f = open('./single/dropout_alpha/model1/hpys.txt', 'r')
+f = open('./single/dropout_alpha/model3/hpys.txt', 'r')
 outputs = f.readlines()
 
-f1 = open('./single/dropout_alpha/model1/tqe.txt', 'w')
+f1 = open('./single/dropout_alpha/model3/tqe.txt', 'w')
 t_sum, count = 0, 0
 
 for o in tqdm(outputs):

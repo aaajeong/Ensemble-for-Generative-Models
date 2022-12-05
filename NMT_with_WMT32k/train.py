@@ -51,6 +51,7 @@ def summarize_train(writer, global_step, last_time, model, opt,
     writer.add_scalar('global_step/sec', steps_per_sec,
                       global_step)
 # python train.py --problem wmt32k --output_dir ./output_10 --data_dir ./wmt32k_data --dropout 0.35 --label_smoothing 0.25
+
 def train(train_data, model, opt, global_step, optimizer, t_vocab_size,
           label_smoothing, writer):
     model.train()

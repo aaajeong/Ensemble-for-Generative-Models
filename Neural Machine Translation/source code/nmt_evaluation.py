@@ -13,7 +13,7 @@ import re
 
 if __name__=="__main__":
     project_dir = '/home/gpuadmin/ahjeong/Ensemble-for-Generative-Models/Neural Machine Translation'
-    result_path = f'{project_dir}/outputs/majority'
+    result_path = f'{project_dir}/outputs/model10'
     
     device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     

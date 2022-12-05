@@ -14,8 +14,8 @@ import re
 
 if __name__=="__main__":
     project_dir = '/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
-    # result_path = f'{project_dir}/evaluation/single/dropout_smoothing/model4'
-    result_path = f'{project_dir}/evaluation/esb/majority/dropout_smoothing'
+    result_path = f'{project_dir}/evaluation/single/supermodel'
+    # result_path = f'{project_dir}/evaluation/esb/majority/dropout_smoothing'
     
     device = 'cuda:1' if torch.cuda.is_available() else 'cpu'
     

@@ -4,10 +4,15 @@ from tqe import TQE
 from tqdm import tqdm
 import re
 
-f = open('./esb/majority/hpys.txt', 'r')
+GPU_NUM = 0 # 원하는 GPU 번호 입력
+device = torch.device(f'cuda:{GPU_NUM}' if torch.cuda.is_available() else 'cpu')
+torch.cuda.set_device(device) # change allocation of current GPU
+print(torch.cuda.is_available())
+
+f = open('./single/dropout_alpha/model8/hpys.txt', 'r')
 outputs = f.readlines()
 
-f1 = open('./esb/majority/tqe.txt', 'w')
+f1 = open('./single/dropout_alpha/model8/tqe.txt', 'w')
 sum, count = 0, 0
 
 for o in tqdm(outputs):

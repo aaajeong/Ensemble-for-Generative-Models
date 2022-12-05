@@ -4,6 +4,7 @@ from tqe import TQE
 from tqdm import tqdm
 import re
 
+
 GPU_NUM = 1 # 원하는 GPU 번호 입력
 
 device = torch.device(f'cuda:{GPU_NUM}' if torch.cuda.is_available() else 'cpu')

@@ -1,3 +1,21 @@
+'''
+conda install -c conda-forge spacy
+conda install -c conda-forge cupy
+python -m spacy download en_core_web_sm
+python -m spacy download de_core_news_sm
+'''
+
+de-core-news-sm==3.4.0
+en-core-web-sm==3.4.1
+
+nltk==3.7
+rouge==1.0.1
+
+# pip install torch==1.5.1+cu101 torchvision==0.6.1+cu101 -f https://download.pytorch.org/whl/torch_stable.html
+# - torch==1.5.0+cu101
+# - torchaudio==0.12.1+cu113
+# - torchvision==0.6.0+cu101
+    
 tensorboardX
 torchtext==0.3.1
 tqdm

@@ -1,6 +1,6 @@
-# Recurrent Ensemble Methods to Enhance the Performance of Multiple Recurrent Network Models*
+# REGEN: Recurrent Ensemble Methods for Generative Models*
 
-paper 캡쳐
+Paper Submission 준비 
 
 
 

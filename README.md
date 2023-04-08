@@ -1,6 +1,7 @@
 # REGEN: Recurrent Ensemble Methods for Generative Models*
 
-Paper Submission 준비 
+- Paper Submission 준비중
+- 프로젝트 README.md 파일 수정 중
 
 
 

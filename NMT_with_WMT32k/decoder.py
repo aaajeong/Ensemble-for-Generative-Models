@@ -96,8 +96,8 @@ def main():
     dataset = f.readlines()
     f.close()
     
-    # f = open('./evaluation/single/hpys_m10.txt', 'w')
-    f = open('./evaluation/single/hpys.txt', 'w')
+    f = open('./evaluation/single/testeval.txt', 'w')
+    # f = open('./evaluation/single/hpys.txt', 'w')
     for data in tqdm(dataset):
         cache = {}
         indices_history = []

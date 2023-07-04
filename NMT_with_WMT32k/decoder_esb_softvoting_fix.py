@@ -38,6 +38,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
         # TODO: get this vocab_size from target.pt?
         k = best_idx // vocab_size
         best_token_idx = best_idx % vocab_size
+        print('best_token_idx: ', best_token_idx)
         best_token = trg_data['field'].vocab.itos[best_token_idx]
         result.append(best_token)
         
@@ -49,10 +50,10 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng
 
 # dropout & alpha
-# python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
+# nohup python decoder_esb_softvoting_fix.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb &
 
 # dropout & alpha + loss
-# python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb --loss_esb
+# python decoder_esb_softvoting_fix.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb --loss_esb
 
 # dropout & label smoothing
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
@@ -77,8 +78,7 @@ def main():
     # alpha_esb = [0.6, 0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 0.8, 1.0]
     alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
     # loss_esb = [2.081, 2.177, 2.028, 2.084, 2.19, 2.059, 2.129, 2.239, 2.309, 2.5]
-
-    loss_esb = [0.112288136, 0.864724046, 0.802321207, 0.825774623, 0.870168589, 0.815304348, 0.844621118, 0.890690328, 0.920007098, 1, 0]
+    loss_esb = [0.112288136, 0.315677966, 0, 0.118644068, 0.343220339, 0.065677966, 0.213983051, 0.447033898, 0.595338983, 1]
 
     # Load fields.
     if args.translate:
@@ -125,11 +125,7 @@ def main():
     f.close()
     
     
-<<<<<<< HEAD
-    f = open('./evaluation/esb/consensus/dropout_alpha/hpys.txt', 'w')
-=======
     f = open('./evaluation/esb/consensus_loss/regular/hpys.txt', 'w')
->>>>>>> kie
     for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
@@ -236,38 +232,32 @@ def main():
                         scores[i] = scores[i] / length_penalties[i]
                         # scores[i] = scores[i].view(-1)
                         
-                        # MIN-MAX 정규화
-                        if idx == 0:
-                            min_values, _ = torch.min(scores[i], 0)
-                            max_values, _ = torch.max(scores[i], 0)
+                        # # MIN-MAX 정규화
+                        # if idx == 0:
+                        #     min_values, _ = torch.min(scores[i], 0)
+                        #     max_values, _ = torch.max(scores[i], 0)
                             
-                            scores[i] = torch.div(scores[i] - min_values, max_values - min_values)
+                        #     scores[i] = torch.div(scores[i] - min_values, max_values - min_values)
                             
                             
-                        else:
-                            min_values, _ = torch.min(scores[i], 1)
-                            max_values, _ = torch.max(scores[i], 1)
+                        # else:
+                        #     min_values, _ = torch.min(scores[i], 1)
+                        #     max_values, _ = torch.max(scores[i], 1)
                             
-                            # min, max value reshape
-                            min_values = min_values.reshape(beam_size, -1)
-                            max_values = max_values.reshape(beam_size, -1)  
+                        #     # min, max value reshape
+                        #     min_values = min_values.reshape(beam_size, -1)
+                        #     max_values = max_values.reshape(beam_size, -1)  
                             
-                            scores[i] = torch.div(scores[i] - min_values, max_values - min_values)
+                        #     scores[i] = torch.div(scores[i] - min_values, max_values - min_values)
                         
                                                 
-                        # LOSS 추가
-                        scores[i] += 0.5 * loss_esb[i]
+                        # # LOSS 추가
+                        # scores[i] = 0.2 * scores[i] + 0.8 * loss_esb[i] # 0.5 * loss_esb[i]
                         scores[i] = scores[i].view(-1)
                         
                     else:
                         length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
                         scores[i] = scores[i] / length_penalty
-                        
-                        # MIN-MAX 정규화
-                        scores[i] = scores[i]-min(scores[i]) / (max(scores[i]) - min(scores[i]))
-                        
-                        # LOSS 추가
-                        scores[i] += 0.5 * loss_esb[i]
                         scores[i] = scores[i].view(-1)
             
                     
@@ -282,15 +272,12 @@ def main():
                 #     else:
                 #         if i==0:
                 #             scores_esb = scores[i]
+  
                 #         else:
                 #             scores_esb = torch.add(scores_esb, scores[i])
                 #     scores_esb = torch.div(scores_esb, m)
-                
-                # for i in range(m):
-                #     print(i+1, ': ', max(scores[i]))
-                #     print(i+1, ': ', min(scores[i]))
-                #     print(i+1, ': ', torch.mean(scores[i]))
-                # Ensemble: Soft Voting
+              
+                # Ensemble: Soft Voting -> 1등에 대해서(confi0, loss 1), 모든 답에 대해서 비교(애매한 답이 1등이 될 가능성)
                 for i in range(m):
                     if i==0:
                         scores_esb = scores[i]
@@ -314,6 +301,7 @@ def main():
                 
                 # 각 모델 다음 target update
                 for i in range(m):
+                    print('best_indices: ', best_indices)
                     targets[i] = update_targets(targets[i], best_indices, idx, vocab_size)
                     
 

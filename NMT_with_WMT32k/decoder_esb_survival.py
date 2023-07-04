@@ -112,7 +112,7 @@ def main():
     beam_size = args.beam_size
     
     # alpha_esb = [0.6, 0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 0.8, 1.0]
-    alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
+    # alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
 
     # Load fields.
     if args.translate:
@@ -159,7 +159,7 @@ def main():
     f.close()
     
     
-    f = open('./evaluation/esb/survival/dropout_smoothing/hpys.txt', 'w')
+    f = open('./evaluation/esb/survival/dropout/hpys.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         models = origin_models
@@ -259,18 +259,19 @@ def main():
                     else:
                         scores[i] = scores_history[i][-1].unsqueeze(1) + preds[i]
 
-                    # length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
-                    if args.alpha_esb:
-                        length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
-                        scores[i] = scores[i] / length_penalties[i]
-                        scores[i] = scores[i].view(-1)
-                    else:
-                        length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
-                        scores[i] = scores[i] / length_penalty
-                        scores[i] = scores[i].view(-1)
+                    
+                    # if args.alpha_esb:
+                    #     length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
+                    #     scores[i] = scores[i] / length_penalties[i]
+                    #     scores[i] = scores[i].view(-1)
+                    # else:
+                    #     length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                    #     scores[i] = scores[i] / length_penalty
+                    #     scores[i] = scores[i].view(-1)
                 
-                    # scores[i] = scores[i] / length_penalty
-                    # scores[i] = scores[i].view(-1)
+                    length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                    scores[i] = scores[i] / length_penalty
+                    scores[i] = scores[i].view(-1)
 
                 # Ensemble: Survival                
                 for i in range(len(models)):    

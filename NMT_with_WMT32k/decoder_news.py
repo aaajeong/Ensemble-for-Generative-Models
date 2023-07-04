@@ -51,7 +51,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_11/last/models --eval_dir ./deu-eng
 
 # dropout & alpha 변경
-# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_2/last/models --eval_dir ./deu-eng --alpha 0.4
+# python decoder_news.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_4/last/models --eval_dir ./deu-eng --alpha 0.0
 
 # dropout & label smoothing 변경
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing/output_4/last/models --eval_dir ./deu-eng
@@ -91,17 +91,22 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
-    f = open(f'{args.eval_dir}/oneline.txt', 'r')
-    dataset = f.readlines()
-    f.close()
+    de = open(f'{args.eval_dir}/newstest2012.de', 'r')
+    en = open(f'{args.eval_dir}/newstest2012.en', 'r')
+    deset = de.readlines()
+    enset = en.readlines()
+    de.close()
+    en.close()
     
     # f = open('./evaluation/single/hpys_m10.txt', 'w')
-    f = open('./evaluation/single/hpys.txt', 'w')
-    for data in tqdm(dataset):
+    f = open('./evaluation/single/dropout_alpha_news/model4/hpys.txt', 'w')
+    for d, data in tqdm(enumerate(deset)):
         cache = {}
         indices_history = []
-        target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
+        
+        # target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
+        source = deset[d].strip()
+        target = enset[d].strip()
         
         if args.translate:
             # sentence = input('Source? ')
@@ -158,13 +163,6 @@ def main():
 
         result = get_result_sentence(indices_history, trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
-        # f.write("Source: {}".format(source))
-        # f.write("Result: {}\n".format(result))
-        # f.write("Elapsed Time: {:.2f} sec\n".format(time.time() - start_time))
-        # f.write("\n")
-        # print("Result: {}".format(result))
-
-        # print("Elapsed Time: {:.2f} sec".format(time.time() - start_time))
         
     f.close()
 

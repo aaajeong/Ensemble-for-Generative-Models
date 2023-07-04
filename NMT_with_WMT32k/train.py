@@ -115,7 +115,7 @@ def validation(validation_data, model, global_step, t_vocab_size, val_writer,
     val_writer.add_scalar('loss', val_loss, global_step)
     return val_loss
 
-# python train.py --problem wmt32k --output_dir ./output_super --data_dir ./wmt32k_data
+# python train.py --problem wmt32k --output_dir ./outputs --data_dir ./wmt32k_data
 # watch -d -n 1 nvidia-smi
 def main():
     parser = argparse.ArgumentParser()
@@ -139,7 +139,7 @@ def main():
     parser.add_argument('--summary_grad', action='store_true')
     opt = parser.parse_args()
 
-    device = torch.device('cpu' if opt.no_cuda else 'cuda:1')
+    device = torch.device('cpu' if opt.no_cuda else 'cuda:0')
 
     if not os.path.exists(opt.output_dir + '/last/models'):
         os.makedirs(opt.output_dir + '/last/models')

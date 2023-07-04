@@ -120,27 +120,27 @@ def main():
     trg_data = torch.load(args.data_dir + '/target.pt')
 
     # Check device cuda 
-    device = torch.device('cpu' if args.no_cuda else 'cuda:1')
+    device = torch.device('cpu' if args.no_cuda else 'cuda:0')
     
     # Load a saved model.
     origin_models = []
     # m = 10
-    # m2 = 12
-    # models_dir = args.model_dir
-    # for i in range(1, m2+1):
-    #     if i == 1:
-    #         continue
-    #     elif i == 9:
-    #         continue
-    #     model_path = models_dir + '/output_' + str(i) + '/last/models'
-    #     model = utils.load_checkpoint(model_path, device)
-    #     origin_models.append(model)
-    m = 10
+    m2 = 12
     models_dir = args.model_dir
-    for i in range(1, m+1):
+    for i in range(1, m2+1):
+        if i == 1:
+            continue
+        elif i == 9:
+            continue
         model_path = models_dir + '/output_' + str(i) + '/last/models'
         model = utils.load_checkpoint(model_path, device)
         origin_models.append(model)
+    # m = 10
+    # models_dir = args.model_dir
+    # for i in range(1, m+1):
+    #     model_path = models_dir + '/output_' + str(i) + '/last/models'
+    #     model = utils.load_checkpoint(model_path, device)
+    #     origin_models.append(model)
 
     pads = torch.tensor([trg_data['pad_idx']] * beam_size, device=device)
     pads = pads.unsqueeze(-1)

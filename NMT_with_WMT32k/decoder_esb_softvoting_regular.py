@@ -49,7 +49,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng
 
 # dropout & alpha
-# python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
+# python decoder_esb_softvoting_regular.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
 
 # dropout & label smoothing
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
@@ -72,6 +72,8 @@ def main():
     
     # alpha_esb = [0.6, 0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 0.8, 1.0]
     alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
+    # loss_esb = [2.081, 2.177, 2.028, 2.084, 2.19, 2.059, 2.129, 2.239, 2.309, 2.5]
+    loss_esb = [0.112288136, 0.315677966, 0, 0.118644068, 0.343220339, 0.065677966, 0.213983051, 0.447033898, 0.595338983, 1]
     
 
     # Load fields.
@@ -102,6 +104,7 @@ def main():
         model = utils.load_checkpoint2(model_path, device)
         models.append(model)
     
+    print(models)
     pads = torch.tensor([trg_data['pad_idx']] * beam_size, device=device)
     pads = pads.unsqueeze(-1)
 
@@ -119,7 +122,7 @@ def main():
     f.close()
     
     
-    f = open('./evaluation/esb/consensus/dropout_alpha/hpys.txt', 'w')
+    f = open('./evaluation/esb/consensus/two/hpys.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
@@ -216,19 +219,38 @@ def main():
                     else:
                         scores[i] = scores_history[i][-1].unsqueeze(1) + preds[i]
 
-                    # length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
                     if args.alpha_esb:
                         length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
                         scores[i] = scores[i] / length_penalties[i]
+                        # scores[i] = scores[i].view(-1)
+                        
+                        # # MIN-MAX 정규화
+                        # if idx == 0:
+                        #     min_values, _ = torch.min(scores[i], 0)
+                        #     max_values, _ = torch.max(scores[i], 0)
+                            
+                        #     scores[i] = torch.div(scores[i] - min_values, max_values - min_values)
+                            
+                            
+                        # else:
+                        #     min_values, _ = torch.min(scores[i], 1)
+                        #     max_values, _ = torch.max(scores[i], 1)
+                            
+                        #     # min, max value reshape
+                        #     min_values = min_values.reshape(beam_size, -1)
+                        #     max_values = max_values.reshape(beam_size, -1)  
+                            
+                        #     scores[i] = torch.div(scores[i] - min_values, max_values - min_values)
+                        
+                                                
+                        # LOSS 추가
+                        scores[i] = 0.2 * scores[i] + 0.8 * (loss_esb[i]) # 0.5 * loss_esb[i]
                         scores[i] = scores[i].view(-1)
+                        
                     else:
                         length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
                         scores[i] = scores[i] / length_penalty
                         scores[i] = scores[i].view(-1)
-            
-                    
-                    # scores[i] = scores[i] / length_penalty
-                    # scores[i] = scores[i].view(-1)
 
                     
                 # Ensemble: Soft Voting

@@ -49,7 +49,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng
 
 # dropout & alpha
-# python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
+# python decoder_esb_softvoting_news.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
 
 # dropout & label smoothing
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
@@ -113,14 +113,16 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    f = open(f'{args.eval_dir}/testset_small.txt', 'r')
-    # f = open(f'{args.eval_dir}/oneline.txt', 'r')
-    dataset = f.readlines()
-    f.close()
+    de = open(f'{args.eval_dir}/newstest2012.de', 'r')
+    en = open(f'{args.eval_dir}/newstest2012.en', 'r')
+    deset = de.readlines()
+    enset = en.readlines()
+    de.close()
+    en.close()
     
     
-    f = open('./evaluation/esb/consensus/dropout_alpha/hpys.txt', 'w')
-    for data in tqdm(dataset):
+    f = open('./evaluation/esb/consensus/dropout_alpha_news/hpys.txt', 'w')
+    for d, data in tqdm(enumerate(deset)):
         # Declare variables for each models
         cache = []
         indices_history = []
@@ -155,7 +157,9 @@ def main():
             # length_penalty
             length_penalties.append(None)
             
-        target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
+        # target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
+        source = deset[d].strip()
+        target = enset[d].strip()
         
         if args.translate:
             # sentence = input('Source? ')

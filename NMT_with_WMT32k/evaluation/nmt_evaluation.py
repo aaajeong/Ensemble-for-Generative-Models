@@ -14,10 +14,10 @@ import re
 
 if __name__=="__main__":
     project_dir = '/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
-    result_path = f'{project_dir}/evaluation/single/supermodel'
-    # result_path = f'{project_dir}/evaluation/esb/majority/dropout_smoothing'
+    # result_path = f'{project_dir}/evaluation/single'
+    result_path = f'{project_dir}/evaluation/esb/consensus_loss/regular'
     
-    device = 'cuda:1' if torch.cuda.is_available() else 'cpu'
+    device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     
     # f = open(result_path +'/hpys_m1.txt', 'r')
     f = open(result_path +'/hpys.txt', 'r')

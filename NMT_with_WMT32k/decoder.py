@@ -51,7 +51,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_11/last/models --eval_dir ./deu-eng
 
 # dropout & alpha 변경
-# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_11/last/models --eval_dir ./deu-eng --alpha 0.5
+# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_2/last/models --eval_dir ./deu-eng --alpha 0.4
 
 # dropout & label smoothing 변경
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing/output_4/last/models --eval_dir ./deu-eng
@@ -96,8 +96,8 @@ def main():
     dataset = f.readlines()
     f.close()
     
-    # f = open('./evaluation/single/hpys_m10.txt', 'w')
-    f = open('./evaluation/single/supermodel/hpys.txt', 'w')
+    f = open('./evaluation/single/testeval.txt', 'w')
+    # f = open('./evaluation/single/hpys.txt', 'w')
     for data in tqdm(dataset):
         cache = {}
         indices_history = []

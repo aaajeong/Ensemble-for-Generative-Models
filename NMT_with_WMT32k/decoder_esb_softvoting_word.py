@@ -160,13 +160,13 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    f = open(f'{args.eval_dir}/testset_small.txt', 'r')
-    # f = open(f'{args.eval_dir}/oneline.txt', 'r')
+    # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
+    f = open(f'{args.eval_dir}/oneline.txt', 'r')
     dataset = f.readlines()
     f.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/word/hpys.txt', 'w')
+    f = open('./evaluation/esb/consensus_loss/test/hpys.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
@@ -291,7 +291,7 @@ def main():
                 settled_topk = get_settled_topk(best_scores, best_indices)
                 settled_topk = torch.tensor(settled_topk, device = device).long()
                 best_token_idx = settled_topk[0] % 38979
-                best_token = trg_data['field'].vocab.itos[int(best_token_idx)]   # ex) what (index에 해당하는 단어)
+                # best_token = trg_data['field'].vocab.itos[int(best_token_idx)]   # ex) what (index에 해당하는 단어)
 
 
                 # Stop searching when the best output of beam is EOS.
@@ -301,23 +301,10 @@ def main():
                 # 각 모델 다음 target update
                 for i in range(len(models)):
                     targets[i] = update_targets(targets[i], settled_topk, idx, vocab_size)
-                    """
-                    best_indices:  tensor([ 76, 141, 252,  29], device='cuda:0')
-                    best_indices:  tensor([ 76, 141, 252,  29], device='cuda:0')
-                    best_indices:  tensor([ 76, 141,  70,  29], device='cuda:0')
-                    best_indices:  tensor([ 76, 141, 252,  29], device='cuda:0')
-                    best_indices:  tensor([ 76, 141, 252,  70], device='cuda:0')
-                    best_indices:  tensor([ 76, 141,  29,  70], device='cuda:0')
-                    best_indices:  tensor([ 76, 141,  70, 252], device='cuda:0')
-                    best_indices:  tensor([ 76, 141,  29, 252], device='cuda:0')
-                    best_indices:  tensor([ 76, 141,  29,   3], device='cuda:0')
-                    best_indices:  tensor([ 76, 141,   3,  29], device='cuda:0')
-                    
-                    여기서 top4의 각 1등만을 넘겨야 함.
-                    """
                     
 
         # 모든 모델 같은 출력을 내기 때문에 0번째 모델의 결과를 출력
+        print('indices_history: ', indices_history)
         result = get_result_sentence(indices_history[0], trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
         

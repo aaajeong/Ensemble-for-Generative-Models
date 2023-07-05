@@ -15,7 +15,7 @@ import re
 if __name__=="__main__":
     project_dir = '/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
     # result_path = f'{project_dir}/evaluation/single'
-    result_path = f'{project_dir}/evaluation/esb/consensus_loss/regular'
+    result_path = f'{project_dir}/evaluation/esb/consensus_loss/word'
     
     device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     

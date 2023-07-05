@@ -125,11 +125,7 @@ def main():
     f.close()
     
     
-<<<<<<< HEAD
-    f = open('./evaluation/esb/consensus/dropout_alpha/hpys.txt', 'w')
-=======
     f = open('./evaluation/esb/consensus_loss/regular/hpys.txt', 'w')
->>>>>>> kie
     for data in tqdm(dataset):
         # Declare variables for each models
         cache = []

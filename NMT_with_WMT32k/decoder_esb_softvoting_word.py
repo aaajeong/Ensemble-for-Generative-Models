@@ -161,12 +161,12 @@ def main():
 
 
     # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
-    f = open(f'{args.eval_dir}/oneline.txt', 'r')
+    f = open(f'{args.eval_dir}/oneline2.txt', 'r')
     dataset = f.readlines()
     f.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/test/hpys.txt', 'w')
+    f = open('./evaluation/esb/consensus_loss/test/hpys2.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
@@ -180,6 +180,7 @@ def main():
         preds = []
         scores = []
         length_penalties = []
+        settled_output = []
         
         for _ in range(m):
             cache.append({})
@@ -290,6 +291,7 @@ def main():
                 # Settled Output 결정
                 settled_topk = get_settled_topk(best_scores, best_indices)
                 settled_topk = torch.tensor(settled_topk, device = device).long()
+                settled_output.append(settled_topk)
                 best_token_idx = settled_topk[0] % 38979
                 # best_token = trg_data['field'].vocab.itos[int(best_token_idx)]   # ex) what (index에 해당하는 단어)
 
@@ -297,15 +299,14 @@ def main():
                 # Stop searching when the best output of beam is EOS.
                 if settled_topk[0].item() % vocab_size == eos_idx:
                     break
-                
+
                 # 각 모델 다음 target update
                 for i in range(len(models)):
                     targets[i] = update_targets(targets[i], settled_topk, idx, vocab_size)
                     
 
         # 모든 모델 같은 출력을 내기 때문에 0번째 모델의 결과를 출력
-        print('indices_history: ', indices_history)
-        result = get_result_sentence(indices_history[0], trg_data, vocab_size)
+        result = get_result_sentence(settled_output, trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
         
     f.close()

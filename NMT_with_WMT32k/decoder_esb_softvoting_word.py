@@ -161,7 +161,7 @@ def main():
 
 
     # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
-    f = open(f'{args.eval_dir}/oneline.txt', 'r')
+    f = open(f'{args.eval_dir}/oneline2.txt', 'r')
     dataset = f.readlines()
     f.close()
     
@@ -243,7 +243,9 @@ def main():
                 # 각 모델 encoding 시작
                 for i in range(m):
                     if idx > start_idx:
+                        print('targets[i]: ', targets[i])
                         targets[i] = torch.cat((targets[i], pads), dim=1)
+                        print('targets[i]: ', targets[i])
                         
                     t_self_masks[i] = utils.create_trg_self_mask(targets[i].size()[1],
                                                         device=targets[i].device)
@@ -304,7 +306,8 @@ def main():
                     
 
         # 모든 모델 같은 출력을 내기 때문에 0번째 모델의 결과를 출력
-        print('indices_history: ', indices_history)
+        print('indices_history[0]: ', indices_history[0])
+        print('indices_history[1]: ', indices_history[1])
         result = get_result_sentence(indices_history[0], trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
         

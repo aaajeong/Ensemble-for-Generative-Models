@@ -1,6 +1,6 @@
 import torch
 import sys
-sys.path.append('/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k')
+# sys.path.append('/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k')
 import nltk
 nltk.download('wordnet')
 nltk.download('omw-1.4')
@@ -13,13 +13,14 @@ from rouge import Rouge
 import re
 
 if __name__=="__main__":
-    project_dir = '/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
-    # result_path = f'{project_dir}/evaluation/single'
-    result_path = f'{project_dir}/evaluation/esb/consensus_loss/word'
+    # project_dir = '/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
+    project_dir = '/home/ahjeong/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
+    # result_path = f'{project_dir}/evaluation/single/dropout_alpha_news/model4'
+    result_path = f'{project_dir}/evaluation/esb/consensus_loss/dropout_alpha_word_news'
     
     device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     
-    # f = open(result_path +'/hpys_m1.txt', 'r')
+    # f = open(result_path +'/testeval.txt', 'r')
     f = open(result_path +'/hpys.txt', 'r')
     output = f.readlines()
     f.close()
@@ -50,6 +51,7 @@ if __name__=="__main__":
         
         # BLEU 측정 위한 preprocessing
         # 특정문자열 제거, 단어와 단어 뒤에 오는 구두점(.)사이에 공백을 생성
+        # print(o)
         src, hpy, ref = o.split('|')
         '''
         src:Source: Hatten Sie Freude daran?
@@ -79,6 +81,8 @@ if __name__=="__main__":
             # all_meteor.append(meteor_score(ref, hpy))
             
             rouge = Rouge()
+            # print('ref: ', ref)
+            # print('hpys: ', hpy)
             temp_rouge = rouge.get_scores(' '.join(ref), ' '.join(hpy.split()), avg=True)['rouge-l']
             rouge_l_f1 += temp_rouge['f']
             rouge_l_precision += temp_rouge['p']

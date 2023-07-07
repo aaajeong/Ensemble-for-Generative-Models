@@ -48,7 +48,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./output_ckp/last/models --eval_dir ./deu-eng
 
 # dropout은 다른 gpu(id)에서 학습 -> torch.load에서 map_location 설정.
-# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_11/last/models --eval_dir ./deu-eng
+# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_4/last/models --eval_dir ./deu-eng
 
 # dropout & alpha 변경
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_2/last/models --eval_dir ./deu-eng --alpha 0.4
@@ -91,8 +91,8 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
-    f = open(f'{args.eval_dir}/oneline.txt', 'r')
+    f = open(f'{args.eval_dir}/testset_small.txt', 'r')
+    # f = open(f'{args.eval_dir}/oneline.txt', 'r')
     dataset = f.readlines()
     f.close()
     

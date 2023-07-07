@@ -92,7 +92,7 @@ def get_settled_topk(best_scores, best_indices, beam_size = 4):
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng
 
 # dropout & alpha
-# nohup python decoder_esb_softvoting_word.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb &
+# nohup python decoder_esb_softvoting_word_news.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb &
 
 # dropout & alpha + loss
 # python decoder_esb_softvoting_fix.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb --loss_esb
@@ -160,14 +160,16 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
-    f = open(f'{args.eval_dir}/oneline2.txt', 'r')
-    dataset = f.readlines()
-    f.close()
+    de = open(f'{args.eval_dir}/newstest2012.de', 'r')
+    en = open(f'{args.eval_dir}/newstest2012.en', 'r')
+    deset = de.readlines()
+    enset = en.readlines()
+    de.close()
+    en.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/test/hpys2.txt', 'w')
-    for data in tqdm(dataset):
+    f = open('./evaluation/esb/consensus_loss/dropout_alpha_word_news/hpys.txt', 'w')
+    for d, data in tqdm(enumerate(deset)):
         # Declare variables for each models
         cache = []
         indices_history = []
@@ -203,7 +205,9 @@ def main():
             # length_penalty
             length_penalties.append(None)
             
-        target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
+        # target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
+        source = deset[d].strip()
+        target = enset[d].strip()
         
         if args.translate:
             # sentence = input('Source? ')
@@ -244,9 +248,7 @@ def main():
                 # 각 모델 encoding 시작
                 for i in range(m):
                     if idx > start_idx:
-                        print('targets[i]: ', targets[i])
                         targets[i] = torch.cat((targets[i], pads), dim=1)
-                        print('targets[i]: ', targets[i])
                         
                     t_self_masks[i] = utils.create_trg_self_mask(targets[i].size()[1],
                                                         device=targets[i].device)

@@ -125,7 +125,7 @@ def main():
     f.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/regular/hpys.txt', 'w')
+    f = open('./evaluation/esb/consensus_loss/test/hpys.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
@@ -230,64 +230,21 @@ def main():
                     if args.alpha_esb:
                         length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
                         scores[i] = scores[i] / length_penalties[i]
-                        # scores[i] = scores[i].view(-1)
-                        
-                        # # MIN-MAX 정규화
-                        # if idx == 0:
-                        #     min_values, _ = torch.min(scores[i], 0)
-                        #     max_values, _ = torch.max(scores[i], 0)
-                            
-                        #     scores[i] = torch.div(scores[i] - min_values, max_values - min_values)
-                            
-                            
-                        # else:
-                        #     min_values, _ = torch.min(scores[i], 1)
-                        #     max_values, _ = torch.max(scores[i], 1)
-                            
-                        #     # min, max value reshape
-                        #     min_values = min_values.reshape(beam_size, -1)
-                        #     max_values = max_values.reshape(beam_size, -1)  
-                            
-                        #     scores[i] = torch.div(scores[i] - min_values, max_values - min_values)
-                        
-                                                
-                        # # LOSS 추가
-                        # scores[i] = 0.2 * scores[i] + 0.8 * loss_esb[i] # 0.5 * loss_esb[i]
                         scores[i] = scores[i].view(-1)
                         
                     else:
                         length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
                         scores[i] = scores[i] / length_penalty
                         scores[i] = scores[i].view(-1)
-            
-                    
-                    
-                # # Ensemble: Soft Voting
-                # for i in range(m):
-                #     if args.loss_esb:
-                #         if i==0:
-                #             scores_esb = scores[i] * (1/loss_esb[i])
-                #         else:
-                #             scores_esb = torch.add(scores_esb, scores[i] * (1/loss_esb[i]))
-                #     else:
-                #         if i==0:
-                #             scores_esb = scores[i]
-  
-                #         else:
-                #             scores_esb = torch.add(scores_esb, scores[i])
-                #     scores_esb = torch.div(scores_esb, m)
               
-                # Ensemble: Soft Voting -> 1등에 대해서(confi0, loss 1), 모든 답에 대해서 비교(애매한 답이 1등이 될 가능성)
+                # Ensemble: Soft Voting
                 for i in range(m):
                     if i==0:
                         scores_esb = scores[i]
                     else:
                         scores_esb = torch.add(scores_esb, scores[i])
                 scores_esb = torch.div(scores_esb, m)
-                
-                # for i in range(m):
-                #     best_scores, best_indices = scores[i].topk(beam_size, 0)
-                
+
                 # 각 모델 best_score, best_indcices 구하기 -> 앞서 앙상블 한 결과이기 때문에 모든 모델은 동일한 결과를 갖게됨.
                 for i in range(m):    
                     best_scores, best_indices = scores_esb.topk(beam_size, 0)
@@ -301,19 +258,13 @@ def main():
                 
                 # 각 모델 다음 target update
                 for i in range(m):
-                    print('best_indices: ', best_indices)
                     targets[i] = update_targets(targets[i], best_indices, idx, vocab_size)
                     
 
         # 모든 모델 같은 출력을 내기 때문에 0번째 모델의 결과를 출력
         result = get_result_sentence(indices_history[0], trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
-        
-        # f.write("Elapsed Time: {:.2f} sec\n".format(time.time() - start_time))
-        # f.write("\n")
-        # print("Result: {}".format(result))
-        # print("Elapsed Time: {:.2f} sec".format(time.time() - start_time))
-        
+
     f.close()
 
 if __name__ == '__main__':

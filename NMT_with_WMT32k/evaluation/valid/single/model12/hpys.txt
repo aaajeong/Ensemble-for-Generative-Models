@@ -1,0 +1,1 @@
+Source: Wie hast du Tom dazu gebracht, mit dem Trinken aufzuhören?|Result: how did you get tom to stop drinking ? <eos>|Target: How did you get Tom to quit drinking?

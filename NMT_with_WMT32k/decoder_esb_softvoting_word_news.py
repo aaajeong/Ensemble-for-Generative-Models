@@ -168,7 +168,7 @@ def main():
     en.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/dropout_alpha_word_news/hpys.txt', 'w')
+    f = open('./evaluation/esb/consensus_loss/dropout_alpha_word_news_kie/hpys.txt', 'w')
     for d, data in tqdm(enumerate(deset)):
         # Declare variables for each models
         cache = []

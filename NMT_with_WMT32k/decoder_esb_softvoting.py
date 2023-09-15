@@ -110,13 +110,13 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    f = open(f'{args.eval_dir}/testset_small.txt', 'r')
-    # f = open(f'{args.eval_dir}/oneline.txt', 'r')
+    # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
+    f = open(f'{args.eval_dir}/oneline2.txt', 'r')
     dataset = f.readlines()
     f.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/dropout_alpha_1/hpys.txt', 'w')
+    f = open('./evaluation/esb/test/hpys.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
@@ -213,19 +213,19 @@ def main():
                     else:
                         scores[i] = scores_history[i][-1].unsqueeze(1) + preds[i]
 
-                    length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
-                    # if args.alpha_esb:
-                    #     length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
-                    #     scores[i] = scores[i] / length_penalties[i]
-                    #     scores[i] = scores[i].view(-1)
-                    # else:
-                    #     length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
-                    #     scores[i] = scores[i] / length_penalty
-                    #     scores[i] = scores[i].view(-1)
+                    # length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                    if args.alpha_esb:
+                        length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
+                        scores[i] = scores[i] / length_penalties[i]
+                        scores[i] = scores[i].view(-1)
+                    else:
+                        length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                        scores[i] = scores[i] / length_penalty
+                        scores[i] = scores[i].view(-1)
             
                     
-                    scores[i] = scores[i] / length_penalty
-                    scores[i] = scores[i].view(-1)
+                    # scores[i] = scores[i] / length_penalty
+                    # scores[i] = scores[i].view(-1)
 
                     
                 # Ensemble: Soft Voting
@@ -242,6 +242,7 @@ def main():
                 # 각 모델 best_score, best_indcices 구하기 -> 앞서 앙상블 한 결과이기 때문에 모든 모델은 동일한 결과를 갖게됨.
                 for i in range(m):    
                     best_scores, best_indices = scores_esb.topk(beam_size, 0)
+                    print('best_scores: ', best_scores)
                     scores_history[i].append(best_scores)
                     indices_history[i].append(best_indices)
                     

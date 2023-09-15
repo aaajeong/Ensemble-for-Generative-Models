@@ -72,7 +72,8 @@ def main():
     
     # alpha_esb = [0.6, 0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 0.8, 1.0]
     alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
-    
+    # MAX - x / MAX-MIN
+    loss_esb = [0.88771186, 0.68432203, 1, 0.88135593, 0.65677966, 0.93432203, 0.78601695, 0.5529661,  0.40466102, 0]
 
     # Load fields.
     if args.translate:
@@ -121,7 +122,7 @@ def main():
     en.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/dropout_alpha_news/hpys.txt', 'w')
+    f = open('./evaluation/esb/consensus_loss/dropout_alpha_news_loss/hpys.txt', 'w')
     for d, data in tqdm(enumerate(deset)):
         # Declare variables for each models
         cache = []
@@ -234,7 +235,10 @@ def main():
                     # scores[i] = scores[i] / length_penalty
                     # scores[i] = scores[i].view(-1)
 
-                    
+                # LOSS 추가
+                for i in range(m):
+                    scores[i] = scores[i] * loss_esb[i]
+                     
                 # Ensemble: Soft Voting
                 for i in range(m):
                     if i==0:

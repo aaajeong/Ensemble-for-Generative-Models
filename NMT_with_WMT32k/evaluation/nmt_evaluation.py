@@ -13,10 +13,10 @@ from rouge import Rouge
 import re
 
 if __name__=="__main__":
-    # project_dir = '/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
-    project_dir = '/home/ahjeong/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
-    # result_path = f'{project_dir}/evaluation/single/dropout_alpha_news/model4'
-    result_path = f'{project_dir}/evaluation/esb/consensus_loss/dropout_alpha_word_news'
+    project_dir = '/home/kie/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
+    # project_dir = '/home/ahjeong/ahjeong/Ensemble-for-Generative-Models/NMT_with_WMT32k'
+    # result_path = f'{project_dir}/evaluation/single_notaffect/model4'
+    result_path = f'{project_dir}/evaluation/esb_weighted_loss/consensus'
     
     device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     

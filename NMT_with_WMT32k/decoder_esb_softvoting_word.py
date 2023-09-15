@@ -94,9 +94,6 @@ def get_settled_topk(best_scores, best_indices, beam_size = 4):
 # dropout & alpha
 # nohup python decoder_esb_softvoting_word.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb &
 
-# dropout & alpha + loss
-# python decoder_esb_softvoting_fix.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb --loss_esb
-
 # dropout & label smoothing
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
 
@@ -108,7 +105,6 @@ def main():
     parser.add_argument('--max_length', type=int, default=100)
     parser.add_argument('--beam_size', type=int, default=4)
     parser.add_argument('--alpha_esb', action='store_true')
-    parser.add_argument('--loss_esb', action='store_true')
     parser.add_argument('--alpha', type=float, default=0.6)
     parser.add_argument('--no_cuda', action='store_true')
     parser.add_argument('--translate', action='store_true')
@@ -119,7 +115,8 @@ def main():
     
     alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
     # loss_esb = [2.081, 2.177, 2.028, 2.084, 2.19, 2.059, 2.129, 2.239, 2.309, 2.5]
-    # loss_esb = [0.112288136, 0.315677966, 0, 0.118644068, 0.343220339, 0.065677966, 0.213983051, 0.447033898, 0.595338983, 1]
+    # MAX - x / MAX-MIN
+    loss_esb = [0.88771186, 0.68432203, 1, 0.88135593, 0.65677966, 0.93432203, 0.78601695, 0.5529661,  0.40466102, 0]
 
     # Load fields.
     if args.translate:
@@ -166,7 +163,7 @@ def main():
     f.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/test/hpys2.txt', 'w')
+    f = open('./evaluation/esb/consensus_loss/word_wettled_loss/hpys.txt', 'w')
     for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
@@ -244,7 +241,9 @@ def main():
                 # 각 모델 encoding 시작
                 for i in range(m):
                     if idx > start_idx:
+                        # print('targets[i]: ', targets[i])
                         targets[i] = torch.cat((targets[i], pads), dim=1)
+                        # print('targets[i]: ', targets[i])
                         
                     t_self_masks[i] = utils.create_trg_self_mask(targets[i].size()[1],
                                                         device=targets[i].device)

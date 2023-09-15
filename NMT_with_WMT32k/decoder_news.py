@@ -99,7 +99,7 @@ def main():
     en.close()
     
     # f = open('./evaluation/single/hpys_m10.txt', 'w')
-    f = open('./evaluation/single/dropout_alpha_news/model4/hpys.txt', 'w')
+    f = open('./evaluation/single/dropout_alpha_news_kie/model4/hpys.txt', 'w')
     for d, data in tqdm(enumerate(deset)):
         cache = {}
         indices_history = []

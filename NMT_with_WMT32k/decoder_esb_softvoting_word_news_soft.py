@@ -43,13 +43,96 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
         
     return ' '.join(result[::-1])
 
+def get_settled_topk(best_scores, best_indices, beam_size = 4):
+    # top k 점수, 인덱스 가져오기
+    best_indices = torch.transpose(best_indices, 0, 1)
+    best_scores = torch.transpose(best_scores, 0, 1)
+    
+    vals = []   # vocab 번호
+    counts = [] # vocab 빈도 수
+    max_idx = [] # 최빈 vocab 인덱스
+    topk_dic = []   # topk의 idx-score 딕셔너리
+    topk_result = [] # topk 최종 1등
+    for i in range(beam_size):
+        val, count = torch.unique(best_indices[i], return_counts = True)
+        vals.append(val)
+        counts.append(count)
+        max_idx.append(torch.where(count == count.max()))
+    
+    
+        # idx-scores 딕셔너리
+        idx_score = {}
+        for j in range(len(best_indices[i])):
+            if best_indices[i][j].item() not in idx_score:
+                idx_score[best_indices[i][j].item()] = [best_scores[i][j]]
+            else:
+                idx_score[best_indices[i][j].item()].append(best_scores[i][j])
+        topk_dic.append(idx_score)
+    
+    for i in range(beam_size):
+        # Settled Output 결정
+        # 최빈값이 여러개면 softmax 값의 평균으로 결정
+        scores = []
+        if len(max_idx[i][0]) != 1:
+            for j in range(len(max_idx[i][0])):
+                scores.append(torch.mean(torch.tensor(topk_dic[i][vals[i][max_idx[i][0][j]].item()])))
+
+            scores = torch.tensor(scores)
+            
+            result = vals[i][max_idx[i][0][torch.argmax(scores)]]
+            topk_result.append(result)
+        else:
+            result = vals[i][max_idx[i][0][0]]
+            topk_result.append(result.item())
+    return topk_result
+
+def get_settled_topk_confi(best_scores, best_indices, beam_size = 4):
+    """
+    Group 별 confidence 고려 후 합이 가장 큰 단어 선택 -> settled output 결정
+    """
+    # top k 점수, 인덱스 가져오기
+    best_indices = torch.transpose(best_indices, 0, 1)
+    best_scores = torch.transpose(best_scores, 0, 1)
+    
+    vals = []   # vocab 번호
+    counts = [] # vocab 빈도 수
+    max_idx = [] # 최빈 vocab 인덱스
+    topk_dic_confi = []   # topk의 idx-score confidence 합
+    topk_result = [] # topk 최종 1등
+    for i in range(beam_size):
+        val, count = torch.unique(best_indices[i], return_counts = True)
+        vals.append(val)
+        counts.append(count)
+        max_idx.append(torch.where(count == count.max()))
+        
+        # idx-scores confidence 합
+        idx_confi = {}
+        for j in range(len(best_indices[i])):
+            if best_indices[i][j].item() not in idx_confi:
+                idx_confi[best_indices[i][j].item()] = best_scores[i][j]
+            else:
+                # idx_confi[best_indices[i][j].item()].append(best_scores[i][j])
+                idx_confi[best_indices[i][j].item()] = torch.add(idx_confi[best_indices[i][j].item()], best_scores[i][j])
+        topk_dic_confi.append(idx_confi)
+    
+    
+    # topk_dic_confi 에서 높은 confidence 가진 인덱스 확인
+    for i in range(beam_size):
+        # print('======')
+        # print(min(topk_dic_confi[i],key=topk_dic_confi[i].get))
+        topk_result.append(min(topk_dic_confi[i],key=topk_dic_confi[i].get))
+    return topk_result
+
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs --eval_dir ./deu-eng
 
 # dropout은 다른 gpu(id)에서 학습 -> torch.load에서 map_location 설정.
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng
 
 # dropout & alpha
-# python decoder_esb_softvoting_news.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
+# nohup python decoder_esb_softvoting_word_news.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb &
+
+# dropout & alpha + loss
+# python decoder_esb_softvoting_fix.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb --loss_esb
 
 # dropout & label smoothing
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
@@ -62,6 +145,7 @@ def main():
     parser.add_argument('--max_length', type=int, default=100)
     parser.add_argument('--beam_size', type=int, default=4)
     parser.add_argument('--alpha_esb', action='store_true')
+    parser.add_argument('--loss_esb', action='store_true')
     parser.add_argument('--alpha', type=float, default=0.6)
     parser.add_argument('--no_cuda', action='store_true')
     parser.add_argument('--translate', action='store_true')
@@ -70,10 +154,9 @@ def main():
 
     beam_size = args.beam_size
     
-    # alpha_esb = [0.6, 0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 0.8, 1.0]
     alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
-    # MAX - x / MAX-MIN
-    loss_esb = [0.88771186, 0.68432203, 1, 0.88135593, 0.65677966, 0.93432203, 0.78601695, 0.5529661,  0.40466102, 0]
+    # loss_esb = [2.081, 2.177, 2.028, 2.084, 2.19, 2.059, 2.129, 2.239, 2.309, 2.5]
+    # loss_esb = [0.112288136, 0.315677966, 0, 0.118644068, 0.343220339, 0.065677966, 0.213983051, 0.447033898, 0.595338983, 1]
 
     # Load fields.
     if args.translate:
@@ -122,7 +205,7 @@ def main():
     en.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/dropout_alpha_news_loss/hpys.txt', 'w')
+    f = open('./evaluation/esb/consensus_loss/dropout_alpha_word_news_soft/hpys.txt', 'w')
     for d, data in tqdm(enumerate(deset)):
         # Declare variables for each models
         cache = []
@@ -136,6 +219,7 @@ def main():
         preds = []
         scores = []
         length_penalties = []
+        settled_output = []
         
         for _ in range(m):
             cache.append({})
@@ -195,6 +279,8 @@ def main():
         # 번역 시작
         with torch.no_grad():
             for idx in range(start_idx, args.max_length):
+                best_scores = torch.tensor((), device = device)
+                best_indices = torch.tensor((), device = device)
                 
                 # 각 모델 encoding 시작
                 for i in range(m):
@@ -221,59 +307,48 @@ def main():
                     else:
                         scores[i] = scores_history[i][-1].unsqueeze(1) + preds[i]
 
-                    # length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                    
                     if args.alpha_esb:
                         length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
                         scores[i] = scores[i] / length_penalties[i]
                         scores[i] = scores[i].view(-1)
+                        
                     else:
                         length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
                         scores[i] = scores[i] / length_penalty
                         scores[i] = scores[i].view(-1)
             
-                    
-                    # scores[i] = scores[i] / length_penalty
-                    # scores[i] = scores[i].view(-1)
-
-                # LOSS 추가
-                for i in range(m):
-                    scores[i] = scores[i] * loss_esb[i]
-                     
                 # Ensemble: Soft Voting
-                for i in range(m):
-                    if i==0:
-                        scores_esb = scores[i]
-                    else:
-                        scores_esb = torch.add(scores_esb, scores[i])
-                scores_esb = torch.div(scores_esb, m)
-                
-                # for i in range(m):
-                #     best_scores, best_indices = scores[i].topk(beam_size, 0)
-                
-                # 각 모델 best_score, best_indcices 구하기 -> 앞서 앙상블 한 결과이기 때문에 모든 모델은 동일한 결과를 갖게됨.
-                for i in range(m):    
-                    best_scores, best_indices = scores_esb.topk(beam_size, 0)
-                    scores_history[i].append(best_scores)
-                    indices_history[i].append(best_indices)
+                for i in range(len(models)):    
+                    best_score, best_indice = scores[i].topk(beam_size, 0)
                     
+                    scores_history[i].append(best_score)
+                    indices_history[i].append(best_indice)
+                    
+                    
+                    best_indices = torch.cat((best_indices, best_indice.unsqueeze(0).float()), 0)
+                    best_scores = torch.cat((best_scores, best_score.unsqueeze(0)), 0)
+                
+                # Settled Output 결정
+                settled_topk = get_settled_topk_confi(best_scores, best_indices)
+                settled_topk = torch.tensor(settled_topk, device = device).long()
+                settled_output.append(settled_topk)
+                # best_token_idx = settled_topk[0] % 38979
+                # best_token = trg_data['field'].vocab.itos[int(best_token_idx)]   # ex) what (index에 해당하는 단어)
+
 
                 # Stop searching when the best output of beam is EOS.
-                if best_indices[0].item() % vocab_size == eos_idx:
+                if settled_topk[0].item() % vocab_size == eos_idx:
                     break
-                
+
                 # 각 모델 다음 target update
-                for i in range(m):
-                    targets[i] = update_targets(targets[i], best_indices, idx, vocab_size)
+                for i in range(len(models)):
+                    targets[i] = update_targets(targets[i], settled_topk, idx, vocab_size)
                     
 
         # 모든 모델 같은 출력을 내기 때문에 0번째 모델의 결과를 출력
-        result = get_result_sentence(indices_history[0], trg_data, vocab_size)
+        result = get_result_sentence(settled_output, trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
-        
-        # f.write("Elapsed Time: {:.2f} sec\n".format(time.time() - start_time))
-        # f.write("\n")
-        # print("Result: {}".format(result))
-        # print("Elapsed Time: {:.2f} sec".format(time.time() - start_time))
         
     f.close()
 

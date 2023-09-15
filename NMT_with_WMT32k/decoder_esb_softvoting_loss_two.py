@@ -24,9 +24,14 @@ def encode_inputs(sentence, model, src_data, beam_size, device):
 
 def update_targets(targets, best_indices, idx, vocab_size):
     best_tensor_indices = torch.div(best_indices, vocab_size)
+    # print('bext_tesor_indices: ', best_tensor_indices)
     best_token_indices = torch.fmod(best_indices, vocab_size)
+    # print('best_token_indices: ', best_token_indices)
+    # print('targets: ', targets)
     new_batch = torch.index_select(targets, 0, best_tensor_indices)
+    # print('new_batch 전: ', new_batch)
     new_batch[:, idx] = best_token_indices
+    # print('new_batch 후: ', new_batch)
     return new_batch
 
 
@@ -49,7 +54,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng
 
 # dropout & alpha
-# python decoder_esb_softvoting_news.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
+# nohup python decoder_esb_softvoting_loss_two.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb &
 
 # dropout & label smoothing
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
@@ -70,10 +75,11 @@ def main():
 
     beam_size = args.beam_size
     
-    # alpha_esb = [0.6, 0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 0.8, 1.0]
-    alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
+    alpha_esb = [0.0, 0.0]  # model 4, model 12
+
     # MAX - x / MAX-MIN
-    loss_esb = [0.88771186, 0.68432203, 1, 0.88135593, 0.65677966, 0.93432203, 0.78601695, 0.5529661,  0.40466102, 0]
+    loss_esb = [1, 0]   # model 4, model 12
+
 
     # Load fields.
     if args.translate:
@@ -85,23 +91,18 @@ def main():
     
     # Load a saved model.
     models = []
-    m = 10
-    m2 = 12
+    m = 2
     models_dir = args.model_dir
     
-    # for i in range(1, m+1):
-    #     model_path = models_dir + '/output_' + str(i) + '/last/models'
-    #     model = utils.load_checkpoint2(model_path, device)
-    #     models.append(model)
-        
-    for i in range(1, m2+1):
-        if i == 1:
-            continue
-        elif i == 9:
-            continue
-        model_path = models_dir + '/output_' + str(i) + '/last/models'
-        model = utils.load_checkpoint2(model_path, device)
-        models.append(model)
+    # Model 4
+    model_path = models_dir + '/output_' + str(4) + '/last/models'
+    model = utils.load_checkpoint2(model_path, device)
+    models.append(model)
+    
+    # Model 12
+    model_path = models_dir + '/output_' + str(4) + '/last/models'
+    model = utils.load_checkpoint2(model_path, device)
+    models.append(model)
     
     pads = torch.tensor([trg_data['pad_idx']] * beam_size, device=device)
     pads = pads.unsqueeze(-1)
@@ -114,19 +115,19 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    de = open(f'{args.eval_dir}/newstest2012.de', 'r')
-    en = open(f'{args.eval_dir}/newstest2012.en', 'r')
-    deset = de.readlines()
-    enset = en.readlines()
-    de.close()
-    en.close()
+    # f = open(f'{args.eval_dir}/testset_small.txt', 'r')
+    f = open(f'{args.eval_dir}/oneline.txt', 'r')
+    # f = open(f'{args.eval_dir}/oneline2.txt', 'r')
+    dataset = f.readlines()
+    f.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/dropout_alpha_news_loss/hpys.txt', 'w')
-    for d, data in tqdm(enumerate(deset)):
+    f = open('./evaluation/valid/esb/1:0_x/hpys.txt', 'w')
+    for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
         indices_history = []
+        m4_indices_history = []
         scores_history = []
         encoder_outputs = []
         src_masks = []
@@ -158,9 +159,7 @@ def main():
             # length_penalty
             length_penalties.append(None)
             
-        # target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
-        source = deset[d].strip()
-        target = enset[d].strip()
+        target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
         
         if args.translate:
             # sentence = input('Source? ')
@@ -191,6 +190,12 @@ def main():
             
             start_idx = targets[0].size(1) - 1
             start_time = time.time()
+        
+        # === Encoder output & source mask & taret 확인 ===
+        # for i in range(m):
+        #     print(i , ' 번 모델 Encoder output: ',encoder_outputs[i])
+        #     print(i , ' 번 모델 source mask: ',src_masks[i])
+        #     print(i , ' 번 모델 taret: ',targets[i])
 
         # 번역 시작
         with torch.no_grad():
@@ -200,59 +205,74 @@ def main():
                 for i in range(m):
                     if idx > start_idx:
                         targets[i] = torch.cat((targets[i], pads), dim=1)
+                        # print(i, ' 번 모델 targets: ', targets[i])
                         
                     t_self_masks[i] = utils.create_trg_self_mask(targets[i].size()[1],
                                                         device=targets[i].device)
+                    # print(i, ' 번 모델 t_self_masks: ', t_self_masks[i])
                 
                     t_masks[i] = utils.create_pad_mask(targets[i], trg_data['pad_idx'])
+                    # print(i, ' 번 모델 t_masks: ', t_masks[i])
 
                     preds[i] = models[i].decode(targets[i], encoder_outputs[i], src_masks[i],
                                     t_self_masks[i], t_masks[i], cache[i])
+                    # print(i, ' 번 모델 cache: ', cache[i])
+                    # print(i, ' 번 모델 preds: ', preds[i])
                     
 
                     preds[i] = preds[i][:, idx].squeeze(1)
+                    # print(i, ' 번 모델 squeeze preds: ', preds[i])
                     vocab_size = preds[i].size(1)    
 
                     preds[i] = F.log_softmax(preds[i], dim=1)
+                    # print(i, ' 번 모델 softmax preds: ', preds[i])
 
                     if idx == start_idx:
                         scores[i] = preds[i][0]
 
                     else:
                         scores[i] = scores_history[i][-1].unsqueeze(1) + preds[i]
-
+                        scores[i] = preds[i]
+                    # print(i, ' 번 모델 scores: ', scores[i])
                     # length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                
+                    # scores[i] = scores[i] / length_penalty
+                    # scores[i] = scores[i].view(-1)
+                    
                     if args.alpha_esb:
                         length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
                         scores[i] = scores[i] / length_penalties[i]
                         scores[i] = scores[i].view(-1)
+                        # print(i, ' 번 모델 length penaltiest 후 scores: ', scores[i])
+                        
                     else:
+                        # print('============= check =============')
                         length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
                         scores[i] = scores[i] / length_penalty
                         scores[i] = scores[i].view(-1)
-            
-                    
-                    # scores[i] = scores[i] / length_penalty
-                    # scores[i] = scores[i].view(-1)
-
+              
                 # LOSS 추가
                 for i in range(m):
+                    # print(i, ' 번째 모델 loss 전 score: ', scores[i])
                     scores[i] = scores[i] * loss_esb[i]
-                     
+                    # print(i, ' 번째 모델 loss 후 score: ', scores[i])
+                
                 # Ensemble: Soft Voting
                 for i in range(m):
                     if i==0:
                         scores_esb = scores[i]
                     else:
                         scores_esb = torch.add(scores_esb, scores[i])
+                # print('soft voting 전 전체 Scores 합: ', scores_esb)
                 scores_esb = torch.div(scores_esb, m)
-                
-                # for i in range(m):
-                #     best_scores, best_indices = scores[i].topk(beam_size, 0)
-                
+                # print('soft voting 후 전체 Scores 평균: ', scores_esb)
+
+                m4_indices = scores[0].topk(beam_size, 0)
+                m4_indices_history.append(m4_indices)
                 # 각 모델 best_score, best_indcices 구하기 -> 앞서 앙상블 한 결과이기 때문에 모든 모델은 동일한 결과를 갖게됨.
                 for i in range(m):    
                     best_scores, best_indices = scores_esb.topk(beam_size, 0)
+                    # print('ensemble 후 topk index: ', best_indices)
                     scores_history[i].append(best_scores)
                     indices_history[i].append(best_indices)
                     
@@ -263,18 +283,17 @@ def main():
                 
                 # 각 모델 다음 target update
                 for i in range(m):
+                    # print(i, ' 번 모델 update 전 Targets: ', targets[i])
                     targets[i] = update_targets(targets[i], best_indices, idx, vocab_size)
-                    
+                    # print(i, ' 번 모델 update 된 Targets: ', targets[i])
+        # print('model 4 none ensemble index: ', m4_indices_history)
+        # print('model 4 indices_history: ', indices_history[0])
+        # print('model 12 indices_history: ', indices_history[1])
 
         # 모든 모델 같은 출력을 내기 때문에 0번째 모델의 결과를 출력
         result = get_result_sentence(indices_history[0], trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
-        
-        # f.write("Elapsed Time: {:.2f} sec\n".format(time.time() - start_time))
-        # f.write("\n")
-        # print("Result: {}".format(result))
-        # print("Elapsed Time: {:.2f} sec".format(time.time() - start_time))
-        
+
     f.close()
 
 if __name__ == '__main__':

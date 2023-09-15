@@ -49,7 +49,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng
 
 # dropout & alpha
-# python decoder_esb_softvoting_news.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb
+# nohup python decoder_esb_softvoting_loss.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout --eval_dir ./deu-eng --alpha_esb &
 
 # dropout & label smoothing
 # python decoder_esb_softvoting.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing --eval_dir ./deu-eng
@@ -70,10 +70,11 @@ def main():
 
     beam_size = args.beam_size
     
-    # alpha_esb = [0.6, 0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 0.8, 1.0]
     alpha_esb = [0.4, 0.2, 0.0, 0.6, 0.4, 0.2, 0.0, 1.0, 0.4, 0.5]  # model 11, 12 추가
+    # loss_esb = [2.081, 2.177, 2.028, 2.084, 2.19, 2.059, 2.129, 2.239, 2.309, 2.5]
     # MAX - x / MAX-MIN
     loss_esb = [0.88771186, 0.68432203, 1, 0.88135593, 0.65677966, 0.93432203, 0.78601695, 0.5529661,  0.40466102, 0]
+
 
     # Load fields.
     if args.translate:
@@ -114,16 +115,14 @@ def main():
     eos_idx = trg_data['field'].vocab.stoi[trg_data['field'].eos_token]
 
 
-    de = open(f'{args.eval_dir}/newstest2012.de', 'r')
-    en = open(f'{args.eval_dir}/newstest2012.en', 'r')
-    deset = de.readlines()
-    enset = en.readlines()
-    de.close()
-    en.close()
+    f = open(f'{args.eval_dir}/testset_small.txt', 'r')
+    # f = open(f'{args.eval_dir}/oneline.txt', 'r')
+    dataset = f.readlines()
+    f.close()
     
     
-    f = open('./evaluation/esb/consensus_loss/dropout_alpha_news_loss/hpys.txt', 'w')
-    for d, data in tqdm(enumerate(deset)):
+    f = open('./evaluation/esb_notaffect/consensus_loss/hpys.txt', 'w')
+    for data in tqdm(dataset):
         # Declare variables for each models
         cache = []
         indices_history = []
@@ -158,9 +157,7 @@ def main():
             # length_penalty
             length_penalties.append(None)
             
-        # target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
-        source = deset[d].strip()
-        target = enset[d].strip()
+        target, source = data.strip().split('\t')   # 원래 데이터셋 형태: en -> de
         
         if args.translate:
             # sentence = input('Source? ')
@@ -219,26 +216,28 @@ def main():
                         scores[i] = preds[i][0]
 
                     else:
-                        scores[i] = scores_history[i][-1].unsqueeze(1) + preds[i]
+                        # scores[i] = scores_history[i][-1].unsqueeze(1) + preds[i]
+                        scores[i] = preds[i]
 
                     # length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
+                
+                    # scores[i] = scores[i] / length_penalty
+                    # scores[i] = scores[i].view(-1)
+                    
                     if args.alpha_esb:
                         length_penalties[i] = pow(((5. + idx + 1.) / 6.), alpha_esb[i])
                         scores[i] = scores[i] / length_penalties[i]
                         scores[i] = scores[i].view(-1)
+                        
                     else:
                         length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
                         scores[i] = scores[i] / length_penalty
                         scores[i] = scores[i].view(-1)
-            
-                    
-                    # scores[i] = scores[i] / length_penalty
-                    # scores[i] = scores[i].view(-1)
-
+              
                 # LOSS 추가
                 for i in range(m):
                     scores[i] = scores[i] * loss_esb[i]
-                     
+                
                 # Ensemble: Soft Voting
                 for i in range(m):
                     if i==0:
@@ -246,10 +245,7 @@ def main():
                     else:
                         scores_esb = torch.add(scores_esb, scores[i])
                 scores_esb = torch.div(scores_esb, m)
-                
-                # for i in range(m):
-                #     best_scores, best_indices = scores[i].topk(beam_size, 0)
-                
+
                 # 각 모델 best_score, best_indcices 구하기 -> 앞서 앙상블 한 결과이기 때문에 모든 모델은 동일한 결과를 갖게됨.
                 for i in range(m):    
                     best_scores, best_indices = scores_esb.topk(beam_size, 0)
@@ -269,12 +265,7 @@ def main():
         # 모든 모델 같은 출력을 내기 때문에 0번째 모델의 결과를 출력
         result = get_result_sentence(indices_history[0], trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
-        
-        # f.write("Elapsed Time: {:.2f} sec\n".format(time.time() - start_time))
-        # f.write("\n")
-        # print("Result: {}".format(result))
-        # print("Elapsed Time: {:.2f} sec".format(time.time() - start_time))
-        
+
     f.close()
 
 if __name__ == '__main__':

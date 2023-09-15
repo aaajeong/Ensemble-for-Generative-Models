@@ -24,9 +24,14 @@ def encode_inputs(sentence, model, src_data, beam_size, device):
 
 def update_targets(targets, best_indices, idx, vocab_size):
     best_tensor_indices = torch.div(best_indices, vocab_size)
+    # print('bext_tesor_indices: ', best_tensor_indices)
     best_token_indices = torch.fmod(best_indices, vocab_size)
+    # print('best_token_indices: ', best_token_indices)
+    # print('targets: ', targets)
     new_batch = torch.index_select(targets, 0, best_tensor_indices)
+    # print('new_batch 전: ', new_batch)
     new_batch[:, idx] = best_token_indices
+    # print('new_batch 후: ', new_batch)
     return new_batch
 
 
@@ -51,7 +56,7 @@ def get_result_sentence(indices_history, trg_data, vocab_size):
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_4/last/models --eval_dir ./deu-eng
 
 # dropout & alpha 변경
-# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_2/last/models --eval_dir ./deu-eng --alpha 0.4
+# python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_dropout/output_4/last/models --eval_dir ./deu-eng --alpha 0.0
 
 # dropout & label smoothing 변경
 # python decoder.py --translate --data_dir ./wmt32k_data --model_dir ./outputs_smoothing/output_4/last/models --eval_dir ./deu-eng
@@ -82,7 +87,7 @@ def main():
     pads = torch.tensor([trg_data['pad_idx']] * beam_size, device=device)
     pads = pads.unsqueeze(-1)
 
-    # We'll find a target sequence by beam search.
+    # We'll find a target sequence by beam search. 
     scores_history = [torch.zeros((beam_size,), dtype=torch.float,
                                   device=device)]
     # indices_history = []
@@ -96,7 +101,7 @@ def main():
     dataset = f.readlines()
     f.close()
     
-    f = open('./evaluation/single/testeval.txt', 'w')
+    f = open('./evaluation/single_notaffect/model4/hpys.txt', 'w')
     # f = open('./evaluation/single/hpys.txt', 'w')
     for data in tqdm(dataset):
         cache = {}
@@ -128,6 +133,7 @@ def main():
             for idx in range(start_idx, args.max_length):
                 if idx > start_idx:
                     targets = torch.cat((targets, pads), dim=1)
+                    # print('targets: ', targets)
                 t_self_mask = utils.create_trg_self_mask(targets.size()[1],
                                                         device=targets.device)
 
@@ -138,23 +144,28 @@ def main():
                 vocab_size = pred.size(1)
 
                 pred = F.log_softmax(pred, dim=1)
+                # print('softmax preds: ', pred)
                 if idx == start_idx:
                     scores = pred[0]
                 else:
-                    scores = scores_history[-1].unsqueeze(1) + pred
+                    # scores = scores_history[-1].unsqueeze(1) + pred
+                    scores = pred
+                # print('모델 scores: ', scores)
                 length_penalty = pow(((5. + idx + 1.) / 6.), args.alpha)
                 scores = scores / length_penalty
                 scores = scores.view(-1)
 
                 best_scores, best_indices = scores.topk(beam_size, 0)
+                # print('topk index: ', best_indices)
                 scores_history.append(best_scores)
                 indices_history.append(best_indices)
 
                 # Stop searching when the best output of beam is EOS.
                 if best_indices[0].item() % vocab_size == eos_idx:
                     break
-
+                # print('update 전 Targets: ', targets)
                 targets = update_targets(targets, best_indices, idx, vocab_size)
+                # print('update 후 Targets: ', targets)
 
         result = get_result_sentence(indices_history, trg_data, vocab_size)
         f.write("Source: {}|Result: {}|Target: {}\n".format(source, result, target))
